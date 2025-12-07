@@ -117,7 +117,7 @@ public class DayEndContract : MonoBehaviour
 
         DOVirtual.DelayedCall(2.0f, () =>
         {
-           //ExecutionTimeLineManager.instance.PlayDayTimeline(1);
+            DaySystem.Instance.NextDayButton();
         });
     }
 

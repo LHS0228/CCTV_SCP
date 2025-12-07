@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -89,8 +90,13 @@ public class DaySystem : MonoBehaviour
     public void NextDayEvent()
     {
         //GameClear 실행
-        
         ExecutionTimeLineManager.instance.PlayDayTimeline(1);
+
+
+        DOVirtual.DelayedCall(3.5f, () =>
+        {
+            DayEndContract.Instance.ShowContract();
+        });
     }
 
     public void NextDayButton()
