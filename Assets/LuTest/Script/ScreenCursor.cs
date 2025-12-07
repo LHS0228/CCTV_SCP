@@ -8,9 +8,11 @@ public class ScreenCursor : MonoBehaviour
     private TabletManager testManager;
     [SerializeField]
     private ManualManager manualManager;
+    [SerializeField]
+    private DayEndContract dayEndContract;
     private void Update()
     {
-        if (cctvManager.isOnCCTV || testManager.isOnTablet || manualManager.isOnManual || GameManager.Instance.IsOptionMode)
+        if (cctvManager.isOnCCTV || testManager.isOnTablet || manualManager.isOnManual || GameManager.Instance.IsOptionMode || dayEndContract.isContractOn)
         {
             // CCTV�� �º���� ������ ��
             Cursor.lockState = CursorLockMode.Confined; // Ŀ�� ��� ����

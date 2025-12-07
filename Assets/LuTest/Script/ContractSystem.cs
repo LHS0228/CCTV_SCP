@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using DG.Tweening;
 using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ContractSystem : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class ContractSystem : MonoBehaviour
     public Button gameStartButton;
     public Button yesButton;
     public Button noButton;
+
+    [Header("Option")]
+    public GameObject optionMenu;
+    public Button optionButton;
+
+    [Header("Exit")]
+    public Button exitButton;
 
     private Vector2 InitPosition;
 
@@ -69,9 +77,39 @@ public class ContractSystem : MonoBehaviour
         {
             noButton.onClick.AddListener(() => OnClickNoButton());
         }
+        if (optionButton != null)
+        {
+            optionButton.onClick.AddListener(() => OnClickOptionButton());
+        }
 
+        if (exitButton != null)
+        {
+            exitButton.onClick.AddListener(() => OnClickExitButton());
+        }
     }
 
+    private void Update()
+    {
+        if (optionMenu.activeSelf)
+        {
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                optionMenu.SetActive(false);
+            }
+        }
+    }
+
+    private void OnClickOptionButton()
+    {
+        if (optionMenu.activeSelf == false)
+        {
+            optionMenu.SetActive(true);
+        }
+        else if (optionMenu.activeSelf)
+        {
+            optionMenu.SetActive(false);
+        }
+    }
     public void OnClickTitleStartButton()
     {
         if(startButton != null)
@@ -79,6 +117,9 @@ public class ContractSystem : MonoBehaviour
             startButton.SetActive(false);
             gameLogo.SetActive(false);
         }
+        optionButton.gameObject.SetActive(false);
+        exitButton.gameObject.SetActive(false);
+
         backGroundPanel.SetActive(true);
         //contractPanel.DOAnchorPos(targetPostion, duration).SetEase(Ease.OutBack);
 
@@ -122,7 +163,14 @@ public class ContractSystem : MonoBehaviour
         });
 
     }
-
+    private void OnClickExitButton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
     private void FadeOut()
     {
         if(fadeOutImage != null)
