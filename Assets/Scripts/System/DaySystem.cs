@@ -54,6 +54,11 @@ public class DaySystem : MonoBehaviour
         TimeReset();
     }
 
+    private void Start()
+    {
+        dayText.text = GetDayText();
+    }
+
     public void Update()
     {
         if (GameManager.Instance.isGameStop) { return; }

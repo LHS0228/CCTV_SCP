@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -9,8 +10,11 @@ public class SoundManager : MonoBehaviour
     public SoundData Data => _soundData;
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource _bgmSource;       // BGM용
-    [SerializeField] private AudioSource _globalSfxSource; // 일반적인 짧은 2D 효과음용 (UI 등)
+    [SerializeField] private AudioSource _bgmSource;
+    [SerializeField] private AudioSource _globalSfxSource;
+
+    // [추가됨] 현재 재생 중인, 제어 가능한(Stoppable/3D) SFX 소스들을 관리하는 리스트
+    private List<AudioSource> _activeSfxSources = new List<AudioSource>();
 
     [Header("Volume Settings (0.0 ~ 1.0)")]
     [Range(0f, 1f)] public static float MasterVolume = 1.0f;
@@ -60,6 +64,7 @@ public class SoundManager : MonoBehaviour
     {
         MasterVolume = Mathf.Clamp01(volume);
         UpdateBgmVolume();
+        UpdateAllSfxVolume(); // [추가됨] 마스터 볼륨 변경 시 SFX도 갱신
     }
 
     public void SetBgmVolume(float volume)
@@ -71,6 +76,7 @@ public class SoundManager : MonoBehaviour
     public void SetSfxVolume(float volume)
     {
         SfxVolume = Mathf.Clamp01(volume);
+        UpdateAllSfxVolume(); // [추가됨] SFX 볼륨 변경 시 실시간 갱신
     }
 
     private void UpdateBgmVolume()
@@ -78,6 +84,31 @@ public class SoundManager : MonoBehaviour
         if (_bgmSource != null)
         {
             _bgmSource.volume = MasterVolume * BgmVolume;
+        }
+    }
+
+    // [추가됨] 현재 떠있는 모든 SFX 오디오 소스의 볼륨을 실시간으로 갱신
+    private void UpdateAllSfxVolume()
+    {
+        // 1. 글로벌 소스 갱신
+        if (_globalSfxSource != null)
+        {
+            _globalSfxSource.volume = MasterVolume * SfxVolume;
+        }
+
+        // 2. 개별 생성된 소스들 갱신 (리스트 역순 순회 - 삭제 안전성 위해)
+        for (int i = _activeSfxSources.Count - 1; i >= 0; i--)
+        {
+            if (_activeSfxSources[i] == null)
+            {
+                // 이미 파괴된 오브젝트는 리스트에서 제거
+                _activeSfxSources.RemoveAt(i);
+            }
+            else
+            {
+                // 살아있다면 볼륨 재설정
+                _activeSfxSources[i].volume = MasterVolume * SfxVolume;
+            }
         }
     }
 
@@ -100,60 +131,58 @@ public class SoundManager : MonoBehaviour
     }
 
     // ====================================================
-    // 1. 일반 2D 효과음 (멈출 필요 없는 짧은 소리)
+    // 1. 일반 2D 효과음
     // ====================================================
     public void PlayGlobalSFX(AudioClip clip)
     {
         if (clip == null) return;
-        float finalVolume = MasterVolume * SfxVolume;
-        _globalSfxSource.PlayOneShot(clip, finalVolume);
+
+        // PlayOneShot을 쓰더라도 Source 자체의 volume을 업데이트해주면
+        // 이후 출력에 영향을 줄 수 있으므로 volume 갱신
+        _globalSfxSource.volume = MasterVolume * SfxVolume;
+
+        // OneShot은 Scale을 1.0으로 주어 Source의 볼륨을 그대로 따르게 함
+        _globalSfxSource.PlayOneShot(clip, 1.0f);
     }
 
-    /// <summary>
-    /// [요청 1] 현재 재생 중인 모든 2D 효과음(UI 등)을 즉시 멈춥니다.
-    /// </summary>
     public void StopAllGlobalSFX()
     {
         _globalSfxSource.Stop();
     }
 
     // ====================================================
-    // 2. 제어 가능한 2D 효과음 (특정 소리 멈추기 가능)
-    // 용도: 알람 소리, 심장 박동 등 멈춰야 하는 2D 소리
+    // 2. 제어 가능한 2D 효과음
     // ====================================================
-    /// <summary>
-    /// [요청 3] 중간에 멈춰야 하는 2D 소리를 재생하고 AudioSource를 반환합니다.
-    /// </summary>
     public AudioSource PlayStoppable2DSFX(AudioClip clip, bool loop = false)
     {
         if (clip == null) return null;
 
         GameObject audioObj = new GameObject("Temp_2D_Stoppable");
-        audioObj.transform.SetParent(this.transform); // 매니저 자식으로 정리
+        audioObj.transform.SetParent(this.transform);
 
         AudioSource audioSource = audioObj.AddComponent<AudioSource>();
         audioSource.clip = clip;
         audioSource.volume = MasterVolume * SfxVolume;
-        audioSource.spatialBlend = 0f; // 2D 사운드
+        audioSource.spatialBlend = 0f;
         audioSource.loop = loop;
 
         audioSource.Play();
 
-        // 반복 재생이 아닐 경우에만 소리 끝나면 자동 삭제
+        // [추가됨] 관리 리스트에 등록
+        _activeSfxSources.Add(audioSource);
+
         if (!loop)
         {
             Destroy(audioObj, clip.length);
+            // Destroy 되어도 리스트에는 null로 남으므로 UpdateAllSfxVolume에서 청소됨
         }
 
-        return audioSource; // 제어권 반환
+        return audioSource;
     }
 
     // ====================================================
-    // 3. 3D 효과음 (특정 소리 멈추기 가능)
+    // 3. 3D 효과음
     // ====================================================
-    /// <summary>
-    /// [요청 2] 3D 소리를 재생하고 제어할 수 있는 AudioSource를 반환합니다.
-    /// </summary>
     public AudioSource Play3DSFX(AudioClip clip, Vector3 position, float maxDistance = 20.0f, bool loop = false)
     {
         if (clip == null) return null;
@@ -164,7 +193,7 @@ public class SoundManager : MonoBehaviour
         AudioSource audioSource = audioObj.AddComponent<AudioSource>();
         audioSource.clip = clip;
         audioSource.volume = MasterVolume * SfxVolume;
-        audioSource.spatialBlend = 1.0f; // 3D
+        audioSource.spatialBlend = 1.0f;
         audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
         audioSource.minDistance = 1.0f;
         audioSource.maxDistance = maxDistance;
@@ -172,25 +201,30 @@ public class SoundManager : MonoBehaviour
 
         audioSource.Play();
 
-        // 반복 재생이 아닐 경우에만 자동 삭제
+        // [추가됨] 관리 리스트에 등록
+        _activeSfxSources.Add(audioSource);
+
         if (!loop)
         {
             Destroy(audioObj, clip.length);
         }
 
-        return audioSource; // 제어권 반환
+        return audioSource;
     }
 
     // ====================================================
-    // 공통: 특정 소리 멈추기 도우미 함수
+    // 공통: 특정 소리 멈추기
     // ====================================================
-    /// <summary>
-    /// 반환받았던 AudioSource를 넣어주면 소리를 끄고 삭제합니다.
-    /// </summary>
     public void StopSFX(AudioSource source)
     {
         if (source != null)
         {
+            // [추가됨] 리스트에서도 명시적으로 제거 (성능 최적화)
+            if (_activeSfxSources.Contains(source))
+            {
+                _activeSfxSources.Remove(source);
+            }
+
             source.Stop();
             Destroy(source.gameObject);
         }

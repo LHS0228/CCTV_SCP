@@ -32,19 +32,26 @@ public class ProtocolSystem : MonoBehaviour
     }
 
     int cachedIndex = 0;
-    public void  StartProtocol(int index)
+
+    public void StartProtocol(int index)
     {
-        cachedIndex = index;
+        cachedIndex = index; // 죽어야 할 대상(인덱스) 캐싱
+
+        // [수정된 부분] 
+        // 이미 기회를 사용했다면 (Second Chance Used) -> 즉시 사망 처리하고 함수 종료
+        if (protocol_FinalChased)
+        {
+            Protocal_GameOver();
+            return; // 중요: 여기서 return을 해야 아래의 사이렌 소리나 타이머가 실행되지 않습니다.
+        }
+
+        // --- 기회가 남아있을 때만 아래 코드가 실행됨 ---
+
+        // 사이렌 소리 재생 (죽을 때는 사이렌 울릴 필요 없이 바로 타임라인 재생하므로 아래로 내림)
         saveSound = SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.deathCommonSirenLoopBeforeDeath, GameManager.Instance.anomalySystem.specialObjects[1].transform.position, 20, true);
 
-        if (protocol_FinalChased) Protocal_GameOver();
-
-        protocol_FinalChased = true;
-        protocol_Activated = true;
-    }
-    public void StopProtocol() { 
-        if(saveSound != null)
-            Destroy(saveSound);
+        protocol_FinalChased = true; // 기회 사용 처리
+        protocol_Activated = true;   // Update문의 카운트다운 시작
     }
 
     // Update is called once per frame
@@ -101,13 +108,33 @@ public class ProtocolSystem : MonoBehaviour
     }
 
     /// <summary>
-    /// 타임오버해서 게임 종료일 경우
+    /// 타임오버 혹은 2번째 기회 박탈로 인한 게임 종료
     /// </summary>
     private void Protocal_GameOver()
     {
         Debug.Log("게임 오버");
+
+        // 중복 실행 방지
+        if (isDeadEventCheck) return;
         isDeadEventCheck = true;
+
+        // 게임 멈춤 상태 해제 (타임라인이 원활하게 돌도록, 필요시 false/true 조정)
+        // 보통 타임라인이 카메라를 제어하므로 게임 로직은 멈추는게 맞음
+        GameManager.Instance.isGameStop = true;
+        GameManager.Instance.isDeadWarring = false; // 카운트다운 로직 정지
+        protocol_Activated = false; // 프로토콜 로직 정지
+
+        // 사이렌 소리가 있다면 끄기
+        StopProtocol();
+
+        // 캐싱된 인덱스의 몬스터 처형 타임라인 재생
         ExecutionTimeLineManager.instance.PlayExecutionTimeline(cachedIndex);
+    }
+
+    public void StopProtocol()
+    {
+        if (saveSound != null)
+            Destroy(saveSound);
     }
 
     private void OnTriggerEnter(Collider other)

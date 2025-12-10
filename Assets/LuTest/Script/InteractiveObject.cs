@@ -194,20 +194,6 @@ public class InteractiveObject : MonoBehaviour
     private void InteractManual()
     {
         manualManager.MovingManualView();
-        if(DaySystem.Instance.GetNowDay() == 1)
-        {
-            if (GameManager.Instance.isGameStart) return;
-
-            GameManager.Instance.isGameStop = false;
-            GameManager.Instance.isGameStart = true;
-
-            GameManager.Instance.anomalySystem.specialObjects[3].GetComponent<Animator>().Play("Close");
-            GameManager.Instance.anomalySystem.specialObjects[2].GetComponent<Animator>().Play("Close");
-
-            SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.ingameDoorCloseHydraulic, GameManager.Instance.anomalySystem.specialObjects[3].transform.position, 20, false);
-            SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.ingameDoorCloseHydraulic, GameManager.Instance.anomalySystem.specialObjects[2].transform.position, 20, false);
-        }
-
     }
     private void InteractBarrel()
     {

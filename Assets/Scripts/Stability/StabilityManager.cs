@@ -41,38 +41,26 @@ public class StabilityManager : MonoBehaviour
     }
 
     bool dam = true;
-    bool uDead = false;
+
     private void Update()
     {
-        // 프로토콜 시스템 발동 로직 (기존 유지)
-        if (currentStability[2] <= 0 && dam)
-        {
-            dam = false;
-            ProtocolSystem.instance.StartProtocol(2);
-        }
-        else if (currentStability[1] <= 1 && dam)
-        {
-            dam = false;
-            ProtocolSystem.instance.StartProtocol(1);
-        }
-        else if (currentStability[0] <= 1 && dam)
-        {
-            dam = false;
-            ProtocolSystem.instance.StartProtocol(0);
-        }
+        // 1. 이미 프로토콜이 진행 중이거나 죽는 중이면 아무것도 안 함
+        if (!dam) return;
 
-        if (dam || uDead) return;
-        for(int i = 0; i<3; i++)
-        {
-            if (currentStability[i] <= 1)
-            {
+        // 2. 안정도 감소 로직 (UpdateStabilityDrain 등으로 감소되고 있다고 가정)
 
-                if(!uDead)
-                {
-                    GameManager.Instance.anomalySystem.specialObjects[1].GetComponent<Animator>().Play("On");
-                    uDead = true;
-                }
-            }
+        // 3. 0이 되었는지 체크 (우선순위 순서대로)
+        if (currentStability[2] <= 0)
+        {
+            ReportAnomaly(2);
+        }
+        else if (currentStability[1] <= 0)
+        {
+            ReportAnomaly(1);
+        }
+        else if (currentStability[0] <= 0)
+        {
+            ReportAnomaly(0);
         }
     }
 
@@ -113,6 +101,13 @@ public class StabilityManager : MonoBehaviour
 
         // 3. 최종 적용 (FixedUpdate에서 호출되므로 Time.fixedDeltaTime 곱함)
         currentStability[roomIndex] = Mathf.Clamp(currentStability[roomIndex] -= currentDrainRate * Time.fixedDeltaTime, 0f, maxStability);
+    }
+
+    private void ReportAnomaly(int index)
+    {
+        dam = false; // 일단 StabilityManager는 멈춤
+        ProtocolSystem.instance.StartProtocol(index);
+        // -> 이후 살지 죽을지는 ProtocolSystem이 결정함
     }
 
     public void ProtocolSuccess()
