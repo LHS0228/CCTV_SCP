@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class ManualManager : MonoBehaviour
 {
     [SerializeField]
+    private MonitorManager monitorManager;
+
+    [SerializeField]
     private GameObject ManualPanel;
     
     [SerializeField]
@@ -239,6 +242,15 @@ public class ManualManager : MonoBehaviour
 
         BackButton.gameObject.SetActive(false);
         ExitButton.gameObject.SetActive(true);
+
+        if(DaySystem.Instance.GetNowDay() == 1)
+        {
+            if (monitorManager != null)
+            {
+                monitorManager.CompleteManualInteract();
+            }
+        }
+        
     }
 
     private void BackToManualPanel()

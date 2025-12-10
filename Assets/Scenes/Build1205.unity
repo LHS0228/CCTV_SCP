@@ -5039,6 +5039,11 @@ Transform:
   - {fileID: 1371933441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &225767370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8793586149365485185, guid: 82af810dceaa6b94086cd0a621e712d7, type: 3}
+  m_PrefabInstance: {fileID: 1356078518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &239106146
 GameObject:
   m_ObjectHideFlags: 0
@@ -8897,6 +8902,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482472245}
   m_Mesh: {fileID: -166887373798719108, guid: 4d7a1f2d72196e24bb9a9eefb40859c3, type: 3}
+--- !u!1 &488153339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2239023289194492649, guid: 59c81661434c0a24b921b591819cc037, type: 3}
+  m_PrefabInstance: {fileID: 1429441718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &490252996
 GameObject:
   m_ObjectHideFlags: 0
@@ -12198,7 +12208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3964824318571873752, guid: f2bc24a1414a2774494c625f4da582dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7869632020249802371, guid: f2bc24a1414a2774494c625f4da582dd, type: 3}
       propertyPath: m_Pivot.x
@@ -17614,7 +17624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100959447813982162, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.999992
+      value: 44.999996
       objectReference: {fileID: 0}
     - target: {fileID: 4170802374136823179, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Name
@@ -17730,7 +17740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6103389382649576201, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6374465635126479720, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Sprite
@@ -17902,7 +17912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8027386128000643984, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.02178806
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9066517753649752605, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_LocalScale.x
@@ -18412,6 +18422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53006c457260bbe4fae805e219dd69c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monitorManager: {fileID: 2101013843}
   ManualPanel: {fileID: 881938747}
   ScrollViewPanel: {fileID: 881938746}
   DetailPanels:
@@ -20848,6 +20859,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056913045}
   m_CullTransparentMesh: 1
+--- !u!1 &1058746368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2413257741519617511, guid: 0c481710591196846a767aa9c230110c, type: 3}
+  m_PrefabInstance: {fileID: 4232026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1059330578
 GameObject:
   m_ObjectHideFlags: 0
@@ -29232,7 +29248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayText: {fileID: 434739703}
   clockText: {fileID: 845401878}
-  MINUTEUP_TIME: 0.03
+  MINUTEUP_TIME: 2
   TIME_START: 0
 --- !u!114 &1429709053
 MonoBehaviour:
@@ -43277,6 +43293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCameraObject: {fileID: 1399082384}
   leftMonitorScreen: {fileID: 1266406729}
+  leftMonitorCanvas: {fileID: 488153339}
   leftButtons:
   - {fileID: 728099537}
   - {fileID: 1525887903}
@@ -43284,6 +43301,7 @@ MonoBehaviour:
   - {fileID: 1033355924}
   centerCameraObject: {fileID: 1298697854}
   centerMonitorScreen: {fileID: 1563699028}
+  centerMonitorCanvas: {fileID: 225767370}
   centerButtons:
   - {fileID: 1295110724}
   - {fileID: 1535525887}
@@ -43291,11 +43309,13 @@ MonoBehaviour:
   - {fileID: 1025196033}
   rightCameraObject: {fileID: 93470961}
   rightMonitorScreen: {fileID: 100807782}
+  rightMonitorCanvas: {fileID: 1058746368}
   rightButtons:
   - {fileID: 730058591}
   - {fileID: 1298789128}
   - {fileID: 252931296}
   - {fileID: 134044326}
+  isInteractCompletedManual: 0
 --- !u!1 &2102648357
 GameObject:
   m_ObjectHideFlags: 0

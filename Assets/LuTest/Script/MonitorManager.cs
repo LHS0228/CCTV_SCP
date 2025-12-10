@@ -7,17 +7,22 @@ public class MonitorManager : MonoBehaviour
     [Header("Left Monitor")]
     public GameObject leftCameraObject;
     public GameObject leftMonitorScreen;
+    public GameObject leftMonitorCanvas;
     public Button[] leftButtons;
 
     [Header("Center Monitor")]
     public GameObject centerCameraObject;
     public GameObject centerMonitorScreen;
+    public GameObject centerMonitorCanvas;
     public Button[] centerButtons;
 
     [Header("Right Monitor")]
     public GameObject rightCameraObject;
     public GameObject rightMonitorScreen;
+    public GameObject rightMonitorCanvas;
     public Button[] rightButtons;
+
+    public bool isInteractCompletedManual;
 
     void Start()
     {
@@ -34,6 +39,16 @@ public class MonitorManager : MonoBehaviour
         foreach (var button in rightButtons)
         {
             button.onClick.AddListener(() => Anomaly_Solution_Click(rightCameraObject, rightMonitorScreen, rightButtons));
+        }
+
+        if(DaySystem.Instance.GetNowDay() == 1)
+        {
+            leftMonitorScreen.SetActive(false);
+            centerMonitorScreen.SetActive(false);
+            rightMonitorScreen.SetActive(false);
+            leftMonitorCanvas.SetActive(false);
+            centerMonitorCanvas.SetActive(false);
+            rightMonitorCanvas.SetActive(false);
         }
     }
 
@@ -60,5 +75,19 @@ public class MonitorManager : MonoBehaviour
         {
             bts.interactable = true;
         }
+    }
+
+    public void CompleteManualInteract()
+    {
+        if(isInteractCompletedManual) { return; }
+
+        isInteractCompletedManual = true;
+
+        leftMonitorScreen.SetActive(true);
+        centerMonitorScreen.SetActive(true);
+        rightMonitorScreen.SetActive(true);
+        leftMonitorCanvas.SetActive(true);
+        centerMonitorCanvas.SetActive(true);
+        rightMonitorCanvas.SetActive(true);
     }
 }
