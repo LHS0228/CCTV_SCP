@@ -6900,7 +6900,7 @@ MonoBehaviour:
       - m_Target: {fileID: 891120094}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetSfxVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17623,7 +17623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100959447813982162, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.99997
+      value: 44.90392
       objectReference: {fileID: 0}
     - target: {fileID: 4170802374136823179, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Name
@@ -31772,12 +31772,12 @@ MonoBehaviour:
       - m_Target: {fileID: 216343721}
         m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
         m_MethodName: SetSensitivity
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 20
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -34651,7 +34651,7 @@ MonoBehaviour:
       - m_Target: {fileID: 891120094}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetMasterVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43662,7 +43662,7 @@ MonoBehaviour:
       - m_Target: {fileID: 891120094}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetBgmVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
