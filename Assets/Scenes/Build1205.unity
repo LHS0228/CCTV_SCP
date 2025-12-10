@@ -17623,7 +17623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100959447813982162, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.999916
+      value: 44.999924
       objectReference: {fileID: 0}
     - target: {fileID: 4170802374136823179, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Name
@@ -17739,7 +17739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6103389382649576201, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6374465635126479720, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Sprite
@@ -17911,7 +17911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8027386128000643984, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.022191942
       objectReference: {fileID: 0}
     - target: {fileID: 9066517753649752605, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_LocalScale.x
@@ -34139,13 +34139,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<line-height=0.08><size=0.045><b>\uAC1C\uCCB4 \uC774\uC0C1\uD604\uC0C1
-    \uC5F0\uAD6C \uACB0\uACFC</size></b>\n</line-height>1. <indent=5%>\uC774\uC0C1
-    \uBC88\uC2DD\uC73C\uB85C <b>\uCD09\uC218\uAC00 \uC99D\uAC00</b>\uD560 \uB54C
-    <b>\uACE0\uC628\uC758 \uC790\uADF9</b>\uC744 \uAC00\uD558\uBA74 \uBC88\uC2DD\uC774
-    \uC885\uB8CC\uB428\uC744 \uD655\uC778\uD588\uB2E4.</indent><line-height=0.08>\n\r</line-height>2.
-    <indent=5%>\uAD70\uC9D1\uC758 \uACF5\uACA9\uC131\uC774 \uC99D\uAC00\uD574  <b>\uC8FC\uBCC0
-    \uC2DC\uC124\uC744 \uACF5\uACA9</b> \uD560 \uB54C <b>\uBB3C\uB9AC\uC801 \uCDA9\uACA9</b>\uC73C\uB85C
-    \uC9C4\uC555\uC774 \uAC00\uB2A5\uD568\uC744 \uD655\uC778\uD588\uB2E4.</indent><line-height=0.08>\n</line-height>3.
+    \uC5F0\uAD6C \uACB0\uACFC</size></b>\n\r</line-height>1. <indent=5%>\uAD70\uC9D1\uC758
+    \uACF5\uACA9\uC131\uC774 \uC99D\uAC00\uD574  <b>\uC8FC\uBCC0 \uC2DC\uC124\uC744
+    \uACF5\uACA9</b> \uD560 \uB54C <b>\uACE0\uC628\uC758 \uC790\uADF9</b>\uC744 \uAC00\uD558\uBA74
+    \uACF5\uACA9\uC131\uC774 \uC0AC\uB77C\uC9D0\uC744 \uD655\uC778\uD588\uB2E4.</indent><line-height=0.08>\n</line-height>2.
     <indent=6%>\uACA9\uB9AC\uC2E4 \uB0B4\uBD80\uC758 <b>\uBA39\uC774\uD1B5\uC774
     \uBE44\uC6CC\uC9C0\uC790 </b>\uAE09\uACA9\uD558\uAC8C \uC0C1\uD0DC\uAC00 \n\uBD88\uC548\uC815\uD574\uC9D0\uC744
     \uD655\uC778\uD588\uB2E4. \n\uC774\uD6C4 <b>\uBC30\uC2DD \uC2DC\uC124\uC744 \uD1B5\uD574
@@ -42372,6 +42369,14 @@ MonoBehaviour:
   - {fileID: 1214583421}
   standardEventPool:
   - {fileID: 11400000, guid: 3a1be9cc7ee468d46be6cece97aabf00, type: 2}
+  - {fileID: 11400000, guid: 76806f2fa1b62fa438efe216a25ff09b, type: 2}
+  - {fileID: 11400000, guid: 382c77bd79d8f9942975f7e01297192b, type: 2}
+  - {fileID: 11400000, guid: 299f3dbe8199c6f4eb415c61285fa069, type: 2}
+  - {fileID: 11400000, guid: 824e4a1c7f2eb4942b86b631149a9dae, type: 2}
+  - {fileID: 11400000, guid: b68e5f305d9a9e447be9b1d1cd078b54, type: 2}
+  - {fileID: 11400000, guid: 156ac1a1fd02a1748a09704aaf1a9a1b, type: 2}
+  - {fileID: 11400000, guid: 1c26ae56aed73fb4698f768bec15dcac, type: 2}
+  - {fileID: 11400000, guid: c84b609bda1aa50499f11973c972c09f, type: 2}
   specialEventPool:
   - {fileID: 11400000, guid: c391712167fcd4c44826990189ed17a4, type: 2}
   activeStandardAnomalies: []

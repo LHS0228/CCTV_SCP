@@ -31,7 +31,7 @@ MonoBehaviour:
   ingameManualPageChangeButtonClick: {fileID: 8300000, guid: 6a0267dd8a04b0640871e3c8225f0b2e, type: 3}
   ingameDoorOpenHydraulic: {fileID: 8300000, guid: 4a6c00a51779705489f4aa1a7d5ecebd, type: 3}
   ingameDoorCloseHydraulic: {fileID: 8300000, guid: 4a6c00a51779705489f4aa1a7d5ecebd, type: 3}
-  ingameElevatorArriveDing: {fileID: 8300000, guid: 923f6878579a9da4f9465ae2fc962001, type: 3}
+  ingameElevatorArriveDing: {fileID: 8300000, guid: 09b80a86add7cec43863e6a0524463d7, type: 3}
   abnormalWireOvergrowthRubber: {fileID: 8300000, guid: 8ae5c38f5830e3b4b9fa570a5665777f, type: 3}
   abnormalWireShortCircuitSpark: {fileID: 8300000, guid: 6e18961e23e21754b97f3ccb0176da94, type: 3}
   abnormalMaskHumanTransform: {fileID: 8300000, guid: 47be6721c1a2133409c780063086b9c6, type: 3}
