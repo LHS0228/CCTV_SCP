@@ -6229,6 +6229,7 @@ MonoBehaviour:
   cctvManager: {fileID: 100531053}
   testManager: {fileID: 251498749}
   manualManager: {fileID: 891335779}
+  dayEndContract: {fileID: 0}
 --- !u!4 &306387743
 Transform:
   m_ObjectHideFlags: 0
@@ -17108,7 +17109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100959447813982162, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.99999
+      value: 44.999996
       objectReference: {fileID: 0}
     - target: {fileID: 4170802374136823179, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Name
@@ -17898,6 +17899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53006c457260bbe4fae805e219dd69c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monitorManager: {fileID: 0}
   ManualPanel: {fileID: 881938747}
   ScrollViewPanel: {fileID: 881938746}
   DetailPanels:
@@ -28387,7 +28389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayText: {fileID: 434739703}
   clockText: {fileID: 845401878}
-  MINUTEUP_TIME: 2
+  MINUTEUP_TIME: 3
   TIME_START: 0
 --- !u!114 &1429709053
 MonoBehaviour:
@@ -30397,21 +30399,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayBaseDecayRates:
-  - 0.25
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.35
+  - 0.4
+  - 0.45
+  - 0.55
+  - 0.66
   activeAnomalyExtraDrain: 0.4
   failureDropAmount: 4
   dayGetMaskValue:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 2
+  - 2
+  - 3
+  - 3
+  - 3
   currentGetMask: 0
-  saveSound: {fileID: 0}
 --- !u!4 &1529692178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 137247180893659862, guid: d84dd8bf81f04d946bbd34bc605c435b, type: 3}
@@ -41329,10 +41330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343f797b5523184a8e5991fae321c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anomaly_MinMinute: 10
-  anomaly_MaxMinute: 20
-  special_MinMinute: 60
-  special_MaxMinute: 80
+  anomaly_MinMinute: 30
+  anomaly_MaxMinute: 40
+  special_MinMinute: 95
+  special_MaxMinute: 115
   anomaly_Threshold: 40
   monsters:
   - {fileID: 181871582}
@@ -42265,6 +42266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCameraObject: {fileID: 1399082384}
   leftMonitorScreen: {fileID: 1266406729}
+  leftMonitorCanvas: {fileID: 0}
   leftButtons:
   - {fileID: 728099537}
   - {fileID: 1525887903}
@@ -42272,6 +42274,7 @@ MonoBehaviour:
   - {fileID: 1033355924}
   centerCameraObject: {fileID: 1298697854}
   centerMonitorScreen: {fileID: 1563699028}
+  centerMonitorCanvas: {fileID: 0}
   centerButtons:
   - {fileID: 1295110724}
   - {fileID: 1535525887}
@@ -42279,11 +42282,13 @@ MonoBehaviour:
   - {fileID: 1025196033}
   rightCameraObject: {fileID: 93470961}
   rightMonitorScreen: {fileID: 100807782}
+  rightMonitorCanvas: {fileID: 0}
   rightButtons:
   - {fileID: 730058591}
   - {fileID: 1298789128}
   - {fileID: 252931296}
   - {fileID: 134044326}
+  isInteractCompletedManual: 0
 --- !u!1 &2102648357
 GameObject:
   m_ObjectHideFlags: 0
@@ -42539,6 +42544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 735073760}
+  mainLight: {fileID: 0}
   lightOutAnomaly: {fileID: 11400000, guid: 76806f2fa1b62fa438efe216a25ff09b, type: 2}
 --- !u!4 &2118661819 stripped
 Transform:
