@@ -17623,7 +17623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100959447813982162, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.90392
+      value: 44.999916
       objectReference: {fileID: 0}
     - target: {fileID: 4170802374136823179, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Name
@@ -29247,7 +29247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayText: {fileID: 434739703}
   clockText: {fileID: 845401878}
-  MINUTEUP_TIME: 2
+  MINUTEUP_TIME: 3
   TIME_START: 0
 --- !u!114 &1429709053
 MonoBehaviour:
@@ -31255,19 +31255,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayBaseDecayRates:
-  - 0.25
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.35
+  - 0.4
+  - 0.45
+  - 0.55
+  - 0.66
   activeAnomalyExtraDrain: 0.4
   failureDropAmount: 4
   dayGetMaskValue:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 2
+  - 2
+  - 3
+  - 3
+  - 3
   currentGetMask: 0
 --- !u!4 &1529692178 stripped
 Transform:
@@ -42357,9 +42357,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anomaly_MinMinute: 30
-  anomaly_MaxMinute: 60
-  special_MinMinute: 60
-  special_MaxMinute: 80
+  anomaly_MaxMinute: 40
+  special_MinMinute: 95
+  special_MaxMinute: 115
   anomaly_Threshold: 40
   monsters:
   - {fileID: 181871582}
