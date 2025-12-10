@@ -7,7 +7,6 @@ public class FeedCetner : MonoBehaviour
     private GameObject guide;
     [SerializeField]
     Anomaly_TentacleOvergrowth anomaly;
-    public bool isCrossingGateShutDown => anomaly.isAnomalyStart;
     private bool isClick = false;
 
 
@@ -34,5 +33,10 @@ public class FeedCetner : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.0f);
 
         isClick = false;
+    }
+
+    public bool GuideOff()
+    {
+        return isClick;
     }
 }

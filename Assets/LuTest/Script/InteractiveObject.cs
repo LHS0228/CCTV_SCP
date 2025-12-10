@@ -141,21 +141,45 @@ public class InteractiveObject : MonoBehaviour
                     outLineObject = hitObject;
                 }
             }
-            // This Is SetOutline Conditional
+
             else if (hitObject == CrossingGatObject)
             {
-                if (CrossingGatObject.transform.parent.GetComponent<CrossingGats>().isCrossingGateShutDown)
+                if (!GameManager.Instance.isGameStop)
                 {
-                    rayCollisionObject = hitObject;
-                    outLineObject = hitObject;
+                    //부모(transform.parent)에서 스크립트를 가져옵니다.
+                    CrossingGats gatScript = CrossingGatObject.transform.parent.GetComponent<CrossingGats>();
+
+                    // 스크립트가 존재하고, GuideOn()이 true일 때만 아웃라인 표시
+                    if (gatScript != null && !gatScript.GuideOff())
+                    {
+                        rayCollisionObject = hitObject; // 상호작용 대상 설정
+                        outLineObject = hitObject;      // 아웃라인 대상 설정
+                    }
+                    else
+                    {
+                        // GuideOn이 false면 상호작용도 안 되고 아웃라인도 안 뜸
+                        // (만약 아웃라인은 안 떠도 F키는 먹히게 하고 싶다면 rayCollisionObject = hitObject;를 밖으로 빼세요)
+                        rayCollisionObject = null;
+                    }
                 }
             }
+
             else if (hitObject == FeedBarObject)
             {
-                if (FeedBarObject.transform.parent.GetComponent<FeedCetner>().isCrossingGateShutDown)
+                //부모(transform.parent)에서 스크립트를 가져옵니다.
+                FeedCetner gatScript = FeedBarObject.transform.parent.GetComponent<FeedCetner>();
+
+                // 스크립트가 존재하고, GuideOn()이 true일 때만 아웃라인 표시
+                if (gatScript != null && !gatScript.GuideOff())
                 {
-                    rayCollisionObject = hitObject;
-                    outLineObject = hitObject;
+                    rayCollisionObject = hitObject; // 상호작용 대상 설정
+                    outLineObject = hitObject;      // 아웃라인 대상 설정
+                }
+                else
+                {
+                    // GuideOn이 false면 상호작용도 안 되고 아웃라인도 안 뜸
+                    // (만약 아웃라인은 안 떠도 F키는 먹히게 하고 싶다면 rayCollisionObject = hitObject;를 밖으로 빼세요)
+                    rayCollisionObject = null;
                 }
             }
             else

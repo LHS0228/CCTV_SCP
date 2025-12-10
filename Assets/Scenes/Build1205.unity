@@ -15401,7 +15401,6 @@ MonoBehaviour:
   - {fileID: 881661719}
   - {fileID: 2132503067}
   - {fileID: 833419584}
-  - {fileID: 0}
   - {fileID: 1903516443}
   - {fileID: 815100028}
   - {fileID: 923935141}
@@ -17624,7 +17623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100959447813982162, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.999996
+      value: 44.9995
       objectReference: {fileID: 0}
     - target: {fileID: 4170802374136823179, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_Name
@@ -33555,7 +33554,7 @@ GameObject:
   - component: {fileID: 1653781193}
   - component: {fileID: 1653781192}
   m_Layer: 0
-  m_Name: Spot Light (2)
+  m_Name: Light_CrossingGats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42372,14 +42371,6 @@ MonoBehaviour:
   - {fileID: 1038453579}
   - {fileID: 1214583421}
   standardEventPool:
-  - {fileID: 11400000, guid: 1c26ae56aed73fb4698f768bec15dcac, type: 2}
-  - {fileID: 11400000, guid: 299f3dbe8199c6f4eb415c61285fa069, type: 2}
-  - {fileID: 11400000, guid: 824e4a1c7f2eb4942b86b631149a9dae, type: 2}
-  - {fileID: 11400000, guid: b68e5f305d9a9e447be9b1d1cd078b54, type: 2}
-  - {fileID: 11400000, guid: 382c77bd79d8f9942975f7e01297192b, type: 2}
-  - {fileID: 11400000, guid: 156ac1a1fd02a1748a09704aaf1a9a1b, type: 2}
-  - {fileID: 11400000, guid: 3a1be9cc7ee468d46be6cece97aabf00, type: 2}
-  - {fileID: 11400000, guid: c84b609bda1aa50499f11973c972c09f, type: 2}
   - {fileID: 11400000, guid: 76806f2fa1b62fa438efe216a25ff09b, type: 2}
   specialEventPool:
   - {fileID: 11400000, guid: c391712167fcd4c44826990189ed17a4, type: 2}
@@ -43571,6 +43562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 735073760}
+  mainLight: {fileID: 1653781193}
   lightOutAnomaly: {fileID: 11400000, guid: 76806f2fa1b62fa438efe216a25ff09b, type: 2}
 --- !u!4 &2118661819 stripped
 Transform:

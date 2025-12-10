@@ -20,6 +20,8 @@ public class LightOutAnomaly : BasicEventAnomaly
 
     public override EventType Execute()
     {
+        CrossingGats.GetComponent<CrossingGats>().mainLight.color = Color.red;
+
         CrossingGats.GetComponent<Animator>().SetBool("isShotDown", true);
         lights_Intensity = new float[GameManager.Instance.lights.Length];
 
@@ -38,6 +40,8 @@ public class LightOutAnomaly : BasicEventAnomaly
 
     private void Clean()
     {
+        CrossingGats.GetComponent<CrossingGats>().mainLight.color = Color.white;
+
         for (int i = 0; i < GameManager.Instance.lights.Length; i++)
         {
             GameManager.Instance.lights[i].intensity = lights_Intensity[i];

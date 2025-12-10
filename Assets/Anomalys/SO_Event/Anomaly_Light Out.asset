@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c082736b6b390a41b4a2256461d2781, type: 3}
-  m_Name: New Light Out Anomaly
+  m_Name: Anomaly_Light Out
   m_EditorClassIdentifier: 
   eventName: "\uC804\uC120\uB9E8_\uC815\uC804"
   eventPlace: 4
