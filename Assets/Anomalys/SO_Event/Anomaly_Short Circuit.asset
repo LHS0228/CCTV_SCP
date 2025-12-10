@@ -16,5 +16,5 @@ MonoBehaviour:
   eventPlace: 4
   eventType: 1
   sparklePrefab: {fileID: 1695421255909618417, guid: b1819d680033bc243a5433fd4c134f23, type: 3}
-  spawnObjVector: {x: 4.8, y: 2.4, z: 0}
+  spawnObjVector: {x: 3.35, y: 2.4, z: 0}
   SpawnObjQuaternion: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
