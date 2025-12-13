@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ContractSystem : MonoBehaviour
 {
+    [Header("Sound Setting")]
+    public SoundManager soundManager;
     [Header("Main Panel Setting")]
     public GameObject backGroundPanel; // RealBackGroundPanel
     public RectTransform contractPanel; // BackGroundPanel
@@ -86,6 +88,13 @@ public class ContractSystem : MonoBehaviour
         {
             exitButton.onClick.AddListener(() => OnClickExitButton());
         }
+
+        if (soundManager == null)
+            soundManager = SoundManager.Instance;
+        if(soundManager != null)
+        {
+            soundManager.PlayBGM(soundManager.Data.systemUiBgmTitle);
+        }
     }
 
     private void Update()
@@ -125,14 +134,14 @@ public class ContractSystem : MonoBehaviour
 
         contractPanel.rotation = Quaternion.Euler(0, 0, -40f);
 
-        // [ºñ¹ý 2] ¼Óµµ¸¦ 0.5ÃÊ·Î ÁÙ¿©¼­ ´õ ½ºÇÇµðÇÏ°Ô (±âÁ¸ 0.8ÃÊ -> 0.5ÃÊ)
+        // [ï¿½ï¿½ï¿½ 2] ï¿½Óµï¿½ï¿½ï¿½ 0.5ï¿½Ê·ï¿½ ï¿½Ù¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Çµï¿½ï¿½Ï°ï¿½ (ï¿½ï¿½ï¿½ï¿½ 0.8ï¿½ï¿½ -> 0.5ï¿½ï¿½)
         float duration = 1.2f;
 
-        // 1. À§Ä¡ ÀÌµ¿ (À§¿¡¼­ ¾Æ·¡·Î)
+        // 1. ï¿½ï¿½Ä¡ ï¿½Ìµï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ï¿½ï¿½)
         contractPanel.DOAnchorPos(targetPostion, duration).SetEase(Ease.OutBack);
 
-        // 2. È¸Àü º¹±¸ (»ßµüÇÑ °¢µµ -> 0µµ)
-        // ³»·Á¿À¸é¼­ °¢µµ°¡ µü ¸ÂÃçÁö¸é Äè°¨ÀÌ µì´Ï´Ù.
+        // 2. È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ßµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ -> 0ï¿½ï¿½)
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è°¨ï¿½ï¿½ ï¿½ï¿½Ï´ï¿½.
         contractPanel.DORotate(Vector3.zero, duration).SetEase(Ease.OutBack);
 
     }
