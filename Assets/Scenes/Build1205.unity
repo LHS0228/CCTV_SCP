@@ -12033,7 +12033,7 @@ PlayableDirector:
   m_GameObject: {fileID: 580823133}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 7c22b8aacec6a7f4ea588dc7703eed4d, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 384ad67bb5779244da14a1ac2fdd5a51, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -15725,9 +15725,9 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 745785029}
-          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-          m_MethodName: OptionOn
+        - m_Target: {fileID: 1429709052}
+          m_TargetAssemblyTypeName: DaySystem, Assembly-CSharp
+          m_MethodName: ClearCheckDay
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -29904,7 +29904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDay: 5
-  nowDay: 5
+  nowDay: 4
   dayText: {fileID: 434739703}
   clockText: {fileID: 845401878}
   MINUTEUP_TIME: 3

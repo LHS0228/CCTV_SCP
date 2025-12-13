@@ -68,10 +68,18 @@ public class DaySystem : MonoBehaviour
         //만약 일정 시간(24시간)을 지나면. (Day 클리어)
         if (totalMinute >= 360 && !isDayClear) {
             isDayClear = true;
-
-            NextDayEvent();
-            Debug.Log("게임 클리어");
             GameManager.Instance.isGameStop = true;
+
+            if (DaySystem.Instance.GetNowDay() >= 5)
+            {
+                ExecutionTimeLineManager.instance.PlayDayTimeline(1);
+            }
+
+            else
+            {
+                NextDayEvent();
+                Debug.Log("게임 클리어");
+            }
         }
         else
             TimeUpdate();
@@ -123,6 +131,15 @@ public class DaySystem : MonoBehaviour
             SceneManager.LoadScene(1); //똑같은 맵 이동. (현재 플레이중인 씬(날짜 업데이트 후 )
         }
     }
+
+    public void ClearCheckDay()
+    {
+        if(GetNowDay() >= 5)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
     public string GetClockText()
     {
         int hour = totalMinute / 60;
