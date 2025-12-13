@@ -29368,7 +29368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDay: 5
-  nowDay: 1
+  nowDay: 5
   dayText: {fileID: 434739703}
   clockText: {fileID: 845401878}
   MINUTEUP_TIME: 3

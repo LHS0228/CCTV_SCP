@@ -30,11 +30,18 @@ public class SoundData : ScriptableObject
     [Tooltip("시간이 06:00에 도달해 일차 종료 씬에 진입 시 출력되는 알람시계 효과음")]
     public AudioClip systemUiDayEndEnterAlarmClock;         // 일차 종료 씬 진입
 
+    [Tooltip("일차 넘어갈떄& 게임 시작할때 체크하면 출력")]
+    public AudioClip ingameCheck;     // 체크가 존재하는 버튼 클릭
+
     [Tooltip("타이틀 씬 진입 시 출력되는 배경음악")]
     public AudioClip systemUiBgmTitle;                      // 타이틀씬 진입 BGM
 
     [Tooltip("1일차에 방에 처음 들어오면 메뉴얼 알람")]
     public AudioClip systemUiManualAlarm;                     // 1일차 첫 방 진입
+
+    [Tooltip("플레이어가 CCTV실에서 플레이중 반복재생")]
+    public AudioClip systemUiBGMingame;                     // 인게임 플레이중 재생
+
 
     [Tooltip("게임오버 씬 진입 시 출력되는 배경음악")]
     public AudioClip systemUiBgmGameOver;                   // 게임오버씬 진입 BGM
