@@ -2199,6 +2199,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &80577644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4972167997025983191, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+  m_PrefabInstance: {fileID: 859660323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &87396414
 GameObject:
   m_ObjectHideFlags: 0
@@ -23900,6 +23905,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104455d00cbed244594180f07c636ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protocolDoor: {fileID: 2040797952}
+  elevatorDoor: {fileID: 80577644}
+  playerCamera: {fileID: 330585543}
+  voiceText: {fileID: 559416045}
 --- !u!4 &1178887767
 Transform:
   m_ObjectHideFlags: 0
@@ -43164,6 +43173,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2040797952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4972167997025983191, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+  m_PrefabInstance: {fileID: 1217833393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2041781222
 GameObject:
   m_ObjectHideFlags: 0
