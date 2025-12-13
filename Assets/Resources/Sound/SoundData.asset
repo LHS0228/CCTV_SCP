@@ -59,9 +59,9 @@ MonoBehaviour:
   deathWireStrangle: {fileID: 8300000, guid: 0bc3fe35fd47f2646950773aba814ae7, type: 3}
   deathMaskCrowdLaugh: {fileID: 8300000, guid: 46aaccca0d2259c4080670ebbe8d5ed7, type: 3}
   deathMaskManLowLaugh: {fileID: 8300000, guid: 4607603614b024a42810dfc71a259265, type: 3}
-  deathTentaclePatternA: {fileID: 0}
-  deathTentaclePatternB: {fileID: 0}
-  deathTentaclePatternC: {fileID: 0}
+  deathTentacleBind: {fileID: 8300000, guid: 0d826d699f24df54e85190bbebe70834, type: 3}
+  deathTentaclePull: {fileID: 8300000, guid: 86f1281748bdddb47bd96f9daeaf0dba, type: 3}
+  deathTentacleEating: {fileID: 8300000, guid: ebbb97576012b494aa588a5b3e147a41, type: 3}
   protocolKeypadButtonClick: {fileID: 8300000, guid: 5c31c922a98e7264b9700c3104fe9fa4, type: 3}
   protocolLoadingLoop: {fileID: 8300000, guid: e23e94a7d1c322942a26c3176fd155f7, type: 3}
   protocolSuccess: {fileID: 8300000, guid: 7e23e34d74c4e61409cc6f4a943374d6, type: 3}
