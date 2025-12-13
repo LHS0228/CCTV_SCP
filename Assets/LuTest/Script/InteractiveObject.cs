@@ -221,6 +221,7 @@ public class InteractiveObject : MonoBehaviour
     }
     private void InteractBarrel()
     {
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameDrug);
         GameManager.Instance.anomalySystem.ClearSpecial();
     }
     private void InteractCrossingGat()
