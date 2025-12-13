@@ -18,6 +18,7 @@ MonoBehaviour:
   systemUiRetryButtonClick: {fileID: 8300000, guid: 9a232c99dffb6644cb4b3beab8d89b63, type: 3}
   systemUiDayEndEnterAlarmClock: {fileID: 8300000, guid: a9a99cb913cc9104f9cfb6ba83fe2b86, type: 3}
   systemUiBgmTitle: {fileID: 8300000, guid: 51f9e5ae0c774ac4cad8c08dedb5616b, type: 3}
+  systemUiManualAlarm: {fileID: 8300000, guid: b89dcfae723d0b04a9f865d0c2bf8f0c, type: 3}
   systemUiBgmGameOver: {fileID: 0}
   systemUiBgmEnding: {fileID: 0}
   ingamePlayerWalkConcrete: {fileID: 8300000, guid: 4c19ed33faa212448a8966be94dde021, type: 3}
@@ -48,6 +49,7 @@ MonoBehaviour:
   minigameFishingSuccessZoneLoop: {fileID: 8300000, guid: 873752e8fde33d94cacbdecf3d2ccab9, type: 3}
   minigameRhythmKeyInput: {fileID: 8300000, guid: 5c31c922a98e7264b9700c3104fe9fa4, type: 3}
   deathCommonStabilityZeroGeneratorExplode: {fileID: 8300000, guid: 735404a28b1299c429699d28e75738ee, type: 3}
+  deathCommonStabilityZeroProtocolAnnounce: {fileID: 8300000, guid: b7d1bdf62ee471a4ba4a7a54eb90dc50, type: 3}
   deathCommonSirenLoopBeforeDeath: {fileID: 8300000, guid: 2bc51c29644fa3f46b5f455deaa31fab, type: 3}
   deathCommonWindowBreak: {fileID: 8300000, guid: e8957b7972e110f4eb138f3a828b3219, type: 3}
   deathWireWhipSwing: {fileID: 8300000, guid: 6fa714981be4b9d46939324a823f2ac2, type: 3}
@@ -62,3 +64,13 @@ MonoBehaviour:
   protocolLoadingLoop: {fileID: 8300000, guid: e23e94a7d1c322942a26c3176fd155f7, type: 3}
   protocolSuccess: {fileID: 8300000, guid: 7e23e34d74c4e61409cc6f4a943374d6, type: 3}
   protocolFail: {fileID: 8300000, guid: 0cac0bea409cab845b9e286dd7777bbd, type: 3}
+  RobotDay1: {fileID: 8300000, guid: 3f9a69d4d3b6c1547b0015942e03c35f, type: 3}
+  RobotDay2: {fileID: 8300000, guid: b3be8bee167c2cd4c8277828abe0a2f1, type: 3}
+  RobotDay3: {fileID: 8300000, guid: 58e137a26f5800f47b5fa2dd811ef80a, type: 3}
+  RobotDay4: {fileID: 8300000, guid: 65c72fc7dd29f0649bf81f9b60c90926, type: 3}
+  RobotDay5: {fileID: 8300000, guid: d5d124f8694d65c419fa18887a258737, type: 3}
+  EDCongratulation: {fileID: 8300000, guid: b80c0575dc18d234281e379d67e59d36, type: 3}
+  EDDelete: {fileID: 8300000, guid: 37589f3081259714ebffe7613caf77f8, type: 3}
+  EDElevatorcrack: {fileID: 8300000, guid: 36b16124da566084d9258d874f68e35a, type: 3}
+  EDElevatorboom: {fileID: 8300000, guid: d8516b5954af1654e9c3c7095fbd3e44, type: 3}
+  EDNewAdmin: {fileID: 8300000, guid: b77c617540ae44f449ae51dab5dd4346, type: 3}

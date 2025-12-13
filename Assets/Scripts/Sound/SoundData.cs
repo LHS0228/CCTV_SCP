@@ -33,6 +33,9 @@ public class SoundData : ScriptableObject
     [Tooltip("타이틀 씬 진입 시 출력되는 배경음악")]
     public AudioClip systemUiBgmTitle;                      // 타이틀씬 진입 BGM
 
+    [Tooltip("1일차에 방에 처음 들어오면 메뉴얼 알람")]
+    public AudioClip systemUiManualAlarm;                     // 1일차 첫 방 진입
+
     [Tooltip("게임오버 씬 진입 시 출력되는 배경음악")]
     public AudioClip systemUiBgmGameOver;                   // 게임오버씬 진입 BGM
 
@@ -166,6 +169,9 @@ public class SoundData : ScriptableObject
     [Tooltip("안정수치 0에 진입 시 불꺼짐과 함께 출력되는 발전기 폭발음")]
     public AudioClip deathCommonStabilityZeroGeneratorExplode;  // 안정수치 0 진입
 
+    [Tooltip("안정수치 0에 진입 시 재생되는 로봇 아나운서 음성")]
+    public AudioClip deathCommonStabilityZeroProtocolAnnounce;  // 안정수치 0 진입
+
     [Tooltip("창문 깨지는 소리 출력 이후, 데스신 출력 때까지 반복되는 사이렌 소리")]
     public AudioClip deathCommonSirenLoopBeforeDeath;           // 안정수치 0~데스신 사이렌
 
@@ -223,4 +229,46 @@ public class SoundData : ScriptableObject
 
     [Tooltip("틀린 프로토콜 코드를 넣어 실패 시 출력되는 효과음")]
     public AudioClip protocolFail;                              // 실패 사운드
+
+    // =========================
+    // 일차별 안내음성
+    // =========================
+
+    [Header("일차별 안내음성(복도)")]
+
+    [Tooltip("1일차에 복도 진입시 재생되는 소리")]
+    public AudioClip RobotDay1;                 // 1일차에 엘베에서 나와서 복도 진입하면 재생
+
+    [Tooltip("2일차에 복도 진입시 재생되는 소리")]
+    public AudioClip RobotDay2;                 // 2일차에 엘베에서 나와서 복도 진입하면 재생
+
+    [Tooltip("3일차에 복도 진입시 재생되는 소리")]
+    public AudioClip RobotDay3;                 // 3일차에 엘베에서 나와서 복도 진입하면 재생
+
+    [Tooltip("4일차에 복도 진입시 재생되는 소리")]
+    public AudioClip RobotDay4;                 // 4일차에 엘베에서 나와서 복도 진입하면 재생
+
+    [Tooltip("5일차에 복도 진입시 재생되는 소리")]
+    public AudioClip RobotDay5;                 // 5일차에 엘베에서 나와서 복도 진입하면 재생
+
+    // =========================
+    // 엔딩 사용 음성
+    // =========================
+
+    [Header("엔딩 사용 음성")]
+
+    [Tooltip("업무 마침 축하(복도->엘베)")]
+    public AudioClip EDCongratulation;                 // 플레이어가 엔딩전용 맵 스폰되면 재생
+
+    [Tooltip("기밀 유출가능성 확인하고 말소한다고함(엘베안에서)")]
+    public AudioClip EDDelete;                 // 플레이어가 엘베 타고 문 닫힌 뒤 3초 후
+
+    [Tooltip("엘베 덜컹거리는소리")]
+    public AudioClip EDElevatorcrack;                 // EDDelete 재생 완료되고 EDElevatorboom전까지 반복재생. 이떄 화면 흔들리게
+
+    [Tooltip("엘베 추락해서 터지는소리")]
+    public AudioClip EDElevatorboom;                 // 이거 재생과 동시에 검은화면으로 바로 변경. 이거 재생 시작이랑 동시에 화면 크게한번 흔들리게
+
+    [Tooltip("새 관리자 뽑는 소리(EDElevatorboom재생끝나고)")]
+    public AudioClip EDNewAdmin;                 // 이거 나오면서 엔딩씬 패널 띄우기
 }
