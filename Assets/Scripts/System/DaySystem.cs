@@ -12,8 +12,8 @@ public class DaySystem : MonoBehaviour
     //날짜
     [SerializeField, Header("최대 날")]
     private int maxDay = 5;
-    [SerializeField, Header("rks")]
-    private /*static*/ int nowDay = 1;
+    [SerializeField, Header("현재 날짜")]
+    private static int nowDay = 1;
 
     //시간
     private int totalMinute;
