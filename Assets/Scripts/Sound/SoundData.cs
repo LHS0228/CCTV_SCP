@@ -209,14 +209,14 @@ public class SoundData : ScriptableObject
 
     [Header("데스신 - 촉수 미상개체 (플레이스홀더)")]
 
-    [Tooltip("TODO: 촉수 미상개체 데스신용 사운드 1")]
-    public AudioClip deathTentaclePatternA;
+    [Tooltip("TODO: 촉수 미상개체 데스신용 발목에 촉수 묶임")]
+    public AudioClip deathTentacleBind;
 
-    [Tooltip("TODO: 촉수 미상개체 데스신용 사운드 2")]
-    public AudioClip deathTentaclePatternB;
+    [Tooltip("TODO: 촉수 미상개체 데스신용 플레이어 당겨짐")]
+    public AudioClip deathTentaclePull;
 
-    [Tooltip("TODO: 촉수 미상개체 데스신용 사운드 3")]
-    public AudioClip deathTentaclePatternC;
+    [Tooltip("TODO: 촉수 미상개체 데스신용 촉수가 씹는소리")]
+    public AudioClip deathTentacleEating;
 
 
     // =========================
