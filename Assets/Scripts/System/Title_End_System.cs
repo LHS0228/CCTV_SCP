@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,9 @@ public class Title_End_System : MonoBehaviour
     [SerializeField] private GameObject protocolDoor;
     [SerializeField] private GameObject elevatorDoor;
     [SerializeField] private GameObject playerCamera;
+    [SerializeField] private TextMeshProUGUI voiceText;
+
+    private AudioSource saveAudio;
 
     private int enddingCount = 0;
 
@@ -22,6 +26,7 @@ public class Title_End_System : MonoBehaviour
             case 0:
                 protocolDoor.GetComponent<Animator>().Play("Open");
                 SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.ingameDoorOpenHydraulic, protocolDoor.transform.position, 10, false);
+                voiceText.text = "관리자32, 당신의 업무 기간이 종료되었습니다. 축하합니다.";
                 Debug.Log("실행됨");
                 break;
 
@@ -45,16 +50,22 @@ public class Title_End_System : MonoBehaviour
                 break;
 
             case 5:
+                voiceText.text = "기밀 누설 가능성 확인. 말소를 진행합니다.";
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.EDDelete);
                 break;
 
             case 6:
-                SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.EDElevatorcrack, elevatorDoor.transform.position, 10, true);
+                saveAudio = SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.EDElevatorcrack, elevatorDoor.transform.position, 10, true);
                 StartCoroutine(CameraShake(0.05f, 200));
                 break;
             case 7:
-                SoundManager.Instance.StopAllGlobalSFX();
+                SoundManager.Instance.StopSFX(saveAudio);
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.EDElevatorboom);
+                break;
+
+            case 8:
+                Cursor.lockState = CursorLockMode.None; // 자유롭게 이동
+                Cursor.visible = true; // 커서 보임
                 break;
             default:
                 Debug.Log("Error:지정되어있지 않은 문");
