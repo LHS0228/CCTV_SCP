@@ -10,8 +10,10 @@ public class DaySystem : MonoBehaviour
     public static DaySystem Instance;
 
     //날짜
+    [SerializeField, Header("최대 날")]
     private int maxDay = 5;
-    private static int nowDay = 1;
+    [SerializeField, Header("rks")]
+    private /*static*/ int nowDay = 1;
 
     //시간
     private int totalMinute;

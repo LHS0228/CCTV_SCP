@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     [Header("세팅 해야되는 시스템들")]
     public AnomalySystem anomalySystem;
     public GameObject player;
+    public GameObject voiceTextBox;
+    public TextMeshProUGUI voiceText;
 
     public bool isGameStop;
     [HideInInspector] public bool isTimeStop;
