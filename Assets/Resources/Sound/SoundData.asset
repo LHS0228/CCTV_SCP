@@ -26,6 +26,7 @@ MonoBehaviour:
   ingamePlayerWalkConcrete: {fileID: 8300000, guid: 4c19ed33faa212448a8966be94dde021, type: 3}
   ingameCctvZoomIn: {fileID: 8300000, guid: 2826be2fa1694ab4c86690a34c465d09, type: 3}
   ingameTabletZoomIn: {fileID: 8300000, guid: 2826be2fa1694ab4c86690a34c465d09, type: 3}
+  ingameDrug: {fileID: 8300000, guid: 8bb6dd0031a378b4cba48e59242edba9, type: 3}
   ingameCctvBurnButtonClick: {fileID: 8300000, guid: 38d107c5d46799940b91d4eb7b1cf1be, type: 3}
   ingameCctvShockButtonClick: {fileID: 8300000, guid: 441940d3bb4466e4c98b562d9fd9c3d9, type: 3}
   ingameCctvResonanceButtonClick: {fileID: 8300000, guid: a942fbe4dcb078b4cbb919cc5ef958f2, type: 3}

@@ -65,6 +65,8 @@ public class SoundData : ScriptableObject
     [Tooltip("F를 눌러 태블릿을 확대할 때 출력")]
     public AudioClip ingameTabletZoomIn;                    // 태블릿 확대
 
+    [Tooltip("F를 눌러 약을 먹을떄 출력")]
+    public AudioClip ingameDrug;                    // 약통 
 
     [Header("인게임 플레이 - CCTV 대처 버튼 조작")]
 
