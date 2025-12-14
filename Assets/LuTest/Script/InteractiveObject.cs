@@ -197,17 +197,20 @@ public class InteractiveObject : MonoBehaviour
 
     void InteractLeftMonitor()
     {
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameCctvZoomIn);
         cctvManager.CCTV_Pos_Rot(CCTVLocation.Left);
         Debug.Log("��");
     }
     void InteractCenterMonitor()
     {
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameCctvZoomIn);
         cctvManager.CCTV_Pos_Rot(CCTVLocation.Center);
         Debug.Log("��");
     }
 
     void InteractRightMonitor()
     {
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameCctvZoomIn);
         cctvManager.CCTV_Pos_Rot(CCTVLocation.Right);
         Debug.Log("��");
     }

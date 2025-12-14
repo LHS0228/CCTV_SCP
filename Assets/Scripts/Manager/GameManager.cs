@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -42,8 +43,8 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
 
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -67,6 +68,10 @@ public class GameManager : MonoBehaviour
     {
         protocolNum = Random.Range(1000, 9999);
         ExecutionTimeLineManager.instance.PlayDayTimeline(0);
+        if (SceneManager.GetActiveScene().buildIndex == 1)//GameSceneIndex
+        {
+            SoundManager.Instance?.PlayBGM(SoundManager.Instance.Data.systemUiBGMIngame);
+        }
     }
 
     /// <summary>
