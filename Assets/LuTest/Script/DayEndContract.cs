@@ -13,10 +13,10 @@ public class DayEndContract : MonoBehaviour
     {
         get
         {
-            // ¸¸¾à ÀÎ½ºÅÏ½º°¡ ºñ¾îÀÖ´Ù¸é
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö´Ù¸ï¿½
             if (_instance == null)
             {
-                // ¾À ¾È¿¡ ÀÖ´Â DayEndContract¸¦ Ã£¾Æº»´Ù
+                // ï¿½ï¿½ ï¿½È¿ï¿½ ï¿½Ö´ï¿½ DayEndContractï¿½ï¿½ Ã£ï¿½Æºï¿½ï¿½ï¿½
                 _instance = FindFirstObjectByType<DayEndContract>();
             }
             return _instance;
@@ -75,10 +75,10 @@ public class DayEndContract : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            ShowContract();
-        }
+        //if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        //{
+        //    ShowContract();
+        //}
     }
 
     public void ShowContract()
@@ -86,7 +86,7 @@ public class DayEndContract : MonoBehaviour
 
         isContractOn = true;
 
-        Debug.Log("´­¸²");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½");
         if (backGroundPanel != null)
         {
             backGroundPanel.SetActive(true);
@@ -100,7 +100,7 @@ public class DayEndContract : MonoBehaviour
             contractPanel.gameObject.SetActive(true);
             contractPanel.anchoredPosition = new Vector2(0, -1500f);
 
-            // ÀÌÁ¦ -1500 À§Ä¡¿¡¼­ TargetPosition(0,0)À¸·Î ÀÌµ¿
+            // ï¿½ï¿½ï¿½ï¿½ -1500 ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ TargetPosition(0,0)ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
             contractPanel.DOAnchorPos(targetPosition, slideDuration).SetEase(Ease.OutBack);
         }
         dayText.text = "Day " + DaySystem.Instance.GetNowDay().ToString() + " Report";

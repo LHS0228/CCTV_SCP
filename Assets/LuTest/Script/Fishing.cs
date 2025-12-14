@@ -80,7 +80,7 @@ public class Fishing : MonoBehaviour
         int day = GetDay();
 
         float zoneRange = 30f;
-        float makerVelocity = 1.5f;
+        float makerVelocity = 3f;
         float gravityVelocity = 7f;
 
         if (day == 1) { zoneRange = 15f; }
