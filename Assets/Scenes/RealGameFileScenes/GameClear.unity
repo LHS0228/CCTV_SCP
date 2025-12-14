@@ -2388,6 +2388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bgmSource: {fileID: 0}
   _globalSfxSource: {fileID: 0}
+  volumeData: {fileID: 11400000, guid: b14b831e6df30df459977860626b77c5, type: 2}
 --- !u!1 &90487211
 GameObject:
   m_ObjectHideFlags: 0
@@ -32435,6 +32436,7 @@ GameObject:
   - component: {fileID: 1567339686}
   - component: {fileID: 1567339688}
   - component: {fileID: 1567339687}
+  - component: {fileID: 1567339689}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -32508,6 +32510,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567339685}
   m_CullTransparentMesh: 1
+--- !u!114 &1567339689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567339685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb106443324274246b5b66d2d0280f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeData: {fileID: 11400000, guid: b14b831e6df30df459977860626b77c5, type: 2}
+  masterVolumeSlider: {fileID: 1732675527}
+  bgmVolumeSlider: {fileID: 2121071819}
+  sfxVolumeSlider: {fileID: 345140934}
 --- !u!4 &1571297566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4005071291129230519, guid: d84dd8bf81f04d946bbd34bc605c435b, type: 3}

@@ -16,7 +16,9 @@ public class SoundManager : MonoBehaviour
     // [추가됨] 현재 재생 중인, 제어 가능한(Stoppable/3D) SFX 소스들을 관리하는 리스트
     private List<AudioSource> _activeSfxSources = new List<AudioSource>();
 
+
     [Header("Volume Settings (0.0 ~ 1.0)")]
+    public SoundVolumeData volumeData;
     [Range(0f, 1f)] public static float MasterVolume = 1.0f;
     [Range(0f, 1f)] public static float BgmVolume = 1.0f;
     [Range(0f, 1f)] public static float SfxVolume = 1.0f;
@@ -37,6 +39,10 @@ public class SoundManager : MonoBehaviour
 
     private void Initialize()
     {
+        MasterVolume = volumeData.masterVolume;
+        BgmVolume = volumeData.bgmVolume;
+        SfxVolume = volumeData.sfxVolume;
+
         _soundData = Resources.Load<SoundData>("Sound/SoundData");
 
         if (_bgmSource == null)
@@ -63,6 +69,7 @@ public class SoundManager : MonoBehaviour
     public void SetMasterVolume(float volume)
     {
         MasterVolume = Mathf.Clamp01(volume);
+        volumeData.masterVolume = MasterVolume;
         UpdateBgmVolume();
         UpdateAllSfxVolume(); // [추가됨] 마스터 볼륨 변경 시 SFX도 갱신
     }
@@ -70,12 +77,14 @@ public class SoundManager : MonoBehaviour
     public void SetBgmVolume(float volume)
     {
         BgmVolume = Mathf.Clamp01(volume);
+        volumeData.bgmVolume = BgmVolume;
         UpdateBgmVolume();
     }
 
     public void SetSfxVolume(float volume)
     {
         SfxVolume = Mathf.Clamp01(volume);
+        volumeData.sfxVolume = SfxVolume;
         UpdateAllSfxVolume(); // [추가됨] SFX 볼륨 변경 시 실시간 갱신
     }
 

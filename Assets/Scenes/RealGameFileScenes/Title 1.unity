@@ -445,10 +445,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 419106758}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetMasterVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 184467533}
   - component: {fileID: 184467535}
   - component: {fileID: 184467534}
+  - component: {fileID: 184467536}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -541,6 +542,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184467532}
   m_CullTransparentMesh: 1
+--- !u!114 &184467536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184467532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb106443324274246b5b66d2d0280f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeData: {fileID: 11400000, guid: b14b831e6df30df459977860626b77c5, type: 2}
+  masterVolumeSlider: {fileID: 128218258}
+  bgmVolumeSlider: {fileID: 1906193852}
+  sfxVolumeSlider: {fileID: 1802211679}
 --- !u!1001 &287422248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -834,6 +851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bgmSource: {fileID: 0}
   _globalSfxSource: {fileID: 0}
+  volumeData: {fileID: 11400000, guid: b14b831e6df30df459977860626b77c5, type: 2}
 --- !u!4 &419106759
 Transform:
   m_ObjectHideFlags: 0
@@ -8664,10 +8682,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 419106758}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetSfxVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9352,10 +9370,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 419106758}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetBgmVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
