@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ButtonSoundAdder : MonoBehaviour
 {
-    //public AudioClip btnClickSound;
+    public AudioClip btnClickSound = null;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,10 +11,10 @@ public class ButtonSoundAdder : MonoBehaviour
         SoundManager soundManager = SoundManager.Instance;
         if (btn != null && soundManager != null)
         {
-            AudioClip audioClip = soundManager.Data.ingameCctvChange;
-            btn.onClick.AddListener(()=> SoundManager.Instance.PlayGlobalSFX(audioClip));
+            if (btnClickSound == null)
+                btnClickSound = soundManager.Data.ingameCctvChange;
+            btn.onClick.AddListener(()=> SoundManager.Instance.PlayGlobalSFX(btnClickSound));
         }
-        Destroy(this);
     }
 
     // Update is called once per frame
