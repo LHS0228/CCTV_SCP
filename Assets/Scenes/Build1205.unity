@@ -13580,6 +13580,7 @@ GameObject:
   - component: {fileID: 654306793}
   - component: {fileID: 654306795}
   - component: {fileID: 654306794}
+  - component: {fileID: 654306796}
   m_Layer: 0
   m_Name: ProtocolSystem
   m_TagString: Untagged
@@ -13640,6 +13641,18 @@ MonoBehaviour:
   protocol_FinalChased: 0
   checkCollider: {fileID: 0}
   protocolKeyPad: {fileID: 1969678505}
+--- !u!114 &654306796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654306792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c798379198480044b1f02dd111615f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &658936116
 PrefabInstance:
   m_ObjectHideFlags: 0

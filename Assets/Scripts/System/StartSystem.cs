@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class StartSystem : MonoBehaviour
 {
+    public static StartSystem instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         GameManager.Instance.isGameStop = true;
@@ -61,7 +66,10 @@ public class StartSystem : MonoBehaviour
         SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.ingameDoorOpenHydraulic, GameManager.Instance.anomalySystem.specialObjects[2].transform.position, 20, false);
         GameManager.Instance.anomalySystem.specialObjects[2].GetComponent<Animator>().Play("Open");
     }
-
+    public void TriggerVoiceTextOnFunc(string text, float time)
+    {
+        StartCoroutine(VoiceTextOn(text, time));
+    }
     private IEnumerator VoiceTextOn(string text, float time)
     {
         GameManager.Instance.voiceTextBox.SetActive(true);
