@@ -40,8 +40,7 @@ public class SoundData : ScriptableObject
     public AudioClip systemUiManualAlarm;                     // 1일차 첫 방 진입
 
     [Tooltip("플레이어가 CCTV실에서 플레이중 반복재생")]
-    public AudioClip systemUiBGMingame;                     // 인게임 플레이중 재생
-
+    public AudioClip systemUiBGMIngame;                     // 인게임 플레이중 재생
 
     [Tooltip("게임오버 씬 진입 시 출력되는 배경음악")]
     public AudioClip systemUiBgmGameOver;                   // 게임오버씬 진입 BGM
@@ -61,6 +60,9 @@ public class SoundData : ScriptableObject
 
     [Tooltip("F를 눌러 CCTV를 확대할 때 출력")]
     public AudioClip ingameCctvZoomIn;                      // CCTV 확대
+
+    [Tooltip("CCTV UI의 좌우버튼을 눌러 화면을 변경할 때 출력")]
+    public AudioClip ingameCctvChange;                      // CCTV 변경
 
     [Tooltip("F를 눌러 태블릿을 확대할 때 출력")]
     public AudioClip ingameTabletZoomIn;                    // 태블릿 확대

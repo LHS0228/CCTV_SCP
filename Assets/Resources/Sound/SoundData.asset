@@ -20,11 +20,12 @@ MonoBehaviour:
   ingameCheck: {fileID: 8300000, guid: 3a89bed242081c544bf19c0f1d78bd57, type: 3}
   systemUiBgmTitle: {fileID: 8300000, guid: 51f9e5ae0c774ac4cad8c08dedb5616b, type: 3}
   systemUiManualAlarm: {fileID: 8300000, guid: b89dcfae723d0b04a9f865d0c2bf8f0c, type: 3}
-  systemUiBGMingame: {fileID: 8300000, guid: 4fa6576aedbd3d644898abb8d087bf67, type: 3}
+  systemUiBGMIngame: {fileID: 8300000, guid: 4fa6576aedbd3d644898abb8d087bf67, type: 3}
   systemUiBgmGameOver: {fileID: 0}
   systemUiBgmEnding: {fileID: 0}
   ingamePlayerWalkConcrete: {fileID: 8300000, guid: 4c19ed33faa212448a8966be94dde021, type: 3}
   ingameCctvZoomIn: {fileID: 8300000, guid: 2826be2fa1694ab4c86690a34c465d09, type: 3}
+  ingameCctvChange: {fileID: 8300000, guid: 9a232c99dffb6644cb4b3beab8d89b63, type: 3}
   ingameTabletZoomIn: {fileID: 8300000, guid: 2826be2fa1694ab4c86690a34c465d09, type: 3}
   ingameDrug: {fileID: 8300000, guid: 8bb6dd0031a378b4cba48e59242edba9, type: 3}
   ingameCctvBurnButtonClick: {fileID: 8300000, guid: 38d107c5d46799940b91d4eb7b1cf1be, type: 3}
