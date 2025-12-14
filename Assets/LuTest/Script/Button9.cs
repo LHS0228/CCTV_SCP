@@ -10,26 +10,26 @@ public class Button9 : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI DisplayNum;
 
-    // ¹öÆ° 9°³ 
+    // ï¿½ï¿½Æ° 9ï¿½ï¿½ 
     [SerializeField]
     private Button[] buttons;
 
-    // ÆÐ³Î °ü¸®
+    // ï¿½Ð³ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     private GameObject button9Panel;
 
-    // º¸¿©ÁÙ ¹öÆ° ¸®½ºÆ®, ´©¸¥ ¹öÆ° ¸®½ºÆ®
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½Æ®
     private List<int> buttonSequence = new List<int>();
     private List<int> inputSequence = new List<int>();
 
-    // ¹öÆ°¿¡ »ö±ò ºÎ¿©ÇÏ·Á°í ¸¸µç °Å
+    // ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     private Color defaultColor = Color.white;
     private Color lightColor = Color.cyan;
 
-    // ¹öÆ° ¾Ë·ÁÁÖ´Â ½Ã°£
+    // ï¿½ï¿½Æ° ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½Ã°ï¿½
     private float lightDuration = 0.5f;
 
-    // ¹öÆ°À» ¾Ë·ÁÁÖ°í ÀÖ´Â°¡? À½ ÀÌ°Ç ¼ø¼­´ë·Î ¹öÆ° ³ª¿Ã ¶§ ÀÔ·Â ¸ø ¹Þ°Ô ÇÏ´Â? ±×·±´À³¦À¸·Î ¾¸
+    // ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö°ï¿½ ï¿½Ö´Â°ï¿½? ï¿½ï¿½ ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½Þ°ï¿½ ï¿½Ï´ï¿½? ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     private bool isStagePlaying = false;
 
     [SerializeField]
@@ -42,7 +42,7 @@ public class Button9 : MonoBehaviour
 
     private void Awake()
     {
-       // °¢°¢ÀÇ ¹öÆ° ¹è¿­¿¡ OnClick ±â´ÉÀ» ³Ö¾îÁÜ
+       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½è¿­ï¿½ï¿½ OnClick ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½
         for(int i = 0; i < buttons.Length; i++)
         {
             int index = i;
@@ -54,7 +54,7 @@ public class Button9 : MonoBehaviour
 
         exitButton.onClick.AddListener(() => ClickExitButton());
     }
-    // ½ÃÀÛ½Ã ÆÐ³Î ²¨
+    // ï¿½ï¿½ï¿½Û½ï¿½ ï¿½Ð³ï¿½ ï¿½ï¿½
     private void Start()
     {
         button9Panel.SetActive(false);
@@ -75,8 +75,8 @@ public class Button9 : MonoBehaviour
     {
         return DaySystem.Instance.GetNowDay();
     }
-    // ÅÂºí¸´¿¡¼­ ½ºÅ¸Æ® ¹öÆ°À» ´­·¶À» ¶§ ½ÇÇàµÇ´Â ÇÔ¼öÀÌ¸ç, ÆÐ³Î ÄÑ±â,
-    // ½ºÅ×ÀÌÁö ÃÊ±âÈ­, ¹öÆ° ¼ø¼­ ÃÊ±âÈ­, ½ºÅ×ÀÌÁö ½ÃÀÛÀÌ ÀÖÀ½.
+    // ï¿½Âºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸Æ® ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½ï¿½Ì¸ï¿½, ï¿½Ð³ï¿½ ï¿½Ñ±ï¿½,
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­, ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
     public void StartButton9()
     {
         if (tabletSceneManager.isPlaying)
@@ -88,12 +88,12 @@ public class Button9 : MonoBehaviour
         }
     }
     
-    // ½ºÅ×ÀÌÁö ½ÃÀÛ ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     private IEnumerator StageStart()
     {
-        // ½ºÅ×ÀÌÁö ½ÃÀÛ º¯¼ö È°¼ºÈ­ [¹öÆ° ÄÑÁú ¶§ ÀÔ·Â ¸·±âÀ§ÇÔ]
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ [ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]
         isStagePlaying = true;
-        // ÀÔ·Â ¹× ¼ø¼­ ÃÊ±âÈ­
+        // ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
         buttonSequence.Clear();
         inputSequence.Clear();
 
@@ -118,89 +118,93 @@ public class Button9 : MonoBehaviour
             lightDuration = 0.3f;
         }
 
-        // ¹öÆ° Áßº¹ ÄÑÁüÀ» ¹æÁöÇÏ±âÀ§ÇÑ ¿¹ºñ¿ë ¸®½ºÆ® Ãß°¡ ¹× ¸®½ºÆ®¿¡ ¹öÆ° ¼ö¸¸Å­ ¹è¿­¿¡ ³Ö±â
+        // ï¿½ï¿½Æ° ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ß°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½Å­ ï¿½è¿­ï¿½ï¿½ ï¿½Ö±ï¿½
         List<int> preparatoryList = new List<int>();
         for(int i = 0; i < buttons.Length; i++)
         {
             preparatoryList.Add(i);
         }
 
-        // ½ºÅ×ÀÌÁö º° È°¼ºÈ­ ¹öÆ° ¼ö ¹× ¼ø¼­ Á¤ÇÏ±â
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È°ï¿½ï¿½È­ ï¿½ï¿½Æ° ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
         for(int i = 0; i < 4 + difficultyLevel; i++)
         {
-            // ¿¹ºñ¿ë ¸®½ºÆ®¿¡ 2°³ ÀÌ»ó ÀÖÀ» ¶§ ÀÌ°É ¿Ö¾²³Ä ¼ø¼­¸¦ Random.Range·Î »ÌÀ»°Çµ¥
-            // Random.Range´Â (ÃÖ¼Ò, ÃÖ´ë)ÀÌ°í (0, 1) ÀÌ¶óÇßÀ»¶§ ÃÖ´ëÀÇ -1 ±îÁö »Ì´Â°Å¶ó 0¹Û¿¡ ¾È»ÌÀÓ È®Á¤
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì°ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Random.Rangeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½
+            // Random.Rangeï¿½ï¿½ (ï¿½Ö¼ï¿½, ï¿½Ö´ï¿½)ï¿½Ì°ï¿½ (0, 1) ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ -1 ï¿½ï¿½ï¿½ï¿½ ï¿½Ì´Â°Å¶ï¿½ 0ï¿½Û¿ï¿½ ï¿½È»ï¿½ï¿½ï¿½ È®ï¿½ï¿½
             if(preparatoryList.Count > 1)
             {
-                // ·£´ýÀ¸·Î »ÌÀº ¼ýÀÚ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 int random = Random.Range(0, preparatoryList.Count);
-                // »ÌÀº ¼ýÀÚ ³Ö±âÀ§ÇÑ º¯¼ö 1°³ ´õ
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½
                 int randomNumber = preparatoryList[random];
-                // ¹öÆ° ¼ø¼­ ¸®½ºÆ®¿¡ Ãß°¡
+                // ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½
                 buttonSequence.Add(randomNumber);
-                // »ÌÀº ¼ýÀÚ ¿¹ºñ ¸®½ºÆ®¿¡¼­ Á¦°Å
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 preparatoryList.RemoveAt(random);
             }
         }
         DisplayInputNumber();
         yield return new WaitForSeconds(1f);
 
-        // ·£´ýÀ¸·Î »ÌÀº ¸®½ºÆ® ´ÙºÁ¹ö¸®±â
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ùºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         foreach(int index in buttonSequence)
         {
-            // ¹öÆ°ÀÇ »ö±ò ¹Ù²Ù±âÀ§ÇÑ image ÄÄÆ÷³ÍÆ® ºÒ·¯¿À±â
+            // ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù±ï¿½ï¿½ï¿½ï¿½ï¿½ image ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
             Image btColor = buttons[index].GetComponent<Image>();
 
             yield return new WaitForSeconds(lightDuration);
+            SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameKeypadLeadSignal);
             btColor.color = lightColor;
             yield return new WaitForSeconds(lightDuration);
             btColor.color = defaultColor;
         }
         isStagePlaying = false;
-        Debug.Log($"ÇÃ·¹ÀÌ Áß : {isStagePlaying}");
+        Debug.Log($"ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ : {isStagePlaying}");
 
     }
 
     private void OnClickButton(int buttonindex)
     {
-        // ½ºÅ×ÀÌÁö ÁøÇà ÁßÀÏ ¶§ [ºÒ ¹ÝÂ¦ÀÏ ¶§] ¾ÈÇÔ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ ï¿½ï¿½Â¦ï¿½ï¿½ ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½
         if (isStagePlaying)
         {
             return;
         }
 
-        // À§¿¡ °¢ ¹öÆ°¿¡ OnClick ±â´É ºÎ¿©Çß´Âµ¥ ´­·¶À» ¶§ ´©¸¥ ¹öÆ°ÀÇ ¹øÈ£¸¦ ¸®½ºÆ®¿¡ Ãß°¡ 
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ OnClick ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ß´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½ 
         inputSequence.Add(buttonindex);
 
         DisplayInputNumber();
-        // ³»°¡ ´©¸¥ ¹öÆ°ÀÇ ¼ö¿Í ¹öÆ°ÀÇ ¸®½ºÆ®¿Í ºñ±³ÇÏ¿© Æ²¸± °æ¿ì ¹Ù·Î Ä±
-        // ¿¹¸¦ µé¾î ¹öÆ°ÀÇ ¸®½ºÆ®°¡ { 0 , 1 , 2 }¶ó ÇßÀ» ¶§ 
-        // ¾ÆÁ÷ inputSequenceÀÇ ¸®½ºÆ®¿¡´Â {} ºñ¾îÀÖÀ½ ¸¸¾à 1¹øÂ° Ä­À» ´©¸£¸é 0ÀÌ µé¾î°¨
-        // ±×·¯¸é inputSequenceÀÇ ¸®½ºÆ®´Â { 0 }ÀÌ µÇ°í ÀÌ if¹® ½ÄÀ¸·Î °¡¸é
-        // count´Â 1ÀÌ µÇ´Ï±î
-        // inputSequence[0]ÀÇ °ªÀº 0 buttonSequence[0]ÀÇ °ªµµ 0 ÀÌ±â¿¡ ¼º°øÀÓ Æ²¸®¸é ³ª°¡¸®
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ Æ²ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ Ä±
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ { 0 , 1 , 2 }ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
+        // ï¿½ï¿½ï¿½ï¿½ inputSequenceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ {} ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½Â° Ä­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½î°¨
+        // ï¿½×·ï¿½ï¿½ï¿½ inputSequenceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ { 0 }ï¿½ï¿½ ï¿½Ç°ï¿½ ï¿½ï¿½ ifï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        // countï¿½ï¿½ 1ï¿½ï¿½ ï¿½Ç´Ï±ï¿½
+        // inputSequence[0]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0 buttonSequence[0]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0 ï¿½Ì±â¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ²ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (inputSequence[inputSequence.Count - 1] != buttonSequence[inputSequence.Count - 1])
         {
-            Debug.Log("½ÇÆÐ");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½");
+            SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
             EndGame();
             return;
         }
-        // ±×·¸°Ô Âß ¼º°øÇÏ°í µÎ ¹è¿­ÀÇ °¹¼ö°¡ ¸ÂÀ¸¸é ¶È°°ÀÌ ÃÆ´Ù´Â °Å±â¿¡ ¼º°ø
+        // ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È°ï¿½ï¿½ï¿½ ï¿½Æ´Ù´ï¿½ ï¿½Å±â¿¡ ï¿½ï¿½ï¿½ï¿½
         if (inputSequence.Count == buttonSequence.Count)
         {
             if (inputSequence.Count == 9)
             {
-                Debug.Log("5ÀÏÂ÷");
+                Debug.Log("5ï¿½ï¿½ï¿½ï¿½");
+                SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
                 EndGame();
             }
             else
             {
-                Debug.Log($"{DaySystem.Instance.GetNowDay()} ÀÏÂ÷ Å¬¸®¾î");
+                Debug.Log($"{DaySystem.Instance.GetNowDay()} ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½");
+                SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameSuccess);
                 StabilityManager.Instance.StabilizationUp(10, 1);
                 EndGame();
             }
         }
-        Debug.Log($"¹öÆ° {buttonindex + 1} ´­¸²");
+        Debug.Log($"ï¿½ï¿½Æ° {buttonindex + 1} ï¿½ï¿½ï¿½ï¿½");
     }
 
     private void DisplayInputNumber()
@@ -234,7 +238,7 @@ public class Button9 : MonoBehaviour
         }
     }
 
-    // ¾ÆÁ÷ ´ëÃæ ÇÔ
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     private void EndGame()
     {
         button9Panel.SetActive(false);

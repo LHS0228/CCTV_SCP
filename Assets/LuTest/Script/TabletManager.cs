@@ -112,6 +112,7 @@ public class TabletManager : MonoBehaviour
         }
         isOnTablet = true;
 
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameTabletZoomIn);
         StartCoroutine(MovingTabletCamera(true));
     }
 

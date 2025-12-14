@@ -7,37 +7,37 @@ using UnityEngine.UI;
 public class Fishing : MonoBehaviour
 {
     [SerializeField]
-    private GameObject fishingPanel; // ¹Ì´Ï °ÔÀÓ ÆÐ³Î
+    private GameObject fishingPanel; // ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½
 
     [SerializeField]
-    private RectTransform gaugeBarTransform; // °ÔÀÌÁö ¹Ù À§Ä¡
+    private RectTransform gaugeBarTransform; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡
     
     [SerializeField]
-    private RectTransform successZoneTransform; // ¼º°ø ¹üÀ§ À§Ä¡
+    private RectTransform successZoneTransform; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
 
     [SerializeField]
-    private RectTransform playerMakerTransform; // ÇÃ·¹ÀÌ¾î ¸¶Ä¿ À§Ä¡
+    private RectTransform playerMakerTransform; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½Ä¿ ï¿½ï¿½Ä¡
 
     [SerializeField]
-    private TextMeshProUGUI Timer; // Å¸ÀÌ¸Ó ÅØ½ºÆ®
+    private TextMeshProUGUI Timer; // Å¸ï¿½Ì¸ï¿½ ï¿½Ø½ï¿½Æ®
 
     [SerializeField]
-    private TextMeshProUGUI Progress; // ¼º°ø ¹üÀ§¿¡ ÀÖ´Â ½Ã°£ ÅØ½ºÆ®
+    private TextMeshProUGUI Progress; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ã°ï¿½ ï¿½Ø½ï¿½Æ®
 
-    private Rect gaugeBarRect; // width°ª °è»ê <- [¿ÀºêÁ§Æ® °¡·Î »çÀÌÁî]
-    private Rect successZoneRect; // width°ª °è»ê
+    private Rect gaugeBarRect; // widthï¿½ï¿½ ï¿½ï¿½ï¿½ <- [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]
+    private Rect successZoneRect; // widthï¿½ï¿½ ï¿½ï¿½ï¿½
 
-    private float makerspeed = 0.5f; // ¸¶Ä¿ ½ºÇÇµå
-    private float gravity = 0.8f; // ½ºÆäÀÌ½º ¹Ù ¾È´­·¶À» ¶§ ¶³¾îÁö´Â ¼Óµµ
+    private float makerspeed = 0.5f; // ï¿½ï¿½Ä¿ ï¿½ï¿½ï¿½Çµï¿½
+    private float gravity = 0.8f; // ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ ï¿½ï¿½ ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
 
-    private float totalTime = 10f; // ÃÑ ½Ã°£ 
-    private float successTime = 3f; // ¼º°ø¿¡ ÇÊ¿äÇÑ ½Ã°£
-    private float progressTime = 0f; // ¼º°ø ¹üÀ§¿¡ ¾ó¸¶³ª ÀÖ¾ú´ÂÁö È®ÀÎ
-    private float curTime = 0f; // ÇöÀç ½Ã°£ ±×³É ÀÌ°Ç Å¸ÀÌ¸Ó¶û ¿¬°üµÊ
-    private float playerVelocity = 0f; // ÇÃ·¹ÀÌ¾î ¼Óµµ <- ¸¶Ä¿¶û ¿¬°üµÊ
+    private float totalTime = 10f; // ï¿½ï¿½ ï¿½Ã°ï¿½ 
+    private float successTime = 3f; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+    private float progressTime = 0f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ó¸¶³ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+    private float curTime = 0f; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½×³ï¿½ ï¿½Ì°ï¿½ Å¸ï¿½Ì¸Ó¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private float playerVelocity = 0f; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Óµï¿½ <- ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    private bool isReeling = false; // Å° ´­¸§°ú ¿¬°üµÊ
-    private bool isFishingPlaying = false; // ¹Ì´Ï°ÔÀÓ ¿©ºÎ¿Í ¿¬°ü
+    private bool isReeling = false; // Å° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private bool isFishingPlaying = false; // ï¿½Ì´Ï°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     [SerializeField]
     TabletSceneManager tabletSceneManager;
@@ -54,11 +54,11 @@ public class Fishing : MonoBehaviour
     {
         if(tabletSceneManager.isPlaying)
         {
-            // ¹Ì´Ï°ÔÀÓ ½ÃÀÛ½Ã ÆÐ³Î È°¼ºÈ­ ¹× °ÔÀÓ ¿©ºÎ
+            // ï¿½Ì´Ï°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Û½ï¿½ ï¿½Ð³ï¿½ È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             fishingPanel.SetActive(true);
             isFishingPlaying = true;
 
-            // ÀÌ°Ç ¾Ë°ÚÁö ¹¹ ´ëÃæ ÃÊ±âÈ­ ³»¿ë
+            // ï¿½Ì°ï¿½ ï¿½Ë°ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½ï¿½ï¿½ï¿½
             curTime = totalTime;
             progressTime = 0f;
             playerVelocity = 0f;
@@ -66,7 +66,7 @@ public class Fishing : MonoBehaviour
             GetDay();
             SetDifficultyLevel();
 
-            // ¼º°ø ¹üÀ§ ¹èÄ¡ ÇÔ¼ö
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½Ô¼ï¿½
             SuccessZonePlacement();
         }
     }
@@ -103,9 +103,9 @@ public class Fishing : MonoBehaviour
     }
     private void Start()
     {
-        // °ÔÀÓ ½ÃÀÛ ½Ã ÆÐ³Î ºñÈ°¼ºÈ­ ¹× ¹Ì´Ï°ÔÀÓ¿¡ ¾²ÀÎ ¿ÀºêÁ§Æ®ÀÇ °ª °¡Á®¿À±â
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ð³ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½Ì´Ï°ï¿½ï¿½Ó¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         fishingPanel.SetActive(false);
-        // ÇØ´ç º¯¼öµéÀÌ °¡Áö°íÀÖ´Â Å©±â°ª ÁÖ±â
+        // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ Å©ï¿½â°ª ï¿½Ö±ï¿½
         gaugeBarRect = gaugeBarTransform.rect;
         successZoneRect = successZoneTransform.rect;
     }
@@ -122,17 +122,17 @@ public class Fishing : MonoBehaviour
 
         if (!isFishingPlaying) return;
 
-        // ¸Å¹ø ºÎ¸£´Â ÇÔ¼ö - ½Ã°£ È®ÀÎ, Å° ´­¸², ¼º°ø ¹üÀ§ ½Ã°£ È®ÀÎ
+        // ï¿½Å¹ï¿½ ï¿½Î¸ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ - ï¿½Ã°ï¿½ È®ï¿½ï¿½, Å° ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ È®ï¿½ï¿½
         CheckTimer();
         PressSpaceBar();
         CheckSuccessTime();
     }
 
-    // ·£´ýµÈ °÷¿¡ ¼º°ø ¹üÀ§ ¹èÄ¡ ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½Ô¼ï¿½
     private void SuccessZonePlacement()
     {
         float zoneHalfWidth = successZoneRect.width / 2;
-        // ¾Æ±î ¹Þ¾Æ¿Â °ÔÀÌÁö ¹Ù Å©±âÀÇ xÀÇ ÃÖ¼Ò°ª ÃÖ´ë°ª ¼±¾ð ±×´ÙÀ½ ·£´ýÀ¸·Î °ª ºÎ¸£±â
+        // ï¿½Æ±ï¿½ ï¿½Þ¾Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Å©ï¿½ï¿½ï¿½ï¿½ xï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½Ö´ë°ª ï¿½ï¿½ï¿½ï¿½ ï¿½×´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Î¸ï¿½ï¿½ï¿½
         float minX = gaugeBarRect.xMin + zoneHalfWidth;
         float maxX = gaugeBarRect.xMax - zoneHalfWidth;
         float randomX = Random.Range(minX, maxX);
@@ -143,30 +143,31 @@ public class Fishing : MonoBehaviour
             maxX = 0f;
         }
 
-        // ¼º°ø ¹üÀ§ÀÇ Pos XÀÇ °ªÀ» ·£´ýx ·Î ¹èÄ¡
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Pos Xï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½x ï¿½ï¿½ ï¿½ï¿½Ä¡
         successZoneTransform.anchoredPosition = new Vector2(randomX, successZoneTransform.anchoredPosition.y);
-        // ¾ê´Â Áß¾Ó ½ÃÀÛ
+        // ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ ï¿½ï¿½ï¿½ï¿½
         playerMakerTransform.anchoredPosition = new Vector2(0f, playerMakerTransform.anchoredPosition.y);
     }
 
     private void CheckTimer()
     {
-        // ½Ã°£ ¾÷µ¥ÀÌÆ® ÇÔ¼ö°í ´ëÃæ ½Ã°£ Áö³ª¸é ³¡
+        // ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         curTime -= Time.deltaTime;
         Timer.text = curTime.ToString("F2") + "s";
 
         if (curTime <= 0)
         {
+            SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
             EndGame();
         }
     }
 
     private void PressSpaceBar()
     {
-        // ´ëÃæ Å° Àß ÀÛµ¿ÇÏ³Ä ±×¸®°í ½ºÆäÀÌ½º ¹Ù ´­·È³Ä
+        // ï¿½ï¿½ï¿½ï¿½ Å° ï¿½ï¿½ ï¿½Ûµï¿½ï¿½Ï³ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½È³ï¿½
         isReeling = Mouse.current != null && Mouse.current.leftButton.isPressed;
 
-        // Æ®·ç¸é ÇÃ·¹ÀÌ¾î ¸¶Ä¿ ¿À¸¥ÂÊ ÀÌµ¿ ¾Æ´Ï¸é ¿ÞÂÊ ÀÌµ¿
+        // Æ®ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½Ä¿ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
         if (isReeling)
         {
             playerVelocity = makerspeed;
@@ -176,34 +177,59 @@ public class Fishing : MonoBehaviour
             playerVelocity -= gravity * Time.deltaTime;
         }
 
-        // Æ®·çÀÏ ¶§ ¸¶Ä¿ÀÇ pos x °ª¿¡ ÇÃ·¹ÀÌ¾î ¼Óµµ(¸¶Ä¿ ¼Óµµ) ±×·¡¼­ ¿À¸¥ÂÊ ÀÌµ¿ÇÔ
+        // Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ pos x ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Óµï¿½(ï¿½ï¿½Ä¿ ï¿½Óµï¿½) ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½
         float makerX = playerMakerTransform.anchoredPosition.x + playerVelocity * Time.deltaTime;
 
-        // ¸¶Ä¿°¡ °ÔÀÌÁö ¹Ù ¾È ³Ñ¾î°¡°Ô ÇÏ·Á°í ÃÖ¼Ò ÃÖ´ë Á¤ÇØµÒ
+        // ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Øµï¿½
         float bar = gaugeBarRect.width / 2f;
         makerX = Mathf.Clamp(makerX, (-bar + 0.1f), (bar - 0.08f));
 
-        // ±×·¡¼­ ¸¶Ä¿À§Ä¡´Â Àú À§¿¡ makerX¿¡¼­ °è»êµÈ °ªÀ¸·Î °£´Ù
+        // ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ makerXï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         playerMakerTransform.anchoredPosition = new Vector2(makerX, playerMakerTransform.anchoredPosition.y);
     }
 
+    AudioSource audioInSuccessZone = null;
     private void CheckSuccessTime()
     {
-        // ¼º°ø ¹üÀ§ È®ÀÎ ¸ÂÀ¸¸é 
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
         if (IsMakerInSuccessZone())
         {
-            // ¼º°ø ¹üÀ§ ³»ºÎ¿¡ ÀÖ´Â ½Ã°£ Ç¥½Ã µÇ¸é ¼º°ø ³ª°¡¸é 0À¸·Î ÃÊ±âÈ­
+            if(audioInSuccessZone == null)
+            {
+                audioInSuccessZone = SoundManager.Instance?.PlayStoppable2DSFX(SoundManager.Instance.Data.minigameFishingSuccessZoneLoop);
+                audioInSuccessZone.loop = true;
+                if(audioInSuccessZone.isPlaying == false)
+                    audioInSuccessZone.Play();
+            }
+            else
+            {
+                if(audioInSuccessZone.isPlaying == false)
+                    audioInSuccessZone.Play();
+            }
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ö´ï¿½ ï¿½Ã°ï¿½ Ç¥ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
             progressTime += Time.deltaTime;
             Progress.text = ((progressTime / 0.3) * 10).ToString("F1") + "%";
 
             if (progressTime >= successTime)
             {
                 StabilityManager.Instance.StabilizationUp(10, 2);
+                if (audioInSuccessZone != null)
+                {
+                    if (audioInSuccessZone.isPlaying)
+                        audioInSuccessZone.Stop();
+                }
+                SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameSuccess);
+                
                 EndGame();
             }
         }
         else
         {
+            if (audioInSuccessZone != null)
+            {
+                if (audioInSuccessZone.isPlaying)
+                    audioInSuccessZone.Stop();
+            }
             progressTime = 0f;
             Progress.text = progressTime.ToString("F1") + "%";
         }
@@ -211,10 +237,10 @@ public class Fishing : MonoBehaviour
 
     private bool IsMakerInSuccessZone()
     {
-        // ¼º°ø ¹üÀ§ È®ÀÎ ÇÔ¼ö
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ ï¿½Ô¼ï¿½
         if (playerMakerTransform == null && successZoneTransform == null) return false;
 
-        // ¸¶Ä¿ À§Ä¡ È®ÀÎ¿ë ±×¸®°í °Á ¼º°ø ¹üÀ§ ÁÂ¿ìÇØ¼­ ÃÖ¼Ò ÃÖ´ë ¾È¿¡ ÀÖÀ¸¸é ¸ÂÀ½ ¾Æ´Ô ¸®ÅÏ
+        // ï¿½ï¿½Ä¿ ï¿½ï¿½Ä¡ È®ï¿½Î¿ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Â¿ï¿½ï¿½Ø¼ï¿½ ï¿½Ö¼ï¿½ ï¿½Ö´ï¿½ ï¿½È¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½ï¿½
         float makerX = playerMakerTransform.anchoredPosition.x;
         float successMin = successZoneTransform.anchoredPosition.x - (successZoneRect.width / 2f);
         float successMax = successZoneTransform.anchoredPosition.x + (successZoneRect.width / 2f);
@@ -232,7 +258,7 @@ public class Fishing : MonoBehaviour
 
     public void EndGame()
     {
-        // ÀÌ°Ç °Á ¹Ì´Ï °ÔÀÓ ³¡³µÀ» ¶§ ÇÏ´Â °Å
+        // ï¿½Ì°ï¿½ ï¿½ï¿½ ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½
         isFishingPlaying = false;
         fishingPanel.SetActive(false);
         tabletSceneManager.tabletPanels[2].SetActive(true);

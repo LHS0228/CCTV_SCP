@@ -47,6 +47,7 @@ public class PlayerMove : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX); // headObject.transform.parent 대신 transform 사용
     }
 
+    AudioSource audioWalk = null;
     // 물리 관련 코드는 FixedUpdate에서 처리합니다.
     void FixedUpdate()
     {
@@ -54,6 +55,29 @@ public class PlayerMove : MonoBehaviour
 
         //움직임
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        if(move != Vector3.zero)
+        {
+            if (audioWalk == null)
+            {
+                audioWalk = SoundManager.Instance?.PlayStoppable2DSFX(SoundManager.Instance.Data.ingamePlayerWalkConcrete);
+                audioWalk.loop = true;
+                if (audioWalk.isPlaying == false)
+                    audioWalk.Play();
+            }
+            else
+            {
+                if (audioWalk.isPlaying == false)
+                    audioWalk.Play();
+            }
+        }
+        else
+        {
+            if (audioWalk != null)
+            {
+                if (audioWalk.isPlaying)
+                    audioWalk.Stop();
+            }
+        }
         Vector3 newPosition = rb.position + move * speed * Time.fixedDeltaTime;
         rb.MovePosition(newPosition); // MovePosition 사용
     }

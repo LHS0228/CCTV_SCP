@@ -7,8 +7,8 @@ using UnityEngine.InputSystem;
 using System.Linq;
 using UnityEngine.UI;
 
-// ÅØ½ºÆ®·Î ÇÏ´Ï±î ¾È ÀÌ»µ¼­ Å° ÀÌ¹ÌÁö °¡Á®¿Í¼­ ÇÏ·Á°í ¸¸µé¾ú½À´Ï´Ù.
-// Å°¶û ¾µ ÀÌ¹ÌÁö¶û ¸ÅÄª Å¬·¡½º
+// ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½Ï´Ï±ï¿½ ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½ï¿½ Å° ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+// Å°ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Äª Å¬ï¿½ï¿½ï¿½ï¿½
 [System.Serializable]
 public class Link_Image_And_Key
 {
@@ -18,32 +18,32 @@ public class Link_Image_And_Key
 
 public class AJae : MonoBehaviour
 {
-    // ÆÐ³Î ¿Â¿ÀÇÁ
+    // ï¿½Ð³ï¿½ ï¿½Â¿ï¿½ï¿½ï¿½
     [SerializeField]
     private GameObject aJaePanel;
 
     [SerializeField]
     private Link_Image_And_Key[] Link;
 
-    // °ÔÀÓ ½ÃÀÛ½Ã ±ÛÀÚ ¶ç¾îÁÖ·Á°í
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Û½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
     [SerializeField]
     private Image[] ShowImages;
 
-    // Å¸ÀÌ¸Ó º¸¿©ÁÖ·Á°í
+    // Å¸ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
     [SerializeField]
     private TextMeshProUGUI timerText;
-    // °ÔÀÓ ½Ã°£
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
     private float limitTimer = 10;
-    // Å¸ÀÌ¸Ó¿¡ ¾µ¶ó°í
+    // Å¸ï¿½Ì¸Ó¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     private float timer = 0;
-    // ½ºÅ×ÀÌÁö¸¶´Ù °¹¼ö ´Ã¾î³ª´Âµ¥ ±âÃÊ °¹¼ö
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¾î³ªï¿½Âµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private int stageLen = 6;
 
-    // ·£´ýÀ¸·Î »ÌÀº ¸®½ºÆ®¿Í ÀÔ·Â¿¡ ÇÊ¿äÇÑ ¸®½ºÆ®
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ô·Â¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
     List<string> aJaeSequence = new List<string>();
     List<string> inputSequence = new List<string>();
 
-    // ÀÌ°Ç Á» ºÁ¾ß´ï ÀÏ´Ü ÇÁ·ÎÅä Å¸ÀÔÀ¸·Î Á¦ÀÛ
+    // ï¿½Ì°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ß´ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private bool isAjaePlaying = false;
 
     [SerializeField]
@@ -74,11 +74,12 @@ public class AJae : MonoBehaviour
         {
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {
+                SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
                 EndGame();
             }
         }
 
-        // ½Ã°£ °ü¸® ¹× ÅØ½ºÆ®·Î ³»º¸³»±â
+        // ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (isAjaePlaying)
         {
             timer -= Time.deltaTime;
@@ -86,15 +87,16 @@ public class AJae : MonoBehaviour
 
             if(timer <= 0)
             {
+                SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
                 EndGame();
                 return;
             }
         }
 
-        // ¾ÆÀç ½ÇÇà½Ã¿¡¸¸
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½
         if(isAjaePlaying)
         {
-            // ÀÔ·Â °¨Áö
+            // ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (Keyboard.current.qKey.wasPressedThisFrame)
             {
                 InputKey("q");
@@ -126,7 +128,7 @@ public class AJae : MonoBehaviour
     {
         if(tabletSceneManager.isPlaying)
         {
-            // ÆÐ³Î ¿Â, ¸®½ºÆ® Á¤¸®, ÇÔ¼ö ½ÃÀÛ
+            // ï¿½Ð³ï¿½ ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½, ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
             aJaePanel.SetActive(true);
             aJaeSequence.Clear();
             inputSequence.Clear();
@@ -136,7 +138,7 @@ public class AJae : MonoBehaviour
 
     private IEnumerator StartStage()
     {
-        // ÇÃ·¹ÀÌ Áß, ¸®½ºÆ® Á¤¸®, 1ÃÊ ±â´Ù¸®±â
+        // ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½, 1ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½
         aJaeSequence.Clear();
         inputSequence.Clear();
         timerText.text = limitTimer.ToString("F1");
@@ -152,7 +154,7 @@ public class AJae : MonoBehaviour
             images.color = Color.white;
         }
 
-        // ½ºÅ×ÀÌÁö ¸¶´Ù °¹¼ö Áõ°¡ ¹× Áßº¹°¡´ÉÇÑ ·£´ý »Ì¾Æ ¸®½ºÆ®¿¡ ³Ö±â
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ö±ï¿½
 
         for(int i = 0; i < stageLen + (2 * (difficultyLevel - 1)); i++)
         {
@@ -160,13 +162,13 @@ public class AJae : MonoBehaviour
             aJaeSequence.Add(Link[index].key);
         }
 
-        // º¸¿©ÁÙ ¸®½ºÆ® Å©±â ¸¸Å­ ½ÇÇàÇÏ¸ç, ½ºÅ×ÀÌÁö¿¡ ¾²ÀÌ´Â °¹¼öº¸´Ù Àû¾îÁö¸é Ä± ³ª¸ÓÁö´Â ¾Èº¸ÀÓ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® Å©ï¿½ï¿½ ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä± ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Èºï¿½ï¿½ï¿½
         for (int i = 0; i < ShowImages.Length; i++)
         {
             if(i < aJaeSequence.Count)
             {
                 string currentKey = aJaeSequence[i];
-                // ¹è¿­ Ã£°íÀÖ´Â °Ô ¸ÂÀ¸¸é ÀÌ¹ÌÁö °¡Á®¿À°í, ¾Æ´Ô ¸»°í
+                // ï¿½è¿­ Ã£ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½ï¿½
                 Sprite sprite = Link.FirstOrDefault(x => x.key == currentKey)?.keyImage;
 
                 ShowImages[i].sprite = sprite;
@@ -178,7 +180,7 @@ public class AJae : MonoBehaviour
             }
         }
 
-        // nÃÊ ±â´Ù·È´Ù, Å¸ÀÌ¸Ó ¼³Á¤,  ÇÃ·¹ÀÌ Áß
+        // nï¿½ï¿½ ï¿½ï¿½Ù·È´ï¿½, Å¸ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½,  ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½
         yield return new WaitForSeconds(1f);
 
         for(int i = 0; i < ShowImages.Length; i++)
@@ -194,21 +196,24 @@ public class AJae : MonoBehaviour
 
     private void InputKey(string inputKey)
     {
-        // ÀÌÁîÇÃ·¹ÀÌ °ü·ÃÀ¸·Î´Â ´Ù½Ã ÀÛ¾÷ÇÒµí
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ ï¿½Ù½ï¿½ ï¿½Û¾ï¿½ï¿½Òµï¿½
         if(!isAjaePlaying)
         {
             return;
         }
-        // ´©¸¥ ÀÔ·Â°ª ÀÔ·Â ¸®½ºÆ®¿¡ Ãß°¡
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameRhythmKeyInput);
+
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â°ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½
         inputSequence.Add(inputKey);
 
         int currentKey = inputSequence.Count - 1;
 
-        // ³ª¿Â°Å¶û ÀÌ»óÇÏ°Ô Ä¡¸é
+        // ï¿½ï¿½ï¿½Â°Å¶ï¿½ ï¿½Ì»ï¿½ï¿½Ï°ï¿½ Ä¡ï¿½ï¿½
         if (inputSequence[inputSequence.Count - 1] != aJaeSequence[inputSequence.Count - 1])
         {
-            // ¿©±â¼­ ³¡³»´Â ÇÔ¼ö¹Ì¿Ï
+            // ï¿½ï¿½ï¿½â¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½Ì¿ï¿½
             isAjaePlaying = false;
+            SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
             EndGame();
         }
         else if (inputSequence[currentKey] == aJaeSequence[currentKey])
@@ -219,8 +224,9 @@ public class AJae : MonoBehaviour
         if (inputSequence.Count == aJaeSequence.Count)
         {
             StabilityManager.Instance.StabilizationUp(10, 0);
-            // ¼º°ø ÇÔ¼ö¿©±â ºÎºÐ °íÃÄ¾ßµÊ Å×½ºÆ®¿ëÀ¸·Î °è¼Ó ³ª¿À°Ô ¸¸µë.
-            Debug.Log($"{DaySystem.Instance.GetNowDay()} ÀÏÂ÷");
+            SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameSuccess);
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ ï¿½ï¿½ï¿½Ä¾ßµï¿½ ï¿½×½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+            Debug.Log($"{DaySystem.Instance.GetNowDay()} ï¿½ï¿½ï¿½ï¿½");
             EndGame();
         }
     }
@@ -234,7 +240,7 @@ public class AJae : MonoBehaviour
     }
 
 
-    // ¾ÆÁ÷ ±¸Ã¼ÀûÀÎ ±â´É ¹Ì¿Ï
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½
     private void EndGame()
     {
         isAjaePlaying = false;

@@ -149,6 +149,7 @@ public class CCTVManager : MonoBehaviour
         {
             return;
         }
+        SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameCctvZoomIn);
         renewalPos = playerCamera.transform.position;
         renewalRot = playerCamera.transform.rotation;
 
