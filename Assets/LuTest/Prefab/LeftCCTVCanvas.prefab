@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 606581071865470361}
   - component: {fileID: 4427749345363228796}
   - component: {fileID: 6124521148476611610}
+  - component: {fileID: 930000000000000003}
   m_Layer: 5
   m_Name: LeftCCTVCanvas
   m_TagString: Untagged
@@ -715,3 +716,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &930000000000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239023289194492649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bbfb5d5f214d2da0dc711c3c8f27a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeCustomMaterials: 1

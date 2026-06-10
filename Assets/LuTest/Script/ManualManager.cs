@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+/// <summary>
+/// 메뉴얼 화면의 카메라 전환, 페이지 표시, 닫기 입력을 관리하는 책임을 가진다.
+/// </summary>
 public class ManualManager : MonoBehaviour
 {
     [SerializeField]
@@ -95,7 +98,7 @@ public class ManualManager : MonoBehaviour
             crossHairCanvas.enabled = !isOnManual;
         }
 
-        if (isOnManual && !isMovingManualCamera && Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (isOnManual && !isMovingManualCamera && IsCloseKeyPressed())
         {
             ExitManualView();
         }
@@ -117,6 +120,12 @@ public class ManualManager : MonoBehaviour
     private void UpdateProtocolNumber()
     {
         protocolNumber.text = GameManager.Instance.protocolNum.ToString();
+    }
+
+    private bool IsCloseKeyPressed()
+    {
+        return Keyboard.current != null &&
+               (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.fKey.wasPressedThisFrame);
     }
 
     private IEnumerator MovingManualCamera(bool ismoving)

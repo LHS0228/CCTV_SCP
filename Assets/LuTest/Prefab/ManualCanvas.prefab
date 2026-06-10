@@ -2212,6 +2212,7 @@ GameObject:
   - component: {fileID: 1600703487347616908}
   - component: {fileID: 2336370421732052502}
   - component: {fileID: 4268689295900214443}
+  - component: {fileID: 930000000000000004}
   m_Layer: 5
   m_Name: ManualCanvas
   m_TagString: Untagged
@@ -5006,3 +5007,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6792190151623673374, guid: 0e645cffd91c27344a1b2917a2e913b6, type: 3}
   m_PrefabInstance: {fileID: 7676897855802822880}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &930000000000000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4170802374136823179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bbfb5d5f214d2da0dc711c3c8f27a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeCustomMaterials: 1

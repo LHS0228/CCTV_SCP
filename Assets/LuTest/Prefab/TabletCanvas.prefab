@@ -7659,6 +7659,7 @@ GameObject:
   - component: {fileID: 7716007128870303450}
   - component: {fileID: 5192635359128554992}
   - component: {fileID: 2167284832211045431}
+  - component: {fileID: 930000000000000006}
   m_Layer: 5
   m_Name: TabletCanvas
   m_TagString: Untagged
@@ -7971,3 +7972,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &930000000000000006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747836318599976390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bbfb5d5f214d2da0dc711c3c8f27a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeCustomMaterials: 1
