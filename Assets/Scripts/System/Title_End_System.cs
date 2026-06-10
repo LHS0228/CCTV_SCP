@@ -3,12 +3,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 타이틀과 엔딩 화면의 버튼 입력, 타임라인 이벤트, 종료 확인 UI를 관리하는 책임을 가진다.
+/// </summary>
 public class Title_End_System : MonoBehaviour
 {
     [SerializeField] private GameObject protocolDoor;
     [SerializeField] private GameObject elevatorDoor;
     [SerializeField] private GameObject playerCamera;
     [SerializeField] private TextMeshProUGUI voiceText;
+    [SerializeField] private GameObject exitConfirmPopup;
 
     private AudioSource saveAudio;
 
@@ -17,6 +21,10 @@ public class Title_End_System : MonoBehaviour
     private void Start()
     {
         ExecutionTimeLineManager.instance.PlayDayTimeline(3);
+        if (exitConfirmPopup != null)
+        {
+            exitConfirmPopup.SetActive(false);
+        }
     }
 
     public void EnddingAnimationCountingEvent()
@@ -99,6 +107,33 @@ public class Title_End_System : MonoBehaviour
     }
 
     public void EndGame()
+    {
+        ShowExitConfirmPopup();
+    }
+
+    public void ShowExitConfirmPopup()
+    {
+        if (exitConfirmPopup == null)
+        {
+            Debug.LogWarning("Exit confirm popup is not assigned.");
+            return;
+        }
+
+        exitConfirmPopup.SetActive(true);
+    }
+
+    public void HideExitConfirmPopup()
+    {
+        if (exitConfirmPopup == null)
+        {
+            Debug.LogWarning("Exit confirm popup is not assigned.");
+            return;
+        }
+
+        exitConfirmPopup.SetActive(false);
+    }
+
+    public void ConfirmExitGame()
     {
         Application.Quit();
     }

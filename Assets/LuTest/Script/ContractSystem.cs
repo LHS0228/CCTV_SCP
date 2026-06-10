@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// 타이틀 화면의 계약서 연출, 버튼 입력, 옵션 및 종료 확인 UI를 관리하는 책임을 가진다.
+/// </summary>
 public class ContractSystem : MonoBehaviour
 {
     [Header("Sound Setting")]
@@ -35,6 +38,7 @@ public class ContractSystem : MonoBehaviour
 
     [Header("Exit")]
     public Button exitButton;
+    [SerializeField] private GameObject exitConfirmPopup;
 
     private Vector2 InitPosition;
 
@@ -87,6 +91,11 @@ public class ContractSystem : MonoBehaviour
         if (exitButton != null)
         {
             exitButton.onClick.AddListener(() => OnClickExitButton());
+        }
+
+        if (exitConfirmPopup != null)
+        {
+            exitConfirmPopup.SetActive(false);
         }
 
         if (soundManager == null)
@@ -173,6 +182,33 @@ public class ContractSystem : MonoBehaviour
 
     }
     private void OnClickExitButton()
+    {
+        ShowExitConfirmPopup();
+    }
+
+    public void ShowExitConfirmPopup()
+    {
+        if (exitConfirmPopup == null)
+        {
+            Debug.LogWarning("Exit confirm popup is not assigned.");
+            return;
+        }
+
+        exitConfirmPopup.SetActive(true);
+    }
+
+    public void HideExitConfirmPopup()
+    {
+        if (exitConfirmPopup == null)
+        {
+            Debug.LogWarning("Exit confirm popup is not assigned.");
+            return;
+        }
+
+        exitConfirmPopup.SetActive(false);
+    }
+
+    public void ConfirmExitGame()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
