@@ -1,0 +1,10 @@
+Third-Party Notices
+===================
+
+This file lists third-party assets used by CCTV_SCP.
+
+Poor SCP UI Elements
+--------------------
+사용 에셋(CC-BY 4.0)
+SCP UI Elements - v3nn7.dev 제작 (2025)
+https://v3nn7.itch.io/scp-ui-elements
