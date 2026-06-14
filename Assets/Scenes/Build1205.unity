@@ -16493,7 +16493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970845827855883028, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3289876341851301639, guid: 42436475e5ba7dc49b768015842c7306, type: 3}
       propertyPath: m_IsActive
@@ -17713,6 +17713,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -419257548765433090, guid: 988d04d4c29b17142bc385e828c1a29a, type: 3}
   m_PrefabInstance: {fileID: 216551467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &910200100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910200101}
+  - component: {fileID: 910200102}
+  m_Layer: 0
+  m_Name: SteamManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &910200101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910200100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910200102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910200100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42d9be92744517a70906658f138ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &915715608
 GameObject:
   m_ObjectHideFlags: 0
@@ -37157,7 +37201,8 @@ MonoBehaviour:
     \n\uC548\uC815\uC801\uC73C\uB85C \uAD00\uB9AC\uD558\uB294 \uAC83\uC785\uB2C8\uB2E4.</indent>\n-
     <indent=3%>\uBAA8\uB2C8\uD130\uB97C \uD1B5\uD574 \uBBF8\uC0C1\uAC1C\uCCB4\uC758
     <b>\uC548\uC815\uC218\uCE58</b>\uB97C \uD655\uC778\uD558\uACE0 \n<b>0%</b>\uAC00
-    \uB418\uC9C0 \uC54A\uAC8C \uAD00\uB9AC\uD558\uC2ED\uC2DC\uC624.</indent>\n"
+    \uB418\uAE30 \uC804\uC5D0 \uCC45\uC0C1\uC758 <b>\uD0DC\uBE14\uB9BF</b>\uC744
+    \uC0AC\uC6A9\uD574 \uC218\uCE58\uB97C \uC0C1\uC2B9\uC2DC\uD0A4\uC2ED\uC2DC\uC624.</indent>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81c38172c200fac46a973ad1a44abbd5, type: 2}
   m_sharedMaterial: {fileID: -6902038219003035648, guid: 81c38172c200fac46a973ad1a44abbd5, type: 2}
@@ -42056,50 +42101,6 @@ PrefabInstance:
       addedObject: {fileID: 1888352204}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e633edbafe12fe842b6a134ffc2d928f, type: 3}
---- !u!1 &910200100
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 910200101}
-  - component: {fileID: 910200102}
-  m_Layer: 0
-  m_Name: SteamManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &910200101
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910200100}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &910200102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910200100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f42d9be92744517a70906658f138ee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
