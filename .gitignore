@@ -63,6 +63,9 @@ ExportedObj/
 # Unity3D generated file on crash reports
 sysinfo.txt
 
+# Steam local development App ID. Steam depot builds should not ship this file.
+steam_appid.txt
+
 # Mono auto generated files
 mono_crash.*
 
