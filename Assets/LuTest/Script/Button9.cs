@@ -1,10 +1,12 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.InputSystem;
 
+/// <summary>
+/// 태블릿의 9버튼 순서 기억 미니게임을 관리하는 책임을 가진다.
+/// </summary>
 public class Button9 : MonoBehaviour
 {
     [SerializeField]
@@ -60,16 +62,6 @@ public class Button9 : MonoBehaviour
         button9Panel.SetActive(false);
     }
 
-    private void Update()
-    {
-        if(button9Panel.activeSelf)
-        {
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                EndGame();
-            }
-        }
-    }
 
     private int GetDay()
     {
@@ -239,8 +231,12 @@ public class Button9 : MonoBehaviour
     }
 
     // ���� ���� ��
-    private void EndGame()
+    public void EndGame()
     {
+        StopAllCoroutines();
+        isStagePlaying = false;
+        buttonSequence.Clear();
+        inputSequence.Clear();
         button9Panel.SetActive(false);
         tabletSceneManager.tabletPanels[1].SetActive(true);
         tabletSceneManager.isPlaying = false;

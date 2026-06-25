@@ -1,9 +1,12 @@
-using TMPro;
+﻿using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+/// <summary>
+/// 태블릿의 낚시형 게이지 미니게임을 관리하는 책임을 가진다.
+/// </summary>
 public class Fishing : MonoBehaviour
 {
     [SerializeField]
@@ -112,13 +115,6 @@ public class Fishing : MonoBehaviour
 
     private void Update()
     {
-        if(fishingPanel.activeSelf)
-        {
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                EndGame();
-            }
-        }
 
         if (!isFishingPlaying) return;
 
@@ -258,8 +254,11 @@ public class Fishing : MonoBehaviour
 
     public void EndGame()
     {
-        // �̰� �� �̴� ���� ������ �� �ϴ� ��
         isFishingPlaying = false;
+        if (audioInSuccessZone != null && audioInSuccessZone.isPlaying)
+        {
+            audioInSuccessZone.Stop();
+        }
         fishingPanel.SetActive(false);
         tabletSceneManager.tabletPanels[2].SetActive(true);
         tabletSceneManager.isPlaying = false;

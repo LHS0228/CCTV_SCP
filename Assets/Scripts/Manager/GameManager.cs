@@ -3,6 +3,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 게임 진행 상태, 옵션 메뉴, 공용 게임 흐름을 관리하는 책임을 가진다.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -30,6 +33,10 @@ public class GameManager : MonoBehaviour
     [SerializeField, Header("메뉴창")]
     private GameObject optionMenu;
 
+    private CCTVManager cctvManager;
+    private TabletManager tabletManager;
+    private ManualManager manualManager;
+
     [Header("프로토콜 비밀번호")]
     public int protocolNum;
 
@@ -49,18 +56,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (optionMenu.activeSelf)
-            {
-                player.GetComponent<PlayerMove>().isStop = false;
-                OptionOff();
-                optionMenu.SetActive(false);
-            }
-            else
-            {
-                player.GetComponent<PlayerMove>().isStop = true;
-                OptionOn();
-                optionMenu.SetActive(true);
-            }
+            HandleEscapeInput();
         }
     }
 
@@ -93,4 +89,83 @@ public class GameManager : MonoBehaviour
     { isOptionMode = true; }
     public void OptionOff()
     { isOptionMode = false; }
+
+    private void HandleEscapeInput()
+    {
+        if (optionMenu != null && optionMenu.activeSelf)
+        {
+            SetPlayerStop(false);
+            OptionOff();
+            optionMenu.SetActive(false);
+            return;
+        }
+
+        if (TryHandleInteractionBack())
+        {
+            return;
+        }
+
+        if (optionMenu == null)
+        {
+            return;
+        }
+
+        SetPlayerStop(true);
+        OptionOn();
+        optionMenu.SetActive(true);
+    }
+
+    private bool TryHandleInteractionBack()
+    {
+        ResolveInteractionManagers();
+
+        if (manualManager != null && manualManager.TryHandleBackInput())
+        {
+            return true;
+        }
+
+        if (tabletManager != null && tabletManager.TryHandleBackInput())
+        {
+            return true;
+        }
+
+        if (cctvManager != null && cctvManager.TryHandleBackInput())
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private void ResolveInteractionManagers()
+    {
+        if (cctvManager == null)
+        {
+            cctvManager = FindFirstObjectByType<CCTVManager>();
+        }
+
+        if (tabletManager == null)
+        {
+            tabletManager = FindFirstObjectByType<TabletManager>();
+        }
+
+        if (manualManager == null)
+        {
+            manualManager = FindFirstObjectByType<ManualManager>();
+        }
+    }
+
+    private void SetPlayerStop(bool isStop)
+    {
+        if (player == null)
+        {
+            return;
+        }
+
+        PlayerMove playerMove = player.GetComponent<PlayerMove>();
+        if (playerMove != null)
+        {
+            playerMove.isStop = isStop;
+        }
+    }
 }

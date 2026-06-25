@@ -1,14 +1,14 @@
-using System.Reflection;
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// íƒœë¸”ë¦¿ ë©”ë‰´ íŒ¨ë„ ì „í™˜ê³¼ ë¯¸ë‹ˆê²Œì„ ì‹œì‘/ë³µê·€ íë¦„ì„ ê´€ë¦¬í•˜ëŠ” ì±…ì„ì„ ê°€ì§„ë‹¤.
+/// </summary>
 public class TabletSceneManager : MonoBehaviour
 {
-    // ½ºÅ¸Æ® ¹öÆ° 3°³
     [SerializeField]
     private Button[] startBts;
 
-    // ÆĞ³Î 3°³
     [SerializeField]
     public GameObject[] tabletPanels;
 
@@ -22,6 +22,10 @@ public class TabletSceneManager : MonoBehaviour
     private Fishing fishing;
 
     public bool isPlaying = false;
+
+    private int currentPanelIndex = 1;
+    private int currentGameIndex = -1;
+
     private void Awake()
     {
         for (int i = 0; i < startBts.Length; i++)
@@ -38,58 +42,102 @@ public class TabletSceneManager : MonoBehaviour
         tabletPanels[1].transform.Find("RightButton").GetComponent<Button>().onClick.AddListener(() => SwitchPanel(tabletPanels[2]));
         tabletPanels[2].transform.Find("LeftButton").GetComponent<Button>().onClick.AddListener(() => SwitchPanel(tabletPanels[1]));
     }
+
     private void Start()
     {
-        tabletPanels[0].SetActive(false);
-        tabletPanels[1].SetActive(true);
-        tabletPanels[2].SetActive(false);
+        ShowPanel(1);
     }
 
     private void SwitchPanel(GameObject switchPanel)
     {
-        // 3°³ ²ô°í ÆÄ¶ó¹ÌÅÍ·Î ¹Ş´Â ÆĞ³Î ÄÑ±â
-        foreach (GameObject panel in tabletPanels)
+        for (int i = 0; i < tabletPanels.Length; i++)
         {
-            panel.SetActive(false);
+            if (tabletPanels[i] == switchPanel)
+            {
+                ShowPanel(i);
+                return;
+            }
         }
-        switchPanel.SetActive(true);
-
     }
 
     private void OnStartButton(int panelBtIndex)
     {
-
         GameStart(panelBtIndex);
     }
 
-    //ÁÂ ¾ÆÀç , Áß ¹öÆ° , ¿ì ÇÇ½Ì
     private void GameStart(int panelBtIndex)
     {
         isPlaying = true;
+        currentGameIndex = panelBtIndex;
 
         if (panelBtIndex == 0)
         {
-            isPlaying = true;
-            //button9.StartButton9();
             aJae.StartAJae();
             tabletPanels[0].SetActive(false);
         }
         else if (panelBtIndex == 1)
         {
-            isPlaying = true;
-            //fishing.StartFishing();
             button9.StartButton9();
             tabletPanels[1].SetActive(false);
         }
         else if (panelBtIndex == 2)
         {
-            isPlaying = true;
-            //aJae.StartAJae();
             fishing.StartFishing();
             tabletPanels[2].SetActive(false);
         }
 
+        Debug.Log($"isPlayer : {isPlaying} & PanelNumber : {panelBtIndex + 1}");
+    }
 
-            Debug.Log($"isPlayer : {isPlaying} & PanelNumber : {panelBtIndex + 1}");
+    public bool TryHandleBackInput()
+    {
+        if (!isPlaying)
+        {
+            return false;
+        }
+
+        EndCurrentGame();
+        return true;
+    }
+
+    public void ReturnToPanel(int panelIndex)
+    {
+        isPlaying = false;
+        currentGameIndex = -1;
+        ShowPanel(panelIndex);
+    }
+
+    private void ShowPanel(int panelIndex)
+    {
+        if (tabletPanels == null || panelIndex < 0 || panelIndex >= tabletPanels.Length)
+        {
+            return;
+        }
+
+        for (int i = 0; i < tabletPanels.Length; i++)
+        {
+            tabletPanels[i].SetActive(i == panelIndex);
+        }
+
+        currentPanelIndex = panelIndex;
+    }
+
+    private void EndCurrentGame()
+    {
+        switch (currentGameIndex)
+        {
+            case 0:
+                aJae.EndGame();
+                break;
+            case 1:
+                button9.EndGame();
+                break;
+            case 2:
+                fishing.EndGame();
+                break;
+            default:
+                ReturnToPanel(currentPanelIndex);
+                break;
+        }
     }
 }

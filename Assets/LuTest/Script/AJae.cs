@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
@@ -9,6 +9,9 @@ using UnityEngine.UI;
 
 // �ؽ�Ʈ�� �ϴϱ� �� �̻��� Ű �̹��� �����ͼ� �Ϸ��� ��������ϴ�.
 // Ű�� �� �̹����� ��Ī Ŭ����
+/// <summary>
+/// 아재 미니게임에서 입력 키와 표시 이미지를 연결하는 책임을 가진다.
+/// </summary>
 [System.Serializable]
 public class Link_Image_And_Key
 {
@@ -16,6 +19,9 @@ public class Link_Image_And_Key
     public Sprite keyImage;
 }
 
+/// <summary>
+/// 태블릿의 키 입력 순서 미니게임을 관리하는 책임을 가진다.
+/// </summary>
 public class AJae : MonoBehaviour
 {
     // �г� �¿���
@@ -70,14 +76,6 @@ public class AJae : MonoBehaviour
 
     private void Update()
     {
-        if(aJaePanel.activeSelf)
-        {
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.minigameFail);
-                EndGame();
-            }
-        }
 
         // �ð� ���� �� �ؽ�Ʈ�� ��������
         if (isAjaePlaying)
@@ -241,8 +239,9 @@ public class AJae : MonoBehaviour
 
 
     // ���� ��ü���� ��� �̿�
-    private void EndGame()
+    public void EndGame()
     {
+        StopAllCoroutines();
         isAjaePlaying = false;
         aJaePanel.SetActive(false);
         tabletSceneManager.tabletPanels[0].SetActive(true);

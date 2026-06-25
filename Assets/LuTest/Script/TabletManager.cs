@@ -4,7 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static System.TimeZoneInfo;
-// �ش� �׽�Ʈ ��ũ��Ʈ�Դϴ�. 
+/// <summary>
+/// 태블릿 화면 진입, 미니게임 메뉴 상태, 일반 시점 복귀를 관리하는 책임을 가진다.
+/// </summary>
 public class TabletManager : MonoBehaviour
 {
     // �÷��̾� ī�޶�� �º�� ī�޶� ��ġ �� ȸ�� ��
@@ -46,6 +48,9 @@ public class TabletManager : MonoBehaviour
 
     [SerializeField]
     private Canvas crossHairCanvas;
+
+    [SerializeField]
+    private TabletSceneManager tabletSceneManager;
 
     void Start()
     {
@@ -94,8 +99,7 @@ public class TabletManager : MonoBehaviour
 
         if (isOnTablet && !isMovingTabletCamera && Input.GetKeyDown(KeyCode.F))
         {
-            isOnTablet = false;
-            StartCoroutine(MovingTabletCamera(false));
+            ExitTabletView();
         }
     }
 
@@ -114,6 +118,33 @@ public class TabletManager : MonoBehaviour
 
         SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.ingameTabletZoomIn);
         StartCoroutine(MovingTabletCamera(true));
+    }
+
+    public bool TryHandleBackInput()
+    {
+        if (!isOnTablet || isMovingTabletCamera)
+        {
+            return false;
+        }
+
+        if (tabletSceneManager == null)
+        {
+            tabletSceneManager = FindFirstObjectByType<TabletSceneManager>();
+        }
+
+        if (tabletSceneManager != null && tabletSceneManager.TryHandleBackInput())
+        {
+            return true;
+        }
+
+        ExitTabletView();
+        return true;
+    }
+
+    private void ExitTabletView()
+    {
+        isOnTablet = false;
+        StartCoroutine(MovingTabletCamera(false));
     }
 
     private IEnumerator MovingTabletCamera(bool ismoving)

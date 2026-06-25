@@ -12,6 +12,9 @@ public enum CCTVLocation
     Right
 }
 
+/// <summary>
+/// CCTV 화면 진입, 화면 전환, 일반 시점 복귀를 관리하는 책임을 가진다.
+/// </summary>
 public class CCTVManager : MonoBehaviour
 {
     [SerializeField]
@@ -142,6 +145,17 @@ public class CCTVManager : MonoBehaviour
         return isMovingCamera;
     }
 
+    public bool TryHandleBackInput()
+    {
+        if (!isOnCCTV || isMovingCamera)
+        {
+            return false;
+        }
+
+        ExitCCTVView();
+        return true;
+    }
+
     public void CCTV_Pos_Rot(CCTVLocation Location)
     {
 
@@ -180,8 +194,7 @@ public class CCTVManager : MonoBehaviour
 
         if (isOnCCTV && curCCTVPos == targetPos)
         {
-            isOnCCTV = false;
-            StartCoroutine(MovingCamera(false));
+            ExitCCTVView();
         }
         else
         {
@@ -196,6 +209,17 @@ public class CCTVManager : MonoBehaviour
             curCCTVRot = targetRot;
             StartCoroutine(MovingCamera(true));
         }
+    }
+
+    private void ExitCCTVView()
+    {
+        renewalPos = playerCamera.transform.position;
+        renewalRot = playerCamera.transform.rotation;
+        renewalFov = playerCamSetting.Lens.FieldOfView;
+        renewalFar = playerCamSetting.Lens.FarClipPlane;
+
+        isOnCCTV = false;
+        StartCoroutine(MovingCamera(false));
     }
 
     private IEnumerator MovingCamera(bool ismoving)

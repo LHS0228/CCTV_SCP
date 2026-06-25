@@ -98,7 +98,7 @@ public class ManualManager : MonoBehaviour
             crossHairCanvas.enabled = !isOnManual;
         }
 
-        if (isOnManual && !isMovingManualCamera && IsCloseKeyPressed())
+        if (isOnManual && !isMovingManualCamera && IsManualCloseKeyPressed())
         {
             ExitManualView();
         }
@@ -122,10 +122,10 @@ public class ManualManager : MonoBehaviour
         protocolNumber.text = GameManager.Instance.protocolNum.ToString();
     }
 
-    private bool IsCloseKeyPressed()
+    private bool IsManualCloseKeyPressed()
     {
         return Keyboard.current != null &&
-               (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.fKey.wasPressedThisFrame);
+               Keyboard.current.fKey.wasPressedThisFrame;
     }
 
     private IEnumerator MovingManualCamera(bool ismoving)
@@ -197,6 +197,23 @@ public class ManualManager : MonoBehaviour
     public bool IsMoving()
     {
         return isMovingManualCamera;
+    }
+
+    public bool TryHandleBackInput()
+    {
+        if (!isOnManual || isMovingManualCamera)
+        {
+            return false;
+        }
+
+        if (ScrollViewPanel != null && !ScrollViewPanel.activeSelf)
+        {
+            BackToManualPanel();
+            return true;
+        }
+
+        ExitManualView();
+        return true;
     }
 
     public void MovingManualView()
