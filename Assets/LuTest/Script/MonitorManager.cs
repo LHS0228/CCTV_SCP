@@ -43,12 +43,9 @@ public class MonitorManager : MonoBehaviour
 
         if(DaySystem.Instance.GetNowDay() == 1)
         {
-            leftMonitorScreen.SetActive(false);
-            centerMonitorScreen.SetActive(false);
-            rightMonitorScreen.SetActive(false);
-            leftMonitorCanvas.SetActive(false);
-            centerMonitorCanvas.SetActive(false);
-            rightMonitorCanvas.SetActive(false);
+            SetMonitorActive(leftCameraObject, leftMonitorScreen, leftMonitorCanvas, false);
+            SetMonitorActive(centerCameraObject, centerMonitorScreen, centerMonitorCanvas, false);
+            SetMonitorActive(rightCameraObject, rightMonitorScreen, rightMonitorCanvas, false);
         }
     }
 
@@ -83,11 +80,26 @@ public class MonitorManager : MonoBehaviour
 
         isInteractCompletedManual = true;
 
-        leftMonitorScreen.SetActive(true);
-        centerMonitorScreen.SetActive(true);
-        rightMonitorScreen.SetActive(true);
-        leftMonitorCanvas.SetActive(true);
-        centerMonitorCanvas.SetActive(true);
-        rightMonitorCanvas.SetActive(true);
+        SetMonitorActive(leftCameraObject, leftMonitorScreen, leftMonitorCanvas, true);
+        SetMonitorActive(centerCameraObject, centerMonitorScreen, centerMonitorCanvas, true);
+        SetMonitorActive(rightCameraObject, rightMonitorScreen, rightMonitorCanvas, true);
+    }
+
+    private static void SetMonitorActive(GameObject camera, GameObject screen, GameObject canvas, bool active)
+    {
+        if (camera != null)
+        {
+            camera.SetActive(active);
+        }
+
+        if (screen != null)
+        {
+            screen.SetActive(active);
+        }
+
+        if (canvas != null)
+        {
+            canvas.SetActive(active);
+        }
     }
 }

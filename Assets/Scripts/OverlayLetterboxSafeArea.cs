@@ -12,6 +12,8 @@ public sealed class OverlayLetterboxSafeArea : MonoBehaviour
     public Vector2 referenceResolution = new Vector2(1920f, 1080f);
 
     private const string SafeAreaName = "LetterboxSafeArea";
+    private const string FadePanelName = "FadePanel";
+    private const int FadePanelSortingOrder = 1000;
 
     private RectTransform safeAreaRect;
     private CanvasScaler canvasScaler;
@@ -25,6 +27,7 @@ public sealed class OverlayLetterboxSafeArea : MonoBehaviour
         canvasScaler = GetComponent<CanvasScaler>();
         EnsureSafeArea();
         MoveRootChildrenIntoSafeArea();
+        ConfigureRootOverlays();
         ApplySafeArea(true);
     }
 
@@ -47,6 +50,7 @@ public sealed class OverlayLetterboxSafeArea : MonoBehaviour
 
         EnsureSafeArea();
         MoveRootChildrenIntoSafeArea();
+        ConfigureRootOverlays();
         ApplySafeArea(true);
     }
 
@@ -81,7 +85,7 @@ public sealed class OverlayLetterboxSafeArea : MonoBehaviour
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             Transform child = transform.GetChild(i);
-            if (child == safeAreaRect)
+            if (child == safeAreaRect || ShouldStayOnCanvasRoot(child))
             {
                 continue;
             }
@@ -92,6 +96,30 @@ public sealed class OverlayLetterboxSafeArea : MonoBehaviour
 
         safeAreaRect.SetAsFirstSibling();
         isRebuildingHierarchy = false;
+    }
+
+    private void ConfigureRootOverlays()
+    {
+        Transform fadePanel = transform.Find(FadePanelName);
+        if (fadePanel == null)
+        {
+            return;
+        }
+
+        Canvas fadeCanvas = fadePanel.GetComponent<Canvas>();
+        if (fadeCanvas == null)
+        {
+            fadeCanvas = fadePanel.gameObject.AddComponent<Canvas>();
+        }
+
+        fadeCanvas.overrideSorting = true;
+        fadeCanvas.sortingOrder = FadePanelSortingOrder;
+        fadePanel.SetAsLastSibling();
+    }
+
+    private static bool ShouldStayOnCanvasRoot(Transform child)
+    {
+        return child != null && child.name == FadePanelName;
     }
 
     private void ApplySafeArea(bool force)

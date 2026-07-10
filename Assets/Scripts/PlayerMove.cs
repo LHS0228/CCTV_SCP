@@ -5,6 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     [Header("캐릭터 화면 이동 속도")]
     public float sensitivity = 20f;
+    private const float MouseSensitivityScale = 1f / 60f;
     float rotX = 0f;
 
     [Header("캐릭터 스피드")]
@@ -38,8 +39,8 @@ public class PlayerMove : MonoBehaviour
         if (isStop) return;
 
         //카메라 회전
-        float mouseX = lookDelta.x * sensitivity * Time.deltaTime;
-        float mouseY = lookDelta.y * sensitivity * Time.deltaTime;
+        float mouseX = lookDelta.x * sensitivity * MouseSensitivityScale;
+        float mouseY = lookDelta.y * sensitivity * MouseSensitivityScale;
 
         rotX -= mouseY;
         rotX = Mathf.Clamp(rotX, -80f, 80f);
@@ -59,10 +60,11 @@ public class PlayerMove : MonoBehaviour
         {
             if (audioWalk == null)
             {
-                audioWalk = SoundManager.Instance?.PlayStoppable2DSFX(SoundManager.Instance.Data.ingamePlayerWalkConcrete);
-                audioWalk.loop = true;
-                if (audioWalk.isPlaying == false)
+                audioWalk = SoundManager.Instance?.PlayStoppable2DSFX(SoundManager.Instance.Data.ingamePlayerWalkConcrete, true);
+                if (audioWalk != null && audioWalk.isPlaying == false)
+                {
                     audioWalk.Play();
+                }
             }
             else
             {
