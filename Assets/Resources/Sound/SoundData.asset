@@ -41,6 +41,7 @@ MonoBehaviour:
   abnormalWireShortCircuitSpark: {fileID: 8300000, guid: 6e18961e23e21754b97f3ccb0176da94, type: 3}
   abnormalMaskHumanTransform: {fileID: 8300000, guid: 47be6721c1a2133409c780063086b9c6, type: 3}
   abnormalMaskCreationWeepingMan: {fileID: 8300000, guid: d1bba25279ef5774ebba7f84e1c243b2, type: 3}
+  abnormalMaskNoise: {fileID: 8300000, guid: 06b60fd0683baa747b124a79f85f4c1c, type: 3}
   abnormalMaskBreakCeramic: {fileID: 8300000, guid: f22403584e2f167479d8b90e0ea5fa49, type: 3}
   abnormalTentacleAggressiveWindowHit: {fileID: 8300000, guid: afce0787820ed434bb085ad48caa986b, type: 3}
   abnormalTentacleOvergrowthSquirm: {fileID: 8300000, guid: 35904b91cd1953c4283664f1dbe998ce, type: 3}

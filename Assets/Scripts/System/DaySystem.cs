@@ -25,6 +25,7 @@ public class DaySystem : MonoBehaviour
     [Header("임시 시간 관련 텍스트 UI")]
     public TextMeshProUGUI dayText;
     public TextMeshProUGUI clockText;
+    private int displayedDay = -1;
 
     [Header("ClearText ")]
 
@@ -58,7 +59,7 @@ public class DaySystem : MonoBehaviour
 
     private void Start()
     {
-        dayText.text = GetDayText();
+        RefreshDayText();
     }
 
     public void Update()
@@ -85,7 +86,7 @@ public class DaySystem : MonoBehaviour
             TimeUpdate();
 
         //임시 시간 텍스트 업데이트
-        dayText.text = GetDayText();
+        RefreshDayText();
         clockText.text = GetClockText();
     }
 
@@ -149,7 +150,15 @@ public class DaySystem : MonoBehaviour
         else return hour + ":" + minute;
     }
     
-    public string GetDayText() { return "Day " + nowDay; }
+    public string GetDayText() { return GameLocalization.Get("ui.day", nowDay); }
+
+    private void RefreshDayText()
+    {
+        if (dayText == null || displayedDay == nowDay)
+            return;
+        GameLocalization.SetText(dayText, "ui.day", nowDay);
+        displayedDay = nowDay;
+    }
 
     /// <summary>
     /// Day 시스템의 Day는 1일 -> 1 값.
@@ -173,4 +182,18 @@ public class DaySystem : MonoBehaviour
     {
         totalMinute = TIME_START;
     }
+
+#if UNITY_EDITOR
+    public bool EditorSetClock(int minutes)
+    {
+        if (!Application.isPlaying || isDayClear)
+            return false;
+        totalMinute = Mathf.Clamp(minutes, 0, 360);
+        minuteUpCountingTime = 0f;
+        if (clockText != null)
+            clockText.text = GetClockText();
+        return true;
+    }
+    public bool EditorIsDayClear => isDayClear;
+#endif
 }

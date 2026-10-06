@@ -108,7 +108,7 @@ public class ContractSystem : MonoBehaviour
 
     private void Update()
     {
-        if (optionMenu.activeSelf)
+        if (optionMenu != null && optionMenu.activeSelf && Keyboard.current != null)
         {
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {

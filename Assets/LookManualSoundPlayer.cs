@@ -9,7 +9,7 @@ public class LookManualSoundPlayer : MonoBehaviour
         {
             isFirst = false;
         SoundManager.Instance?.PlayGlobalSFX(SoundManager.Instance.Data.systemUiManualAlarm);
-        StartSystem.instance?.TriggerVoiceTextOnFunc("메뉴얼을 확인하고 업무 정보를 확인하십시오.", 4);
+        StartSystem.instance?.TriggerLocalizedVoiceText("voice.manual", 4);
         }
     }
 }

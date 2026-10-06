@@ -1,0 +1,695 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameText_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3837ebd90fa5c6e428d3eb0f9f0593ce, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 744108032
+    m_Localized: Sound Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468160
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468161
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468162
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662464
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662465
+    m_Localized: Master Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662466
+    m_Localized: Mouse Sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662467
+    m_Localized: Full Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662468
+    m_Localized: Are you sure you want to quit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662469
+    m_Localized: Suppress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662470
+    m_Localized: Incinerate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662471
+    m_Localized: 'Entity File: ''Tentacle Colony'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662472
+    m_Localized: Success
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662473
+    m_Localized: 'System
+
+      Check'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662474
+    m_Localized: 'System
+
+      Check'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662475
+    m_Localized: '<size=115%>2. Entity Management Precautions</size>
+
+      - Entities
+      may cause anomalies that damage the facility.
+
+      - Use CCTV controls and
+      wall-mounted equipment to resolve anomalies. Consult Entity Anomaly Research
+      Findings in the entity files for the correct response.
+
+      - For hallucinations
+      and other physical symptoms, consult the Physical Symptoms Manual.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662476
+    m_Localized: '<size=135%>Entity Anomaly Research Findings</size>
+
+      1. When
+      imitating Bound Circuit, the entity was vulnerable to electric shocks.
+
+      2.
+      When imitating Tentacle Colony, exposure to high temperatures restored its
+      original form.
+
+      3. Its humanoid shell was also vulnerable to high temperatures.
+
+      4.
+      It periodically creates masks around the facility. These interfere with the
+      system and must be destroyed promptly by stepping on them. The masks emit a
+      noise-like sound.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662477
+    m_Localized: 'Electric
+
+      Shock'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662478
+    m_Localized: 'Entity File: ''Mimic'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662479
+    m_Localized: '<size=135%>Entity Anomaly Research Findings</size>
+
+      1. Electrical
+      discharges caused sparks and disrupted nearby systems. A system check was required.
+
+      2.
+      If the entity stood up from its restraint chair, physical force could suppress
+      it.
+
+      3. When it generated wires around itself, incineration stopped their
+      growth.
+
+      4. High-voltage discharges sometimes caused lighting failures.
+      Resetting the power system with the circuit breaker resolved them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662480
+    m_Localized: "Entity: AC-029 \u2014 Mimic\nAbilities: Mimicry, system interference\n<size=90%>An
+      object-like entity captured on a farm in Chernobyl. It imitates humans to approach
+      its victims, then puts masks on them to turn them into its own kind.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662481
+    m_Localized: "Entity: AC-017 \u2014 Bound Circuit\nAbilities: Current manipulation,
+      wire generation\n<size=90%>A humanoid entity found in a former Soviet bunker.
+      It normally absorbs electricity, but when unstable, it generates wires and
+      devastates its surroundings.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662482
+    m_Localized: 'Entity File: ''Bound Circuit'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662483
+    m_Localized: '<size=130%>1. Possible Physical Symptoms</size>
+
+      The confined
+      facility may cause the following minor symptoms:
+
+      - Visual static that
+      obstructs your vision.
+
+      - Voices other than your own.
+
+      - Unreal
+      apparitions unrelated to registered entities or objects.
+
+
+      <size=130%>2.
+      Response</size>
+
+      If any of these occur, immediately take the administrator
+      medication on the desk, shown below.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662484
+    m_Localized: 'Electric
+
+      Shock'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662485
+    m_Localized: 'Physical Symptoms: Response Manual'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662486
+    m_Localized: Failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662487
+    m_Localized: Containment failed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662488
+    m_Localized: "Today's Protocol Code \u2014 "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662489
+    m_Localized: '<size=115%>3. Emergency Protocol</size>
+
+      - If a room''s stability
+      reaches zero, the Emergency Protocol activates.
+
+      - Before time runs out,
+      enter the correct code into the protocol terminal left of the elevator and
+      submit it. The code at the bottom of this document is updated daily.
+
+      -
+      If you fail to submit the protocol in time, this facility will be sealed and
+      erasure procedures will follow. Good luck.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662490
+    m_Localized: '<size=135%>Entity Anomaly Research Findings</size>
+
+      1. When
+      the colony became aggressive and attacked nearby equipment, exposure to high
+      temperatures stopped the aggression.
+
+      2. The colony became highly unstable
+      when its food container was empty. Supplying food through the feeding system
+      restored its stability.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662491
+    m_Localized: Basic Management Rules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662492
+    m_Localized: '<size=115%>1. Duty Objective</size>
+
+      - Maintain stable containment
+      of all entities from 00:00 to 06:00.
+
+      - Monitor each entity''s stability.
+      Use the tablet on the desk to raise it before it reaches 0%.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662493
+    m_Localized: Incinerate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662494
+    m_Localized: "Entity: AC-013 \u2014 Tentacle Colony\nAbilities: Tentacle attacks,
+      tentacle generation\n<size=90%>An annelid found in the Pantanal wetlands. It
+      feeds and reproduces endlessly, attempting to consume everything in sight.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662495
+    m_Localized: 'Reported hallucinations: visual static (left), unreal apparitions
+      (right).'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662496
+    m_Localized: 'System
+
+      Check'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662497
+    m_Localized: 'System
+
+      Check'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662498
+    m_Localized: Day 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662499
+    m_Localized: '<size=135%>Entity Anomaly Research Findings</size>
+
+      1. When
+      imitating Bound Circuit, the entity was vulnerable to electric shocks.
+
+      2.
+      When imitating Tentacle Colony, exposure to high temperatures restored its
+      original form.
+
+      3. Its humanoid shell was also vulnerable to high temperatures.
+
+      4.
+      It periodically creates masks around the facility. These interfere with the
+      system and must be destroyed promptly by stepping on them. The masks emit a
+      noise-like sound.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662500
+    m_Localized: Administrator 32. Your term of service has ended. Congratulations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662501
+    m_Localized: 'End: Erasure'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662502
+    m_Localized: '<size=135%>Entity Anomaly Research Findings</size>
+
+      1. Electrical
+      discharges caused sparks and disrupted nearby systems. A system check was required.
+
+      2.
+      If the entity stood up from its restraint chair, physical force could suppress
+      it.
+
+      3. When it generated wires around itself, incineration stopped their
+      growth.
+
+      4. High-voltage discharges sometimes caused lighting failures.
+      Resetting the power system with the circuit breaker resolved them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662503
+    m_Localized: For low-ranking employees, it always ends in 'erasure'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662504
+    m_Localized: '<size=130%>1. Possible Physical Symptoms</size>
+
+      The confined
+      facility may cause the following minor symptoms:
+
+      - Visual static that
+      obstructs your vision.
+
+      - Voices other than your own.
+
+      - Unreal
+      apparitions unrelated to registered entities or objects.
+
+
+      <size=130%>2.
+      Response</size>
+
+      If any of these occur, immediately take the administrator
+      medication on the desk, shown below.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662505
+    m_Localized: Day 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662506
+    m_Localized: Day 1 Complete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662507
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662508
+    m_Localized: '<size=135%>Entity Anomaly Research Findings</size>
+
+      1. When
+      the colony became aggressive and attacked nearby equipment, exposure to high
+      temperatures stopped the aggression.
+
+      2. The colony became highly unstable
+      when its food container was empty. Supplying food through the feeding system
+      restored its stability.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662509
+    m_Localized: '<size=115%>1. Duty Objective</size>
+
+      - Maintain stable containment
+      of all entities from 00:00 to 06:00.
+
+      - Monitor each entity''s stability
+      and prevent it from reaching 0%.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662510
+    m_Localized: 'System
+
+      Check'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662511
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662512
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662513
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662514
+    m_Localized: Employment Contract
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662515
+    m_Localized: Anomaly Control Division
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662516
+    m_Localized: Do you accept these terms and agree to join?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662517
+    m_Localized: Next Day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662518
+    m_Localized: <size=115%>Day n Report</size>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662519
+    m_Localized: '<size=80%>1. Asset Damage: None
+
+
+      2. Containment Stability:
+      High
+
+
+      3. Response Speed: Average
+
+
+      4. Mental Contamination: None</size>
+
+
+      <size=115%>Fitness
+      for Duty: A</size>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662520
+    m_Localized: Performance Evaluation Report
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662521
+    m_Localized: Performance Evaluation Report
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662522
+    m_Localized: I agree to receive my salary and continue my employment contract.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662523
+    m_Localized: 'Prevent System
+
+      Intrusion'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662524
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662525
+    m_Localized: Voltage Stabilization
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662526
+    m_Localized: Timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662527
+    m_Localized: Tranquilizer Preparation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662528
+    m_Localized: Prepare a tranquilizer for the Tentacle Colony.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662529
+    m_Localized: Enter the defense code exactly as instructed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662530
+    m_Localized: Enter the defense code to prevent system intrusion.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662531
+    m_Localized: Stabilize the fluctuating voltage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662532
+    m_Localized: Stabilizing voltage...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662533
+    m_Localized: '<color=red>Game Over</color>
+
+      <size=80%>Containment failed.</size>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662534
+    m_Localized: Day 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662535
+    m_Localized: '- Prefers thick macarons to regular macarons.
+
+
+      - Only eats
+      sausages of Johnsonville quality or better.
+
+
+      - Prefers flattened, crispy
+      croissants to regular croissants.
+
+
+      - Many women.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662536
+    m_Localized: Management Manual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662537
+    m_Localized: 'Entity Name: Kim Ji-won
+
+      Main Ability: Planning
+
+
+      Discovered
+      underground in the former Soviet Union.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662538
+    m_Localized: 'Unknown Entity Management Division: Operations Manual'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662539
+    m_Localized: Basic Management Rules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662540
+    m_Localized: Day {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662541
+    m_Localized: Day {0} Complete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662542
+    m_Localized: Day {0} Report
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662543
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828288
+    m_Localized: Check the manual for essential task information.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828289
+    m_Localized: Previous records expunged. New designation assigned. Welcome, Administrator
+      32.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828290
+    m_Localized: 'Welcome, Administrator 32. Reminder: The preservation of company
+      assets takes strict priority over personnel safety.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828291
+    m_Localized: Welcome, Administrator 32.and please remain alert as the Entity
+      is currently unstable for reasons unknown.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828292
+    m_Localized: Welcome, Administrator 32. Please note that asset loss leads to
+      immediate termination.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828293
+    m_Localized: Welcome, Administrator 32. Complete your service with perfection
+      until the last moment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828294
+    m_Localized: Possibility of confidential leak confirmed. Proceeding with Termination.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243348611072
+    m_Localized: 'Anomaly Control
+
+      Division
+
+      <size=60%>Unknown Entity
+      Management Division</size>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243373776896
+    m_Localized: '<size=115%>1. Duties and Risk Warning</size>
+
+      You may face
+      uncontrollable biological or paranormal hazards. The Company accepts no responsibility
+      for death, dismemberment, or mental contamination during your duties.
+
+
+      <size=115%>2.
+      Confidentiality</size>
+
+      Disclosure of classified information, including
+      after leaving the Company, will result in immediate legal action and mandatory
+      memory erasure. Any resulting side effects, including reduced intelligence,
+      are the employee''s responsibility.
+
+
+      <size=115%>3. Emergencies</size>
+
+      In
+      a containment breach or other emergency, recovery and protection of Company
+      assets (anomalous entities) take priority over your own safety.
+
+
+      <size=115%>4.
+      Workplace Injuries and Insurance</size>
+
+      This special employment arrangement
+      provides no statutory social insurance or workplace injury coverage. If you
+      die on duty, your body will be donated to the Company for research at no cost.
+
+
+      <size=115%>5.
+      Information Censorship</size>
+
+      The Company may censor any materials provided
+      to you at its discretion. Information stored by employees is also subject to
+      unannounced inspection.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064357789696
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13146795945984
+    m_Localized: 'Choose Language: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784318197760
+    m_Localized: 'Bound Circuit: Management Rules'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752192
+    m_Localized: 'Mimic: Management Rules'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752193
+    m_Localized: 'Tentacle Colony: Management Rules'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752194
+    m_Localized: 'Physical Symptoms: Response'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752195
+    m_Localized: Emergency. Emergency. Execute protocol immediately......
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752196
+    m_Localized: Previous records expunged. New designation assigned. Welcome, Administrator
+      33.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016800960512
+    m_Localized: Translation Notice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514944
+    m_Localized: All languages other than Korean were translated using AI. Some translations
+      may sound unnatural or contain errors. Thank you for your understanding.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514945
+    m_Localized: Are you sure you want to leave?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514946
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514947
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514948
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

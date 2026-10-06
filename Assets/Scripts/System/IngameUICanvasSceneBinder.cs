@@ -82,6 +82,12 @@ public static class IngameUICanvasSceneBinder
                 }
                 break;
             case GoToTitleButtonName:
+                if (gameManager != null)
+                {
+                    button.onClick.AddListener(gameManager.RequestReturnToTitle);
+                    BoundButtonIds.Add(button.GetInstanceID());
+                }
+                break;
             case RestartButtonName:
                 if (gameManager != null)
                 {

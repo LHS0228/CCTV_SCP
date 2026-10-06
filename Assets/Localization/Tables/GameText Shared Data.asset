@@ -1,0 +1,456 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: GameText Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: GameText
+  m_TableCollectionNameGuidString: 3837ebd90fa5c6e428d3eb0f9f0593ce
+  m_Entries:
+  - m_Id: 744108032
+    m_Key: options.sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468160
+    m_Key: options.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468161
+    m_Key: menu.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468162
+    m_Key: menu.options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662464
+    m_Key: menu.cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662465
+    m_Key: options.master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662466
+    m_Key: options.sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662467
+    m_Key: options.fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662468
+    m_Key: menu.confirmExit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662469
+    m_Key: action.suppress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662470
+    m_Key: action.incinerate.12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662471
+    m_Key: entity.tentacles.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662472
+    m_Key: protocol.success
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662473
+    m_Key: action.systemCheck.15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662474
+    m_Key: action.systemCheck.19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662475
+    m_Key: manual.management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662476
+    m_Key: manual.mimic.research.23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662477
+    m_Key: action.shock.24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662478
+    m_Key: entity.mimic.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662479
+    m_Key: manual.circuit.research.28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662480
+    m_Key: manual.mimic.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662481
+    m_Key: manual.circuit.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662482
+    m_Key: entity.circuit.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662483
+    m_Key: manual.symptoms.32
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662484
+    m_Key: action.shock.33
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662485
+    m_Key: manual.symptoms.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662486
+    m_Key: protocol.fail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662487
+    m_Key: game.failure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662488
+    m_Key: manual.protocolCode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662489
+    m_Key: manual.emergency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662490
+    m_Key: manual.tentacles.research.40
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662491
+    m_Key: manual.rules.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662492
+    m_Key: manual.objective.tablet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662493
+    m_Key: action.incinerate.43
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662494
+    m_Key: manual.tentacles.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662495
+    m_Key: manual.symptoms.caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662496
+    m_Key: action.systemCheck.47
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662497
+    m_Key: action.systemCheck.48
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662498
+    m_Key: day.initial.five
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662499
+    m_Key: manual.mimic.research.50
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662500
+    m_Key: voice.ending.congratulations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662501
+    m_Key: ending.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662502
+    m_Key: manual.circuit.research.54
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662503
+    m_Key: ending.epilogue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662504
+    m_Key: manual.symptoms.58
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662505
+    m_Key: day.initial.one.59
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662506
+    m_Key: day.initial.clear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662507
+    m_Key: game.over.short
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662508
+    m_Key: manual.tentacles.research.63
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662509
+    m_Key: manual.objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662510
+    m_Key: action.systemCheck.65
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662511
+    m_Key: menu.yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662512
+    m_Key: menu.no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662513
+    m_Key: menu.start.68
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662514
+    m_Key: contract.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662515
+    m_Key: division.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662516
+    m_Key: contract.acceptQuestion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662517
+    m_Key: report.nextDay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662518
+    m_Key: report.initial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662519
+    m_Key: report.results
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662520
+    m_Key: report.title.78
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662521
+    m_Key: report.title.79
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662522
+    m_Key: report.agreement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662523
+    m_Key: tablet.defense.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662524
+    m_Key: menu.start.82
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662525
+    m_Key: tablet.voltage.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662526
+    m_Key: tablet.timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662527
+    m_Key: tablet.tranquilizer.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662528
+    m_Key: tablet.tranquilizer.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662529
+    m_Key: tablet.defense.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662530
+    m_Key: tablet.defense.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662531
+    m_Key: tablet.voltage.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662532
+    m_Key: tablet.voltage.progress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662533
+    m_Key: game.over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662534
+    m_Key: day.initial.one.97
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662535
+    m_Key: prototype.entity.preferences
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662536
+    m_Key: manual.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662537
+    m_Key: prototype.entity.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662538
+    m_Key: manual.division.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662539
+    m_Key: manual.rules.plain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662540
+    m_Key: ui.day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662541
+    m_Key: ui.dayClear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662542
+    m_Key: ui.dayReport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662543
+    m_Key: options.language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828288
+    m_Key: voice.manual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828289
+    m_Key: voice.day1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828290
+    m_Key: voice.day2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828291
+    m_Key: voice.day3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828292
+    m_Key: voice.day4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828293
+    m_Key: voice.day5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828294
+    m_Key: voice.ending.erasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243348611072
+    m_Key: game.logo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243373776896
+    m_Key: contract.terms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064357789696
+    m_Key: options.resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13146795945984
+    m_Key: options.languageSelect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784318197760
+    m_Key: manual.circuit.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752192
+    m_Key: manual.mimic.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752193
+    m_Key: manual.tentacles.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752194
+    m_Key: manual.symptoms.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752195
+    m_Key: voice.emergency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752196
+    m_Key: voice.ending.last
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016800960512
+    m_Key: dialog.translation.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514944
+    m_Key: dialog.translation.body
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514945
+    m_Key: dialog.returnTitle.question
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514946
+    m_Key: dialog.confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514947
+    m_Key: dialog.yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514948
+    m_Key: dialog.no
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4860295613370335256
+  references:
+    version: 2
+    RefIds:
+    - rid: 4860295613370335256
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1791185302790

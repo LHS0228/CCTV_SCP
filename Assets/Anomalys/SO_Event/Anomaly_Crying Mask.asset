@@ -22,3 +22,6 @@ MonoBehaviour:
   lastTransRange:
   - {x: 3, y: 0.68, z: -1}
   - {x: 4.16, y: 0.68, z: -4.8}
+  excludedSpawnAreas:
+  - m_Center: {x: -2.6506908, y: 0.6379355, z: 0}
+    m_Extent: {x: 2.2405844, y: 0.63793564, z: 0.97401315}

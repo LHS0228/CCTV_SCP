@@ -50,6 +50,13 @@ public class ProtocolSystem : MonoBehaviour
         // 사이렌 소리 재생 (죽을 때는 사이렌 울릴 필요 없이 바로 타임라인 재생하므로 아래로 내림)
         saveSound = SoundManager.Instance.Play3DSFX(SoundManager.Instance.Data.deathCommonSirenLoopBeforeDeath, GameManager.Instance.anomalySystem.specialObjects[1].transform.position, 20, true);
 
+        AudioClip announcement = SoundManager.Instance.Data.deathCommonStabilityZeroProtocolAnnounce;
+        if (announcement != null)
+        {
+            SoundManager.Instance.PlayGlobalSFX(announcement);
+            StartSystem.instance?.TriggerLocalizedVoiceText("voice.emergency", announcement.length);
+        }
+
         protocol_FinalChased = true; // 기회 사용 처리
         protocol_Activated = true;   // Update문의 카운트다운 시작
     }

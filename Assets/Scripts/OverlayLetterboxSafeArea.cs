@@ -13,7 +13,7 @@ public sealed class OverlayLetterboxSafeArea : MonoBehaviour
 
     private const string SafeAreaName = "LetterboxSafeArea";
     private const string FadePanelName = "FadePanel";
-    private const int FadePanelSortingOrder = 1000;
+    public const int FadePanelSortingOrder = 1000;
 
     private RectTransform safeAreaRect;
     private CanvasScaler canvasScaler;

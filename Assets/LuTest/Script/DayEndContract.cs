@@ -41,6 +41,11 @@ public class DayEndContract : MonoBehaviour
 
     public bool isContractOn = false;
 
+    private Canvas reportCanvas;
+    private int originalSortingOrder;
+    private bool originalOverrideSorting;
+    private bool nextDayRequested;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -83,8 +88,28 @@ public class DayEndContract : MonoBehaviour
 
     public void ShowContract()
     {
-
+        nextDayRequested = false;
         isContractOn = true;
+
+        if (reportCanvas == null && contractPanel != null)
+        {
+            reportCanvas = contractPanel.GetComponentInParent<Canvas>();
+            if (reportCanvas != null)
+            {
+                originalSortingOrder = reportCanvas.sortingOrder;
+                originalOverrideSorting = reportCanvas.overrideSorting;
+            }
+        }
+        // The end-of-day Timeline holds a black fade. Show the interactive report above it.
+        if (reportCanvas != null)
+        {
+            reportCanvas.overrideSorting = true;
+            reportCanvas.sortingOrder = OverlayLetterboxSafeArea.FadePanelSortingOrder + 1;
+        }
+        if (yesButton != null)
+            yesButton.interactable = true;
+        if (checkMarkLeft != null)
+            checkMarkLeft.fillAmount = 0f;
 
         Debug.Log("����");
         if (backGroundPanel != null)
@@ -103,12 +128,17 @@ public class DayEndContract : MonoBehaviour
             // ���� -1500 ��ġ���� TargetPosition(0,0)���� �̵�
             contractPanel.DOAnchorPos(targetPosition, slideDuration).SetEase(Ease.OutBack);
         }
-        dayText.text = "Day " + DaySystem.Instance.GetNowDay().ToString() + " Report";
+        GameLocalization.SetText(dayText, "ui.dayReport", DaySystem.Instance.GetNowDay());
     }
 
     public void OnClickNextButton()
     {
+        if (!isContractOn || nextDayRequested)
+            return;
+        nextDayRequested = true;
         isContractOn= false;
+        if (yesButton != null)
+            yesButton.interactable = false;
 
         if (checkMarkLeft != null)
         {
@@ -117,8 +147,13 @@ public class DayEndContract : MonoBehaviour
 
         DOVirtual.DelayedCall(2.0f, () =>
         {
+            if (reportCanvas != null)
+            {
+                reportCanvas.sortingOrder = originalSortingOrder;
+                reportCanvas.overrideSorting = originalOverrideSorting;
+            }
             DaySystem.Instance.NextDayButton();
-        });
+        }).SetLink(gameObject);
     }
 
 }

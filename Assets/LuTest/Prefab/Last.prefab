@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manualIndex: 0
+  manualManager: {fileID: 0}
 --- !u!1 &7033232598384565013
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +223,7 @@ GameObject:
   - component: {fileID: 8168271865762612125}
   - component: {fileID: 3622486647123897671}
   - component: {fileID: 9987350577087747}
+  - component: {fileID: 2019834286232893202}
   m_Layer: 5
   m_Name: InfoText
   m_TagString: Untagged
@@ -347,3 +349,16 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2019834286232893202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033232598384565013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: manual.rules.plain

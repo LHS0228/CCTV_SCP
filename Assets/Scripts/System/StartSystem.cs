@@ -4,6 +4,7 @@ using UnityEngine;
 public class StartSystem : MonoBehaviour
 {
     public static StartSystem instance;
+    private Coroutine subtitleRoutine;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -34,27 +35,27 @@ public class StartSystem : MonoBehaviour
             case 1:
                 nextTime = 8;
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.RobotDay1);
-                StartCoroutine(VoiceTextOn("이전 관리 기록 말소, 신입 관리자 번호 배정. 출근을 환영합니다, 관리자 32님.", nextTime));
+                TriggerLocalizedVoiceText("voice.day1", nextTime);
                 break;
             case 2:
                 nextTime = 10;
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.RobotDay2);
-                StartCoroutine(VoiceTextOn("출근을 환영합니다, 관리자 32님. 회사의 자산은 언제나 직원의 안전보다 우선되는 것을 명심하십시오.", nextTime));
+                TriggerLocalizedVoiceText("voice.day2", nextTime);
                 break;
             case 3:
                 nextTime = 8;
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.RobotDay3);
-                StartCoroutine(VoiceTextOn("출근을 환영합니다, 관리자 32님. 알수없는 원인으로 개체가 불안정해졌으니 주의하십시오.", nextTime));
+                TriggerLocalizedVoiceText("voice.day3", nextTime);
                 break;
             case 4:
                 nextTime = 8;
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.RobotDay4);
-                StartCoroutine(VoiceTextOn("출근을 환영합니다, 관리자 32님. 자산에 손실이 일어나면 즉시 해고되니 주의하십시오.", nextTime));
+                TriggerLocalizedVoiceText("voice.day4", nextTime);
                 break;
             case 5:
                 nextTime = 8;
                 SoundManager.Instance.PlayGlobalSFX(SoundManager.Instance.Data.RobotDay5);
-                StartCoroutine(VoiceTextOn("출근을 환영합니다, 관리자 32님. 마지막까지 완벽하게 근무하십시오.", nextTime));
+                TriggerLocalizedVoiceText("voice.day5", nextTime);
                 break;
             default:
                 Debug.LogError("버그 남 날짜관련 버그 일단 StartSystem에서 난거니까 확인");
@@ -68,16 +69,40 @@ public class StartSystem : MonoBehaviour
     }
     public void TriggerVoiceTextOnFunc(string text, float time)
     {
-        StartCoroutine(VoiceTextOn(text, time));
+        ShowSubtitle(text, time, false);
     }
-    private IEnumerator VoiceTextOn(string text, float time)
+    public void TriggerLocalizedVoiceText(string key, float time)
+    {
+        ShowSubtitle(key, time, true);
+    }
+
+    private void ShowSubtitle(string text, float time, bool localized)
+    {
+        if (subtitleRoutine != null)
+            StopCoroutine(subtitleRoutine);
+        subtitleRoutine = StartCoroutine(VoiceTextOn(text, time, localized));
+    }
+
+    private IEnumerator VoiceTextOn(string text, float time, bool localized = false)
     {
         GameManager.Instance.voiceTextBox.SetActive(true);
-        GameManager.Instance.voiceText.text = text;
+        if (localized)
+        {
+            GameLocalization.SetText(GameManager.Instance.voiceText, text);
+        }
+        else
+        {
+            // Legacy callers can still display a literal subtitle without a stale locale binding.
+            LocalizedTMPText binding = GameManager.Instance.voiceText.GetComponent<LocalizedTMPText>();
+            if (binding != null)
+                binding.SetReference(null);
+            GameManager.Instance.voiceText.text = text;
+        }
 
         yield return new WaitForSecondsRealtime(time);
 
         GameManager.Instance.voiceTextBox.SetActive(false);
+        subtitleRoutine = null;
     }
 
     private void OnTriggerEnter(Collider other)

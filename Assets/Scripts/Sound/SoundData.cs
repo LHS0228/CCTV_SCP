@@ -121,8 +121,11 @@ public class SoundData : ScriptableObject
     [Tooltip("인간 변신 이상현상 발동 시 창문쪽에서 출력 (스테레오)")]
     public AudioClip abnormalMaskHumanTransform;            // 인간 변신 이상현상
 
-    [Tooltip("우는 가면 이상현상 발동 시 생성된 가면쪽에서 출력 (스테레오)")]
+    [Tooltip("우는 가면 생성 즉시 거리와 무관하게 출력")]
     public AudioClip abnormalMaskCreationWeepingMan;        // 가면 생성 이상현상 (우는 소리)
+
+    [Tooltip("바닥에 생성된 가면 위치에서 반복 출력하는 거리별 잡음")]
+    public AudioClip abnormalMaskNoise;
 
     [Tooltip("생성된 우는 가면과 상호작용 시 출력되는 도자기 깨지는 소리")]
     public AudioClip abnormalMaskBreakCeramic;              // 가면 상호작용 (도자기 깨짐)

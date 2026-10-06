@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 4987608958231184173}
   - component: {fileID: 3522440431897624647}
   - component: {fileID: 300295280295625524}
+  - component: {fileID: 6916332721283252073}
   m_Layer: 5
   m_Name: RoomText
   m_TagString: Untagged
@@ -607,6 +608,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6916332721283252073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212924552926081737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.defense.title
 --- !u!1 &1249895194641856273
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +903,7 @@ GameObject:
   - component: {fileID: 6333918158042486315}
   - component: {fileID: 3582372500781781531}
   - component: {fileID: 5292970691643169351}
+  - component: {fileID: 733081200568651719}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1014,6 +1029,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &733081200568651719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456479351242055047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: menu.start.82
 --- !u!1 &1476528844599097707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1053,7 @@ GameObject:
   - component: {fileID: 7143018443754549317}
   - component: {fileID: 2121282330144818414}
   - component: {fileID: 2817518756918445407}
+  - component: {fileID: 4887459820201594843}
   m_Layer: 5
   m_Name: RoomText
   m_TagString: Untagged
@@ -1150,6 +1179,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4887459820201594843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476528844599097707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.voltage.title
 --- !u!1 &1542504579023746970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1278,7 @@ GameObject:
   - component: {fileID: 4399360304221283458}
   - component: {fileID: 694995644163650935}
   - component: {fileID: 8852837153909037009}
+  - component: {fileID: 4231854089683286723}
   m_Layer: 5
   m_Name: ProgressTimer
   m_TagString: Untagged
@@ -1361,6 +1404,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4231854089683286723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723263856752072101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.timer
 --- !u!1 &1755402034975114440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1789,7 @@ GameObject:
   - component: {fileID: 7308880218769494154}
   - component: {fileID: 3630048141841412185}
   - component: {fileID: 5413741265410492369}
+  - component: {fileID: 2031374426146561209}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1858,6 +1915,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2031374426146561209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239005316078478115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: menu.start.82
 --- !u!1 &2393817025948249597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,6 +2019,7 @@ GameObject:
   - component: {fileID: 3832606568164849869}
   - component: {fileID: 3373929363583566448}
   - component: {fileID: 7572332511311942835}
+  - component: {fileID: 6383013888011946958}
   m_Layer: 5
   m_Name: RoomText
   m_TagString: Untagged
@@ -2074,6 +2145,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6383013888011946958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577688700056759391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.tranquilizer.title
 --- !u!1 &2663015342599524900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,6 +3028,7 @@ GameObject:
   - component: {fileID: 9065343889439288098}
   - component: {fileID: 4161029380350201997}
   - component: {fileID: 7668189481329559456}
+  - component: {fileID: 2505729756935414433}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -3069,6 +3154,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2505729756935414433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3023323202797675883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.timer
 --- !u!1 &3119830430493156812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3298,7 @@ GameObject:
   - component: {fileID: 7570950933427285023}
   - component: {fileID: 3441333448820015953}
   - component: {fileID: 593185123791685430}
+  - component: {fileID: 7232669675918962713}
   m_Layer: 5
   m_Name: description
   m_TagString: Untagged
@@ -3326,6 +3425,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7232669675918962713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124462385117457893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.tranquilizer.instructions
 --- !u!1 &3533293299957324402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,6 +3606,7 @@ GameObject:
   - component: {fileID: 557911006763663825}
   - component: {fileID: 4080262426796168815}
   - component: {fileID: 7822377403661782468}
+  - component: {fileID: 6136973321137231697}
   m_Layer: 5
   m_Name: MainText
   m_TagString: Untagged
@@ -3620,6 +3733,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6136973321137231697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596382077700492536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.defense.instructions
 --- !u!1 &3647215330612249661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,6 +4123,7 @@ GameObject:
   - component: {fileID: 921252782050089751}
   - component: {fileID: 5765029492006526288}
   - component: {fileID: 406602433529716290}
+  - component: {fileID: 5895540410055086158}
   m_Layer: 5
   m_Name: description
   m_TagString: Untagged
@@ -4123,6 +4250,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5895540410055086158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4043056502465514691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.defense.description
 --- !u!1 &4382235892470666922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4582,6 +4722,7 @@ GameObject:
   - component: {fileID: 7610103999126620165}
   - component: {fileID: 3395062067130383103}
   - component: {fileID: 6381217666091425884}
+  - component: {fileID: 6795184408619655264}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4707,6 +4848,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6795184408619655264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4697741525709982505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: menu.start.82
 --- !u!1 &4876590972216531176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,6 +6720,7 @@ GameObject:
   - component: {fileID: 8184820686284291159}
   - component: {fileID: 6516736068768866464}
   - component: {fileID: 3079495267671051621}
+  - component: {fileID: 2535422244682788786}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -6691,6 +6846,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2535422244682788786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6877610481733730706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.timer
 --- !u!1 &6903131572685213945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,6 +6991,7 @@ GameObject:
   - component: {fileID: 5532397571031320475}
   - component: {fileID: 562187152544047778}
   - component: {fileID: 6966219038125316703}
+  - component: {fileID: 8188735645461580507}
   m_Layer: 5
   m_Name: description
   m_TagString: Untagged
@@ -6948,6 +7117,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8188735645461580507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602346358538533884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.voltage.instructions
 --- !u!1 &7818052196224646712
 GameObject:
   m_ObjectHideFlags: 0
@@ -7521,6 +7703,7 @@ GameObject:
   - component: {fileID: 661204342291230239}
   - component: {fileID: 3347932486095954245}
   - component: {fileID: 4971701290029834093}
+  - component: {fileID: 5954432881899179441}
   m_Layer: 5
   m_Name: description
   m_TagString: Untagged
@@ -7646,6 +7829,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5954432881899179441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649620159500274250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad24301aba7d224abea2fb4a8dda37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tablet.voltage.progress
 --- !u!1 &8747836318599976390
 GameObject:
   m_ObjectHideFlags: 0
@@ -7777,6 +7973,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.65, y: 4.22, z: 0.21}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &930000000000000006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747836318599976390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bbfb5d5f214d2da0dc711c3c8f27a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeCustomMaterials: 1
 --- !u!1 &8836067974645785566
 GameObject:
   m_ObjectHideFlags: 0
@@ -7972,16 +8181,3 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &930000000000000006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8747836318599976390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93bbfb5d5f214d2da0dc711c3c8f27a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  includeCustomMaterials: 1

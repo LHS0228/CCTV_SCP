@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     private CCTVManager cctvManager;
     private TabletManager tabletManager;
     private ManualManager manualManager;
+    private MenuDialog activeMenuDialog;
+    private MenuDialog returnToTitleDialog;
 
     [Header("프로토콜 비밀번호")]
     public int protocolNum;
@@ -76,13 +78,33 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     public bool AllStopCheck()
     {
-        if (isGameStop || isTimeStop) { return true; }
+        if (isGameStop || isTimeStop || (activeMenuDialog != null && activeMenuDialog.IsOpen)) { return true; }
         else return false;
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void RequestReturnToTitle()
+    {
+        if (returnToTitleDialog == null)
+            returnToTitleDialog = MenuDialog.Create();
+        returnToTitleDialog?.ShowReturnToTitle(RestartGame);
+    }
+
+    public void RegisterMenuDialog(MenuDialog dialog)
+    {
+        if (activeMenuDialog != null && activeMenuDialog != dialog)
+            activeMenuDialog.Cancel();
+        activeMenuDialog = dialog;
+    }
+
+    public void UnregisterMenuDialog(MenuDialog dialog)
+    {
+        if (activeMenuDialog == dialog)
+            activeMenuDialog = null;
     }
 
     public void OptionOn()
@@ -92,6 +114,12 @@ public class GameManager : MonoBehaviour
 
     private void HandleEscapeInput()
     {
+        if (activeMenuDialog != null && activeMenuDialog.IsOpen)
+        {
+            activeMenuDialog.Cancel();
+            return;
+        }
+
         if (optionMenu != null && optionMenu.activeSelf)
         {
             SetPlayerStop(false);

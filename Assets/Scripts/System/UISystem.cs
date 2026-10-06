@@ -22,8 +22,8 @@ public class UISystem : MonoBehaviour
 
     private void Start()
     {
-        startDayText.text = "Day " + DaySystem.Instance.GetNowDay();
-        clearDayText.text = "Day " + DaySystem.Instance.GetNowDay() + " Clear";
+        GameLocalization.SetText(startDayText, "ui.day", DaySystem.Instance.GetNowDay());
+        GameLocalization.SetText(clearDayText, "ui.dayClear", DaySystem.Instance.GetNowDay());
     }
 
     private void Update()

@@ -1,0 +1,10 @@
+.runtime-test { padding: 12px; }
+.heading { font-size: 17px; -unity-font-style: bold; margin-bottom: 10px; }
+.status { font-size: 13px; margin-bottom: 10px; }
+.section-heading { -unity-font-style: bold; margin-top: 16px; margin-bottom: 8px; }
+.time-row, .button-row { flex-direction: row; margin-bottom: 8px; }
+.time-row > IntegerField { flex-grow: 1; flex-basis: 0; }
+.time-row .unity-base-field__label { min-width: 70px; }
+.button-row > Button { flex-grow: 1; min-height: 25px; }
+.active-list { white-space: normal; margin-top: 14px; }
+.hint { white-space: normal; color: rgb(150, 150, 150); margin-top: 10px; }

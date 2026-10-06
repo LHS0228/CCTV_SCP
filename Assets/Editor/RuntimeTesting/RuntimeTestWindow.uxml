@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:ScrollView class="runtime-test">
+        <ui:Label text="Play Mode 런타임 테스트" class="heading" />
+        <ui:Label name="status" class="status" />
+        <ui:HelpBox name="message" text="이 창은 Unity Editor에서만 작동합니다. 변경한 런타임 상태는 Play Mode 종료 시 사라집니다." message-type="Info" />
+        <ui:VisualElement name="actions">
+            <ui:Label text="게임 시간" class="section-heading" />
+            <ui:VisualElement class="time-row">
+                <ui:IntegerField name="hour" label="시 (0–6)" />
+                <ui:IntegerField name="minute" label="분 (0–59)" />
+            </ui:VisualElement>
+            <ui:VisualElement class="button-row">
+                <ui:Button name="set-clock" text="시간 적용" />
+                <ui:Button name="finish-day" text="06:00으로 이동" />
+            </ui:VisualElement>
+            <ui:Toggle name="pause-clock" label="시간 흐름 일시정지" />
+            <ui:Label text="이상현상" class="section-heading" />
+            <ui:Toggle name="suspend-spawns" label="자동 이상현상 발생 정지" />
+            <ui:DropdownField name="anomaly" label="실행할 현상" />
+            <ui:VisualElement class="button-row">
+                <ui:Button name="trigger" text="선택한 현상 즉시 실행" />
+                <ui:Button name="clear" text="활성 이상현상 해결" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label name="active-list" class="active-list" />
+        <ui:Label text="같은 방의 현상은 중복 실행할 수 없습니다. 근무 종료·게임 오버 후에는 새 현상을 실행할 수 없습니다." class="hint" />
+    </ui:ScrollView>
+</ui:UXML>

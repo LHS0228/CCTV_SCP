@@ -51,7 +51,11 @@ public class AnomalySystem : MonoBehaviour
 
         // 2. 일반 이상현상 스폰 체크
         // 시간이 됐고 + 현재 2개 미만이며 + 빈 방이 있을 때
-        if (currentClock > nextStandardTime)
+        if (currentClock > nextStandardTime
+#if UNITY_EDITOR
+            && !EditorSuspendNaturalSpawns
+#endif
+            )
         {
             if (activeStandardAnomalies.Count < 2 && GetAvailableRoomCount() > 0)
             {
@@ -62,7 +66,11 @@ public class AnomalySystem : MonoBehaviour
 
         // 3. 특수 이상현상 스폰 체크
         // 시간이 됐고 + 현재 특수 현상이 없을 때
-        if (currentClock > nextSpecialTime)
+        if (currentClock > nextSpecialTime
+#if UNITY_EDITOR
+            && !EditorSuspendNaturalSpawns
+#endif
+            )
         {
             if (activeSpecialAnomaly == null)
             {
@@ -303,6 +311,71 @@ public class AnomalySystem : MonoBehaviour
         if (activeSpecialAnomaly != null) activeSpecialAnomaly.eventScript.Fail();
         activeSpecialAnomaly = null;
     }
+
+#if UNITY_EDITOR
+    // Runtime state only: the test window does not change event assets or scene data.
+    public bool EditorSuspendNaturalSpawns { get; set; }
+    public ActiveAnomaly EditorActiveSpecialAnomaly => activeSpecialAnomaly;
+
+    public bool EditorTriggerAnomaly(BasicEventAnomaly anomaly, out string message)
+    {
+        if (!Application.isPlaying || anomaly == null)
+        {
+            message = "Play Mode에서 이상현상을 선택하세요.";
+            return false;
+        }
+        if (GameManager.Instance == null || GameManager.Instance.isDeadWarring
+            || DaySystem.Instance == null || DaySystem.Instance.EditorIsDayClear)
+        {
+            message = "종료 또는 게임 오버 상태에서는 실행할 수 없습니다.";
+            return false;
+        }
+        bool standard = System.Array.IndexOf(standardEventPool, anomaly) >= 0;
+        bool special = System.Array.IndexOf(specialEventPool, anomaly) >= 0;
+        if (!standard && !special)
+        {
+            message = "현재 씬의 이상현상 풀에 없는 항목입니다.";
+            return false;
+        }
+        if (standard && (activeStandardAnomalies.Count >= 2
+            || activeStandardAnomalies.Exists(active => active.eventScript == anomaly || active.place == anomaly.eventPlace)))
+        {
+            message = "일반 이상현상이 이미 실행 중이거나 해당 방이 사용 중입니다. 활성 이상현상을 정리한 뒤 실행하세요.";
+            return false;
+        }
+        if (special && activeSpecialAnomaly != null)
+        {
+            message = "특수 이상현상이 이미 실행 중입니다. 활성 이상현상을 정리한 뒤 실행하세요.";
+            return false;
+        }
+        EventType type = anomaly.Execute();
+        var active = new ActiveAnomaly(anomaly, anomaly.eventPlace, type);
+        if (standard)
+            activeStandardAnomalies.Add(active);
+        else
+            activeSpecialAnomaly = active;
+        message = $"{anomaly.name} 실행됨 ({anomaly.eventPlace}, {type})";
+        return true;
+    }
+    public void EditorClearAnomalies()
+    {
+        if (!Application.isPlaying)
+            return;
+        foreach (ActiveAnomaly anomaly in activeStandardAnomalies)
+            anomaly.eventScript.Clear();
+        activeStandardAnomalies.Clear();
+        if (activeSpecialAnomaly != null)
+            activeSpecialAnomaly.eventScript.Clear();
+        activeSpecialAnomaly = null;
+    }
+    public void EditorRescheduleSpawns()
+    {
+        if (!Application.isPlaying || DaySystem.Instance == null)
+            return;
+        SetNextStandardTime();
+        SetNextSpecialTime();
+    }
+#endif
 
     // --- 유틸리티 함수 ---
 

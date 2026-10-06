@@ -19,6 +19,16 @@ public class PlayerMove : MonoBehaviour
 
     public GameObject headObject;
     private Rigidbody rb;
+    private Transform lookTransform;
+    private bool hasFocus = true;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        var camera = headObject.GetComponentInChildren<Unity.Cinemachine.CinemachineCamera>();
+        // Pitch at the camera: pitching the Head makes its offset camera orbit vertically.
+        lookTransform = camera != null ? camera.transform : headObject.transform;
+    }
 
     void Start()
     {
@@ -32,19 +42,27 @@ public class PlayerMove : MonoBehaviour
     public void SetMoveEnable(bool enable)
     {
         isStop = !enable;
+        ClearInput();
     }
     // Update는 카메라 회전처럼 물리와 관련 없는 로직만 처리합니다.
     void Update()
     {
-        if (isStop) return;
+        if (isStop || !hasFocus || Cursor.lockState != CursorLockMode.Locked)
+        {
+            ClearInput();
+            return;
+        }
+        ApplyLook(lookDelta);
+    }
 
-        //카메라 회전
-        float mouseX = lookDelta.x * sensitivity * MouseSensitivityScale;
-        float mouseY = lookDelta.y * sensitivity * MouseSensitivityScale;
+    private void ApplyLook(Vector2 delta)
+    {
+        float mouseX = delta.x * sensitivity * MouseSensitivityScale;
+        float mouseY = delta.y * sensitivity * MouseSensitivityScale;
 
         rotX -= mouseY;
         rotX = Mathf.Clamp(rotX, -80f, 80f);
-        headObject.transform.localRotation = Quaternion.Euler(rotX, 0f, 0f);
+        lookTransform.localRotation = Quaternion.Euler(rotX, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX); // headObject.transform.parent 대신 transform 사용
     }
 
@@ -52,10 +70,11 @@ public class PlayerMove : MonoBehaviour
     // 물리 관련 코드는 FixedUpdate에서 처리합니다.
     void FixedUpdate()
     {
-        if (isStop) return;
+        if (isStop || !hasFocus || Cursor.lockState != CursorLockMode.Locked) return;
 
         //움직임
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        move.y = 0f;
         if(move != Vector3.zero)
         {
             if (audioWalk == null)
@@ -86,18 +105,34 @@ public class PlayerMove : MonoBehaviour
 
     void OnLook(InputValue value)
     {
-        if (isStop) return;
+        if (isStop || !hasFocus || Cursor.lockState != CursorLockMode.Locked) return;
         lookDelta = value.Get<Vector2>();
     }
 
     void OnMove(InputValue value)
     {
-        if (isStop) return;
+        if (isStop || !hasFocus || Cursor.lockState != CursorLockMode.Locked) return;
         moveInput = value.Get<Vector2>();
     }
 
     public void SetSensitivity(float value)
     {
         sensitivity = value;
+    }
+
+    private void OnApplicationFocus(bool focused)
+    {
+        hasFocus = focused;
+        ClearInput();
+    }
+
+    private void OnDisable() => ClearInput();
+
+    private void ClearInput()
+    {
+        lookDelta = Vector2.zero;
+        moveInput = Vector2.zero;
+        if (audioWalk != null)
+            audioWalk.Stop();
     }
 }
