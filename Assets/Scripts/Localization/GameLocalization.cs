@@ -12,6 +12,7 @@ public static class GameLocalization
 {
     public const string TableName = "GameText";
     public const string PreferenceKey = "CCTV_SCP.Language";
+    public const string DefaultLanguageCode = "en";
     public static readonly string[] LanguageCodes = { "ko", "en", "ja", "zh-CN", "zh-TW", "fr", "de", "ru" };
     public static readonly string[] LanguageNames = { "한국어", "English", "日本語", "简体中文", "繁體中文", "Français", "Deutsch", "Русский" };
     public static event Action LanguageChanged;
@@ -20,7 +21,7 @@ public static class GameLocalization
     private static readonly Dictionary<string, TMP_FontAsset> fonts = new Dictionary<string, TMP_FontAsset>();
     private static readonly HashSet<string> missingKeys = new HashSet<string>();
     private static bool initialized;
-    private static string currentCode = "ko";
+    private static string currentCode = DefaultLanguageCode;
     public static string CurrentCode { get { Initialize(); return currentCode; } }
     public static int CurrentIndex => Array.IndexOf(LanguageCodes, CurrentCode);
     public static string TablePath(string code) => "Localization/Tables/GameText_" + code;
@@ -31,7 +32,7 @@ public static class GameLocalization
         if (initialized && LocalizationSettings.HasSettings)
             LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
         initialized = false;
-        currentCode = "ko";
+        currentCode = DefaultLanguageCode;
         tables.Clear();
         fonts.Clear();
         missingKeys.Clear();
@@ -44,9 +45,9 @@ public static class GameLocalization
         if (initialized)
             return;
         initialized = true;
-        currentCode = PlayerPrefs.GetString(PreferenceKey, "ko");
+        currentCode = PlayerPrefs.GetString(PreferenceKey, DefaultLanguageCode);
         if (Array.IndexOf(LanguageCodes, currentCode) < 0)
-            currentCode = "ko";
+            currentCode = DefaultLanguageCode;
 
         if (LocalizationSettings.HasSettings)
         {

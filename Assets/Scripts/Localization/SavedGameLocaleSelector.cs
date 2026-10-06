@@ -9,9 +9,9 @@ public sealed class SavedGameLocaleSelector : IStartupLocaleSelector
 {
     public Locale GetStartupLocale(ILocalesProvider availableLocales)
     {
-        string code = PlayerPrefs.GetString(GameLocalization.PreferenceKey, "ko");
+        string code = PlayerPrefs.GetString(GameLocalization.PreferenceKey, GameLocalization.DefaultLanguageCode);
         if (Array.IndexOf(GameLocalization.LanguageCodes, code) < 0)
-            code = "ko";
+            code = GameLocalization.DefaultLanguageCode;
         return availableLocales.GetLocale(new LocaleIdentifier(code));
     }
 }
