@@ -97,7 +97,7 @@ public sealed class ManualRulesLocalizationLayout : MonoBehaviour
         Place(protocolCaption, -0.15f, captionLayout.position.y, 0.68f, 0.12f);
         protocolCaption.alignment = TextAlignmentOptions.Right;
         protocolCaption.textWrappingMode = TextWrappingModes.NoWrap;
-        protocolCaption.fontSizeMax = language == "en" || language == "ja" ? 0.042f : 0.06f;
+        protocolCaption.fontSizeMax = language == "zh-CN" || language == "zh-TW" ? 0.06f : 0.042f;
         protocolCaption.fontSizeMin = 0.03f;
         protocolCaption.fontSize = protocolCaption.fontSizeMax;
         Place(protocolNumber, 0.34f, numberLayout.position.y, 0.28f, numberLayout.size.y);

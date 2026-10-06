@@ -24,6 +24,10 @@ public static class GameLocalizationPlayModeValidation
     private const string ExitCode = "CCTV.LocalizationValidation.ExitCode";
     private const string SavedScenes = "CCTV.LocalizationValidation.SavedScenes";
     private const string SavedBackground = "CCTV.LocalizationValidation.SavedBackground";
+    private const string LanguagesOnly = "CCTV.LocalizationValidation.LanguagesOnly";
+    private const string SceneFilter = "CCTV.LocalizationValidation.SceneFilter";
+    public static bool IncludeGameplayChecks => !SessionState.GetBool(LanguagesOnly, false);
+    public static string ValidationScene => SessionState.GetString(SceneFilter, "");
     [Serializable] private sealed class OpenScenes { public SceneSetup[] scenes; }
 
     static GameLocalizationPlayModeValidation()
@@ -32,21 +36,36 @@ public static class GameLocalizationPlayModeValidation
         EditorApplication.update += Watchdog;
     }
 
-    public static void Run()
+    public static void Run() => Run(false);
+
+    // Play Mode restores the current Editor scene, including its unsaved changes, on exit.
+    public static void RunLanguagesFromCurrentScene(string scenePath = "")
     {
-        if (!Application.isBatchMode)
+        SessionState.SetString(SceneFilter, scenePath);
+        Run(true);
+    }
+
+    private static void Run(bool preserveCurrentScene)
+    {
+        SessionState.SetBool(LanguagesOnly, preserveCurrentScene);
+        if (!preserveCurrentScene)
+            SessionState.EraseString(SceneFilter);
+        if (!Application.isBatchMode && !preserveCurrentScene)
         {
             if (EditorSceneManager.GetSceneManagerSetup().Any(scene => SceneManager.GetSceneByPath(scene.path).isDirty))
                 throw new InvalidOperationException("Save modified scenes before running localization validation.");
             SessionState.SetString(SavedScenes, JsonUtility.ToJson(new OpenScenes { scenes = EditorSceneManager.GetSceneManagerSetup() }));
         }
+        if (preserveCurrentScene)
+            SessionState.EraseString(SavedScenes);
         SessionState.SetBool(HadPreference, PlayerPrefs.HasKey(GameLocalization.PreferenceKey));
         SessionState.SetBool(SavedBackground, Application.runInBackground);
         SessionState.SetString(SavedPreference, PlayerPrefs.GetString(GameLocalization.PreferenceKey, "ko"));
         SessionState.SetBool(Pending, true);
         SessionState.SetInt(ExitCode, -1);
         SessionState.SetString(Started, DateTime.UtcNow.ToString("O"));
-        EditorSceneManager.OpenScene(EditorBuildSettings.scenes.First(scene => scene.enabled).path);
+        if (!preserveCurrentScene)
+            EditorSceneManager.OpenScene(EditorBuildSettings.scenes.First(scene => scene.enabled).path);
         EditorApplication.EnterPlaymode();
     }
 
@@ -120,7 +139,10 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
     {
         yield return null;
         yield return null;
-        foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes.Where(scene => scene.enabled))
+        EditorBuildSettingsScene[] validationScenes = EditorBuildSettings.scenes
+            .Where(scene => scene.enabled && (GameLocalizationPlayModeValidation.ValidationScene == ""
+                || scene.path == GameLocalizationPlayModeValidation.ValidationScene)).ToArray();
+        foreach (EditorBuildSettingsScene scene in validationScenes)
         {
             if (SceneManager.GetActiveScene().path != scene.path)
             {
@@ -169,8 +191,14 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
                 Check(dropdown.IsExpanded, "language button opens choices");
                 UnityEngine.UI.Toggle[] choices = dropdown.GetComponentsInChildren<UnityEngine.UI.Toggle>()
                     .Where(toggle => toggle.isActiveAndEnabled).ToArray();
-                Check(choices.Length == GameLocalization.LanguageCodes.Length, "five visible language choices");
-                Check(dropdown.options.Count == GameLocalization.LanguageCodes.Length, "five configured language choices");
+                Check(choices.Length == GameLocalization.LanguageCodes.Length, "all language choices visible");
+                Check(dropdown.options.Count == GameLocalization.LanguageCodes.Length, "all language choices configured");
+                UnityEngine.UI.ScrollRect choicesScroll = choices[index].GetComponentInParent<UnityEngine.UI.ScrollRect>();
+                choicesScroll.verticalNormalizedPosition = 1f - (float)index / (choices.Length - 1);
+                Canvas.ForceUpdateCanvases();
+                yield return null;
+                Check(PointerHandler(choices[index].transform as RectTransform) == choices[index].gameObject,
+                    "scrolled language choice is clickable " + GameLocalization.LanguageCodes[index]);
                 ExecuteEvents.Execute(choices[index].gameObject, new PointerEventData(EventSystem.current),
                     ExecuteEvents.pointerClickHandler);
                 yield return new WaitForSecondsRealtime(0.25f);
@@ -184,9 +212,10 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
                 Check(dropdown.captionText.text == GameLocalization.LanguageNames[index], "native menu caption " + code);
                 Check(languageButton.Caption.text == GameLocalization.Get("options.languageSelect", GameLocalization.LanguageNames[index]),
                     "language button caption " + code);
+                ValidateTranslationNotice(code);
                 foreach (LocalizedSpriteButton button in FindObjectsByType<LocalizedSpriteButton>(FindObjectsSortMode.None))
                 {
-                    bool translated = code == "ja" || code == "zh-CN" || code == "zh-TW";
+                    bool translated = code != "ko" && code != "en";
                     UnityEngine.UI.Graphic[] graphics = button.GetComponentsInChildren<UnityEngine.UI.Graphic>();
                     Check(graphics.Any(graphic => graphic.isActiveAndEnabled && graphic.raycastTarget),
                         "translated button remains clickable " + button.name + "/" + code);
@@ -213,7 +242,10 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
                 }
                 ValidateReportedUI(code);
                 if (SceneManager.GetActiveScene().buildIndex == 1)
+                {
                     yield return ValidateManualRules(code);
+                    yield return ValidateManualDetails(code);
+                }
                 if (SceneManager.GetActiveScene().buildIndex == 0)
                 {
                     yield return ValidateContract(selectors[0], code);
@@ -226,8 +258,14 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
                 GameLocalization.SetLanguage(0);
                 yield return ValidateContract(selectors[0], "ko");
             }
-            Destroy(dynamicObject);
             if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                GameLocalization.SetLanguage(0);
+                yield return ValidateManualRules("ko");
+                yield return ValidateManualDetails("ko");
+            }
+            Destroy(dynamicObject);
+            if (SceneManager.GetActiveScene().buildIndex == 1 && GameLocalizationPlayModeValidation.IncludeGameplayChecks)
             {
                 yield return ValidateGameplayChanges();
                 yield return ValidateRuntimeToolAndDayEnd();
@@ -243,8 +281,8 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
             }
             yield return null;
         }
-        Debug.Log($"LOCALIZATION_PLAYMODE_{(failed ? "FAILED" : "PASSED")}: {checks} checks, 3 scenes, {GameLocalization.LanguageCodes.Length} languages.");
-        File.WriteAllText(".utmp/localization/playmode-result.txt", $"{(failed ? "FAILED" : "PASSED")}: {checks} checks, 3 scenes, {GameLocalization.LanguageCodes.Length} languages.\n");
+        Debug.Log($"LOCALIZATION_PLAYMODE_{(failed ? "FAILED" : "PASSED")}: {checks} checks, {validationScenes.Length} scenes, {GameLocalization.LanguageCodes.Length} languages.");
+        File.WriteAllText(".utmp/localization/playmode-result.txt", $"{(failed ? "FAILED" : "PASSED")}: {checks} checks, {validationScenes.Length} scenes, {GameLocalization.LanguageCodes.Length} languages.\n");
         GameLocalizationPlayModeValidation.Finish(!failed);
     }
 
@@ -314,6 +352,26 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
         }
     }
 
+    private void ValidateTranslationNotice(string code)
+    {
+        MenuDialog[] open = FindObjectsByType<MenuDialog>(FindObjectsSortMode.None)
+            .Where(dialog => dialog.IsOpen).ToArray();
+        Check(open.Length == (code == "ko" ? 0 : 1), "translation notice follows language selection " + code);
+        foreach (MenuDialog notice in open)
+        {
+            LocalizedTMPText[] labels = notice.GetComponentsInChildren<LocalizedTMPText>();
+            foreach (LocalizedTMPText label in labels)
+            {
+                TMP_Text text = label.GetComponent<TMP_Text>();
+                text.ForceMeshUpdate();
+                Check(text.text == GameLocalization.Get(label.Key), "translated dialog text " + code + "/" + label.Key);
+                Check(!text.isTextOverflowing, "dialog text fits " + code + "/" + label.Key);
+            }
+            notice.GetComponentsInChildren<UnityEngine.UI.Button>().Single().onClick.Invoke();
+            Check(!notice.IsOpen, "translation notice closes " + code);
+        }
+    }
+
     private IEnumerator ValidateManualRules(string code)
     {
         GameManager.Instance.isTimeStop = true;
@@ -374,8 +432,8 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
             Check(caption.rectTransform.anchoredPosition.x + caption.rectTransform.rect.xMax
                 < number.rectTransform.anchoredPosition.x + number.rectTransform.rect.xMin,
                 "protocol caption has separate digit area " + code);
-            if (code == "en" || code == "ja")
-                Check(caption.fontSize <= .0421f, "English/Japanese protocol caption is smaller " + code);
+            if (code != "zh-CN" && code != "zh-TW")
+                Check(caption.fontSize <= .0421f, "long protocol caption is smaller " + code);
             Debug.Log($"MANUAL_RULES_SIZE: {code}, body={sections[0].fontSize:F5}, caption={caption.fontSize:F5}");
         }
         GameObject option = FindObjectsByType<LanguageSelectorUI>(FindObjectsSortMode.None)
@@ -394,6 +452,83 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
         manualPanel.SetActive(false);
         // Capture temporarily changes overlay canvas modes. Let their screen matrices settle
         // after restoration before the next native menu raycast.
+        yield return null;
+        yield return null;
+    }
+
+    private IEnumerator ValidateManualDetails(string code)
+    {
+        ManualManager manual = FindFirstObjectByType<ManualManager>();
+        var data = new SerializedObject(manual);
+        GameObject panel = data.FindProperty("ManualPanel").objectReferenceValue as GameObject;
+        panel.SetActive(true);
+        (data.FindProperty("ScrollViewPanel").objectReferenceValue as GameObject).SetActive(true);
+        yield return null;
+        GameObject option = FindObjectsByType<LanguageSelectorUI>(FindObjectsSortMode.None)
+            .Select(selector => selector.GetComponentInParent<OptionLanguageLayout>().gameObject).First();
+        bool oldOption = option.activeSelf;
+        option.SetActive(false);
+        UnityEngine.UI.Image fade = FindObjectsByType<UnityEngine.UI.Image>(FindObjectsSortMode.None)
+            .First(image => image.name == "FadePanel");
+        Color oldFade = fade.color;
+        fade.color = Color.clear;
+        foreach (Manual button in FindObjectsByType<Manual>(FindObjectsSortMode.None))
+        {
+            TMP_Text text = button.GetComponentInChildren<TMP_Text>();
+            text.ForceMeshUpdate();
+            Check(text.fontSize >= 6f && !text.isTextOverflowing,
+                "readable manual menu " + code + "/" + button.manualIndex);
+        }
+        SerializedProperty pages = data.FindProperty("DetailPanels");
+        for (int page = 1; page < pages.arraySize; page++)
+        {
+            manual.MoveToDetailPanel(page);
+            yield return null;
+            GameObject detail = pages.GetArrayElementAtIndex(page).objectReferenceValue as GameObject;
+            foreach (LocalizedTMPText label in detail.GetComponentsInChildren<LocalizedTMPText>())
+            {
+                TMP_Text text = label.GetComponent<TMP_Text>();
+                text.ForceMeshUpdate();
+                if (code == "ko")
+                {
+                    float original = label.Key.EndsWith(".description") ? .04f
+                        : label.Key.Contains(".research.") ? .039f
+                        : label.Key == "manual.symptoms.caption" ? .02f
+                        : label.Key.StartsWith("manual.symptoms.") && !label.Key.EndsWith(".title") ? .04f
+                        : .07f;
+                    Check(Mathf.Approximately(text.fontSize, original) && !text.enableAutoSizing,
+                        "original Korean detail size restored " + label.Key);
+                    if (label.Key.EndsWith(".title"))
+                        Check(Mathf.Abs(text.rectTransform.anchoredPosition.x) < .0001f
+                            && Mathf.Abs(text.rectTransform.rect.width - 1f) < .0001f,
+                            "original Korean heading layout restored " + label.Key);
+                    continue;
+                }
+                float minimum = label.Key.EndsWith(".description") ? .028f
+                    : label.Key.Contains(".research.") ? .02925f
+                    : label.Key == "manual.symptoms.caption" ? .015f
+                    : label.Key.StartsWith("manual.symptoms.") && !label.Key.EndsWith(".title") ? .03f
+                    : .0385f;
+                Check(text.fontSize >= minimum - .00001f,
+                    "readable manual detail " + code + "/" + label.Key + "; size=" + text.fontSize);
+                Check(!text.isTextOverflowing, "manual detail fits " + code + "/" + label.Key);
+                Check(text.textBounds.min.x >= text.rectTransform.rect.xMin - .0001f
+                    && text.textBounds.max.x <= text.rectTransform.rect.xMax + .0001f,
+                    "manual glyphs stay inside paper " + code + "/" + label.Key);
+                if (label.Key.EndsWith(".title"))
+                    Check(text.rectTransform.anchoredPosition.x + text.rectTransform.rect.xMin >= -.376f,
+                        "manual heading reserves back arrow space " + code + "/" + label.Key);
+                Check(!text.enableAutoSizing, "world manual avoids coarse AutoSize " + code + "/" + label.Key);
+                Debug.Log($"MANUAL_DETAIL_SIZE: {code}, key={label.Key}, size={text.fontSize:F5}, lines={text.textInfo.lineCount}, overflow={text.isTextOverflowing}");
+            }
+            if ((page == 2 || page == 4) && (code == "fr" || code == "de" || code == "ru"))
+                yield return CaptureManual(detail.transform as RectTransform,
+                    ".utmp/localization/manual-detail-" + page + "-" + code + ".png");
+        }
+        fade.color = oldFade;
+        option.SetActive(oldOption);
+        manual.TryHandleBackInput();
+        panel.SetActive(false);
         yield return null;
         yield return null;
     }
@@ -711,18 +846,42 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
 
     private static GameObject PointerHandler(RectTransform rect)
     {
-        Canvas canvas = rect.GetComponentInParent<Canvas>();
-        Camera camera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
+        Canvas canvas = rect.GetComponentInParent<Canvas>().rootCanvas;
+        UnityEngine.UI.GraphicRaycaster raycaster = rect.GetComponentInParent<UnityEngine.UI.GraphicRaycaster>();
+        Camera camera = raycaster != null ? raycaster.eventCamera
+            : canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
         Vector2 center = RectTransformUtility.WorldToScreenPoint(camera, rect.TransformPoint(rect.rect.center));
         var pointer = new PointerEventData(EventSystem.current) { position = center };
         var hits = new System.Collections.Generic.List<RaycastResult>();
         EventSystem.current.RaycastAll(pointer, hits);
+        if (hits.Count == 0 || ExecuteEvents.GetEventHandler<IPointerClickHandler>(hits[0].gameObject) == null)
+            Debug.Log($"LOCALIZATION_POINTER_DIAGNOSTIC: {rect.name}, first={(hits.Count == 0 ? "none" : hits[0].gameObject.transform.parent.name + "/" + hits[0].gameObject.name)}, text={(hits.Count == 0 ? "none" : hits[0].gameObject.GetComponent<TMP_Text>()?.text)}, mode={canvas.renderMode}, camera={camera}, center={center}, screen={Screen.width}x{Screen.height}");
         return hits.Count == 0 ? null : ExecuteEvents.GetEventHandler<IPointerClickHandler>(hits[0].gameObject);
     }
 
-    private static IEnumerator Capture(string path)
+    private static IEnumerator CaptureManual(RectTransform page, string path)
     {
-        Camera camera = Camera.main;
+        GameObject captureObject = new GameObject("Manual Validation Camera", typeof(Camera));
+        Camera camera = captureObject.GetComponent<Camera>();
+        camera.CopyFrom(Camera.main);
+        camera.enabled = false;
+        camera.orthographic = true;
+        camera.aspect = .75f;
+        Vector3[] corners = new Vector3[4];
+        page.GetWorldCorners(corners);
+        Vector3 center = (corners[0] + corners[2]) * .5f;
+        float width = Vector3.Distance(corners[0], corners[3]);
+        float height = Vector3.Distance(corners[0], corners[1]);
+        camera.orthographicSize = Mathf.Max(height * .5f, width * .5f / camera.aspect) * 1.08f;
+        camera.transform.SetPositionAndRotation(center - page.forward * 2f,
+            Quaternion.LookRotation(page.forward, page.up));
+        try { yield return Capture(path, camera, 900, 1200); }
+        finally { Destroy(captureObject); }
+    }
+
+    private static IEnumerator Capture(string path, Camera captureCamera = null, int width = 0, int height = 0)
+    {
+        Camera camera = captureCamera == null ? Camera.main : captureCamera;
         GameObject temporaryCamera = null;
         if (camera == null)
         {
@@ -743,8 +902,8 @@ public sealed class GameLocalizationValidationRunner : MonoBehaviour
             .Where(canvas => canvas.isRootCanvas && canvas.renderMode == RenderMode.ScreenSpaceOverlay).ToArray();
         Camera[] oldCameras = canvases.Select(canvas => canvas.worldCamera).ToArray();
         float[] oldDistances = canvases.Select(canvas => canvas.planeDistance).ToArray();
-        int width = Mathf.Max(Screen.width, 1);
-        int height = Mathf.Max(Screen.height, 1);
+        width = width > 0 ? width : Mathf.Max(Screen.width, 1);
+        height = height > 0 ? height : Mathf.Max(Screen.height, 1);
         RenderTexture render = RenderTexture.GetTemporary(width, height, 24);
         RenderTexture previousTarget = camera.targetTexture;
         RenderTexture previousActive = RenderTexture.active;

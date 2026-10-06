@@ -1,0 +1,555 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameText_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 3837ebd90fa5c6e428d3eb0f9f0593ce, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 744108032
+    m_Localized: Soundeffekte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468160
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468161
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468162
+    m_Localized: Einstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662464
+    m_Localized: Abbrechen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662465
+    m_Localized: "Gesamtlautst\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662466
+    m_Localized: Mausempfindlichkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662467
+    m_Localized: Vollbild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662468
+    m_Localized: "M\xF6chten Sie das Spiel wirklich beenden?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662469
+    m_Localized: "Unterdr\xFCcken"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662470
+    m_Localized: Verbrennen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662471
+    m_Localized: "Entit\xE4tsakte: \u201ETentakelkolonie\u201C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662472
+    m_Localized: Erfolgreich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662473
+    m_Localized: "System\npr\xFCfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662474
+    m_Localized: "System\npr\xFCfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662475
+    m_Localized: "<size=115%>2. Hinweise zum Umgang mit Entit\xE4ten</size>\n- Entit\xE4ten
+      k\xF6nnen Anomalien ausl\xF6sen, die die Anlage besch\xE4digen.\n- Nutzen Sie
+      die CCTV-Steuerung und die Ger\xE4te an den W\xE4nden, um Anomalien zu beheben.
+      Das richtige Vorgehen finden Sie in den Forschungsergebnissen zu Anomalien
+      in den Entit\xE4tsakten.\n- Bei Halluzinationen oder anderen k\xF6rperlichen
+      Symptomen lesen Sie das Handbuch f\xFCr k\xF6rperliche Symptome."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662476
+    m_Localized: "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die
+      Entit\xE4t den Gefesselten Schaltkreis nachahmte, war sie anf\xE4llig f\xFCr
+      Stromschl\xE4ge.\n2. Wenn sie die Tentakelkolonie nachahmte, brachte starke
+      Hitze sie in ihre urspr\xFCngliche Form zur\xFCck.\n3. Auch ihre humanoide
+      H\xFClle war anf\xE4llig f\xFCr Hitze.\n4. Sie erzeugt regelm\xE4\xDFig Masken
+      in der Anlage. Diese st\xF6ren die Systeme und m\xFCssen rasch durch Drauftreten
+      zerst\xF6rt werden. Die Masken geben ein Rauschen von sich."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662477
+    m_Localized: 'Strom-
+
+      schlag'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662478
+    m_Localized: "Entit\xE4tsakte: \u201ENachahmer\u201C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662479
+    m_Localized: "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Elektrische
+      Entladungen erzeugten Funken und st\xF6rten nahe Systeme. Eine Systempr\xFCfung
+      war erforderlich.\n2. Wenn sich die Entit\xE4t aus ihrem Fixierstuhl erhob,
+      konnte sie mit k\xF6rperlicher Gewalt unterdr\xFCckt werden.\n3. Wenn sie Dr\xE4hte
+      um sich herum erzeugte, stoppte Verbrennen deren Wachstum.\n4. Hochspannungsentladungen
+      f\xFChrten manchmal zu Beleuchtungsausf\xE4llen. Ein Zur\xFCcksetzen der Stromversorgung
+      am Sicherungskasten behob das Problem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662480
+    m_Localized: "Entit\xE4t: AC-029 \u2014 Nachahmer\nF\xE4higkeiten: Gestaltnachahmung,
+      Systemst\xF6rungen\n<size=90%>Eine objektartige Entit\xE4t, die auf einem Bauernhof
+      in Tschernobyl gefangen wurde. Sie ahmt Menschen nach, n\xE4hert sich ihren
+      Opfern und setzt ihnen Masken auf, um sie in ihresgleichen zu verwandeln.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662481
+    m_Localized: "Entit\xE4t: AC-017 \u2014 Gefesselter Schaltkreis\nF\xE4higkeiten:
+      Strommanipulation, Drahterzeugung\n<size=90%>Eine humanoide Entit\xE4t aus
+      einem ehemaligen sowjetischen Bunker. Sie nimmt normalerweise Strom auf, erzeugt
+      bei Instabilit\xE4t jedoch Dr\xE4hte und verw\xFCstet ihre Umgebung.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662482
+    m_Localized: "Entit\xE4tsakte: \u201EGefesselter Schaltkreis\u201C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662483
+    m_Localized: "<size=130%>1. M\xF6gliche k\xF6rperliche Symptome</size>\nDie abgeschlossene
+      Anlage kann folgende leichte Symptome verursachen:\n- Bildrauschen, das die
+      Sicht beeintr\xE4chtigt.\n- Stimmen anderer Personen.\n- Unwirkliche Erscheinungen,
+      die keiner registrierten Entit\xE4t oder keinem Objekt entsprechen.\n\n<size=130%>2.
+      Gegenma\xDFnahmen</size>\nNehmen Sie bei diesen Symptomen sofort das unten
+      abgebildete Medikament f\xFCr Administratoren auf dem Schreibtisch ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662484
+    m_Localized: 'Strom-
+
+      schlag'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662485
+    m_Localized: "K\xF6rperliche Symptome: Gegenma\xDFnahmen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662486
+    m_Localized: Fehlgeschlagen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662487
+    m_Localized: "Eind\xE4mmung fehlgeschlagen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662488
+    m_Localized: 'Heutiger Protokollcode: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662489
+    m_Localized: "<size=115%>3. Notfallprotokoll</size>\n- Sinkt die Stabilit\xE4t
+      eines Raums auf null, wird das Notfallprotokoll aktiviert.\n- Geben Sie vor
+      Ablauf der Zeit den richtigen Code am Protokollterminal links vom Aufzug ein
+      und best\xE4tigen Sie ihn. Der Code am Ende dieses Dokuments wird t\xE4glich
+      erneuert.\n- Wird das Protokoll nicht rechtzeitig angefordert, wird die Anlage
+      abgeriegelt und das Ausl\xF6schungsverfahren eingeleitet. Viel Gl\xFCck."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662490
+    m_Localized: "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die
+      Kolonie aggressiv wurde und nahe Ger\xE4te angriff, beendete starke Hitze ihre
+      Aggression.\n2. Sobald ihr Futterbeh\xE4lter leer war, wurde die Kolonie stark
+      instabil. Futterzufuhr \xFCber die F\xFCtterungsanlage stellte ihre Stabilit\xE4t
+      wieder her."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662491
+    m_Localized: Grundregeln der Verwaltung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662492
+    m_Localized: "<size=115%>1. Dienstziel</size>\n- Halten Sie alle Entit\xE4ten
+      von 00:00 bis 06:00 stabil unter Kontrolle.\n- \xDCberwachen Sie ihre Stabilit\xE4t
+      auf den Monitoren. Erh\xF6hen Sie sie mit dem Tablet auf dem Schreibtisch,
+      bevor sie 0 % erreicht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662493
+    m_Localized: Verbrennen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662494
+    m_Localized: "Entit\xE4t: AC-013 \u2014 Tentakelkolonie\nF\xE4higkeiten: Tentakelangriffe,
+      Tentakelerzeugung\n<size=90%>Ein Ringelwurm aus den Feuchtgebieten des Pantanal.
+      Er frisst und vermehrt sich unabl\xE4ssig und versucht, alles in Sichtweite
+      zu verschlingen.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662495
+    m_Localized: 'Berichtete Halluzinationen: Bildrauschen (links), unwirkliche Erscheinungen
+      (rechts).'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662496
+    m_Localized: "System\npr\xFCfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662497
+    m_Localized: "System\npr\xFCfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662498
+    m_Localized: Tag 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662499
+    m_Localized: "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die
+      Entit\xE4t den Gefesselten Schaltkreis nachahmte, war sie anf\xE4llig f\xFCr
+      Stromschl\xE4ge.\n2. Wenn sie die Tentakelkolonie nachahmte, brachte starke
+      Hitze sie in ihre urspr\xFCngliche Form zur\xFCck.\n3. Auch ihre humanoide
+      H\xFClle war anf\xE4llig f\xFCr Hitze.\n4. Sie erzeugt regelm\xE4\xDFig Masken
+      in der Anlage. Diese st\xF6ren die Systeme und m\xFCssen rasch durch Drauftreten
+      zerst\xF6rt werden. Die Masken geben ein Rauschen von sich."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662500
+    m_Localized: "Administrator 32. Ihre Dienstzeit ist beendet. Herzlichen Gl\xFCckwunsch."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662501
+    m_Localized: "Ende: Ausl\xF6schung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662502
+    m_Localized: "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Elektrische
+      Entladungen erzeugten Funken und st\xF6rten nahe Systeme. Eine Systempr\xFCfung
+      war erforderlich.\n2. Wenn sich die Entit\xE4t aus ihrem Fixierstuhl erhob,
+      konnte sie mit k\xF6rperlicher Gewalt unterdr\xFCckt werden.\n3. Wenn sie Dr\xE4hte
+      um sich herum erzeugte, stoppte Verbrennen deren Wachstum.\n4. Hochspannungsentladungen
+      f\xFChrten manchmal zu Beleuchtungsausf\xE4llen. Ein Zur\xFCcksetzen der Stromversorgung
+      am Sicherungskasten behob das Problem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662503
+    m_Localized: "F\xFCr niederrangige Angestellte endet es immer mit einer \u201EAusl\xF6schung\u201C."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662504
+    m_Localized: "<size=130%>1. M\xF6gliche k\xF6rperliche Symptome</size>\nDie abgeschlossene
+      Anlage kann folgende leichte Symptome verursachen:\n- Bildrauschen, das die
+      Sicht beeintr\xE4chtigt.\n- Stimmen anderer Personen.\n- Unwirkliche Erscheinungen,
+      die keiner registrierten Entit\xE4t oder keinem Objekt entsprechen.\n\n<size=130%>2.
+      Gegenma\xDFnahmen</size>\nNehmen Sie bei diesen Symptomen sofort das unten
+      abgebildete Medikament f\xFCr Administratoren auf dem Schreibtisch ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662505
+    m_Localized: Tag 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662506
+    m_Localized: Tag 1 abgeschlossen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662507
+    m_Localized: Spiel vorbei
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662508
+    m_Localized: "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die
+      Kolonie aggressiv wurde und nahe Ger\xE4te angriff, beendete starke Hitze ihre
+      Aggression.\n2. Sobald ihr Futterbeh\xE4lter leer war, wurde die Kolonie stark
+      instabil. Futterzufuhr \xFCber die F\xFCtterungsanlage stellte ihre Stabilit\xE4t
+      wieder her."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662509
+    m_Localized: "<size=115%>1. Dienstziel</size>\n- Halten Sie alle Entit\xE4ten
+      von 00:00 bis 06:00 stabil unter Kontrolle.\n- \xDCberwachen Sie ihre Stabilit\xE4t
+      auf den Monitoren und verhindern Sie, dass sie 0 % erreicht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662510
+    m_Localized: "System\npr\xFCfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662511
+    m_Localized: Ja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662512
+    m_Localized: Nein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662513
+    m_Localized: Starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662514
+    m_Localized: Arbeitsvertrag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662515
+    m_Localized: "Abteilung f\xFCr Anomaliekontrolle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662516
+    m_Localized: Akzeptieren Sie diese Bedingungen und treten Sie dem Unternehmen
+      bei?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662517
+    m_Localized: "N\xE4chster Tag"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662518
+    m_Localized: "<size=115%>Bericht f\xFCr Tag n</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662519
+    m_Localized: "<size=80%>1. Sch\xE4den an Verm\xF6genswerten: keine\n\n2. Eind\xE4mmungsstabilit\xE4t:
+      hoch\n\n3. Reaktionsgeschwindigkeit: durchschnittlich\n\n4. Geistige Kontamination:
+      keine</size>\n\n<size=115%>Diensteignung: A</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662520
+    m_Localized: Leistungsbeurteilung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662521
+    m_Localized: Leistungsbeurteilung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662522
+    m_Localized: Ich stimme dem Erhalt meines Gehalts und der Fortsetzung meines
+      Arbeitsvertrags zu.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662523
+    m_Localized: 'Systemeinbruch
+
+      verhindern'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662524
+    m_Localized: Starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662525
+    m_Localized: Spannungsstabilisierung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662526
+    m_Localized: Zeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662527
+    m_Localized: Beruhigungsmittel herstellen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662528
+    m_Localized: "Stellen Sie ein Beruhigungsmittel f\xFCr die Tentakelkolonie her."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662529
+    m_Localized: Geben Sie den Abwehrcode genau wie angezeigt ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662530
+    m_Localized: Geben Sie den Abwehrcode ein, um den Systemeinbruch zu verhindern.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662531
+    m_Localized: Stabilisieren Sie die schwankende Spannung.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662532
+    m_Localized: Spannung wird stabilisiert...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662533
+    m_Localized: "<color=red>Spiel vorbei</color>\n<size=80%>Eind\xE4mmung fehlgeschlagen.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662534
+    m_Localized: Tag 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662535
+    m_Localized: "- Mag dicke Macarons lieber als gew\xF6hnliche.\n\n- Isst nur W\xFCrstchen
+      von mindestens Johnsonville-Qualit\xE4t.\n\n- Bevorzugt flach gepresste, knusprige
+      Croissants.\n\n- Viele Frauen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662536
+    m_Localized: Verwaltungshandbuch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662537
+    m_Localized: "Entit\xE4tsname: Kim Ji-won\nHauptf\xE4higkeit: Planung\n\nUnterirdisch
+      in der ehemaligen Sowjetunion entdeckt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662538
+    m_Localized: "Abteilung f\xFCr unbekannte Entit\xE4ten: Betriebshandbuch"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662539
+    m_Localized: Grundregeln der Verwaltung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662540
+    m_Localized: Tag {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662541
+    m_Localized: Tag {0} abgeschlossen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662542
+    m_Localized: "Bericht f\xFCr Tag {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662543
+    m_Localized: Sprache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828288
+    m_Localized: "Lesen Sie das Handbuch f\xFCr wichtige Informationen zu Ihren Aufgaben."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828289
+    m_Localized: "Vorherige Aufzeichnungen gel\xF6scht. Neue Kennung zugewiesen.
+      Willkommen, Administrator 32."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828290
+    m_Localized: "Willkommen, Administrator 32. Erinnerung: Der Erhalt der Verm\xF6genswerte
+      hat strikten Vorrang vor der Sicherheit des Personals."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828291
+    m_Localized: "Willkommen, Administrator 32. Bleiben Sie wachsam: Die Entit\xE4t
+      ist derzeit aus unbekannten Gr\xFCnden instabil."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828292
+    m_Localized: "Willkommen, Administrator 32. Beachten Sie: Der Verlust von Verm\xF6genswerten
+      f\xFChrt zur sofortigen Entlassung."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828293
+    m_Localized: "Willkommen, Administrator 32. Erf\xFCllen Sie Ihren Dienst bis
+      zum letzten Moment vollkommen fehlerfrei."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828294
+    m_Localized: "M\xF6gliche Weitergabe vertraulicher Informationen best\xE4tigt.
+      Eliminierung wird eingeleitet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243348611072
+    m_Localized: "Anomaly Control\nDivision\n<size=60%>Abteilung f\xFCr Anomaliekontrolle</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243373776896
+    m_Localized: "<size=115%>1. Aufgaben und Risiken</size>\nSie k\xF6nnen unkontrollierbaren
+      biologischen oder paranormalen Gefahren ausgesetzt sein. Das Unternehmen \xFCbernimmt
+      keine Haftung f\xFCr Tod, Verst\xFCmmelung oder geistige Kontamination w\xE4hrend
+      Ihres Dienstes.\n\n<size=115%>2. Geheimhaltung</size>\nDie Weitergabe vertraulicher
+      Informationen, auch nach Ihrem Ausscheiden, f\xFChrt zu sofortigen rechtlichen
+      Schritten und erzwungener Ged\xE4chtnisl\xF6schung. Nebenwirkungen wie verringerte
+      Intelligenz liegen in der Verantwortung des Angestellten.\n\n<size=115%>3.
+      Notf\xE4lle</size>\nBei einem Eind\xE4mmungsbruch oder anderen Notf\xE4llen
+      haben Bergung und Schutz der Verm\xF6genswerte (anomale Entit\xE4ten) Vorrang
+      vor Ihrer eigenen Sicherheit.\n\n<size=115%>4. Arbeitsunf\xE4lle und Versicherung</size>\nDieses
+      besondere Arbeitsverh\xE4ltnis bietet weder gesetzliche Sozialversicherung
+      noch Arbeitsunfallschutz. Bei Tod im Dienst wird Ihr K\xF6rper dem Unternehmen
+      kostenlos f\xFCr Forschungszwecke \xFCberlassen.\n\n<size=115%>5. Informationszensur</size>\nDas
+      Unternehmen darf bereitgestellte Unterlagen nach eigenem Ermessen zensieren.
+      Von Angestellten gespeicherte Informationen k\xF6nnen unangek\xFCndigt \xFCberpr\xFCft
+      werden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064357789696
+    m_Localized: "Aufl\xF6sung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13146795945984
+    m_Localized: "Sprache w\xE4hlen: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784318197760
+    m_Localized: 'Gefesselter Schaltkreis: Verwaltungsregeln'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752192
+    m_Localized: 'Nachahmer: Verwaltungsregeln'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752193
+    m_Localized: 'Tentakelkolonie: Verwaltungsregeln'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752194
+    m_Localized: "K\xF6rperliche Symptome: Gegenma\xDFnahmen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752195
+    m_Localized: "Notfall. Notfall. Protokoll sofort ausf\xFChren......"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752196
+    m_Localized: "Vorherige Aufzeichnungen gel\xF6scht. Neue Kennung zugewiesen.
+      Willkommen, Administrator 33."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016800960512
+    m_Localized: "Hinweis zu den \xDCbersetzungen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514944
+    m_Localized: "Alle Sprachen au\xDFer Koreanisch wurden mithilfe von KI \xFCbersetzt.
+      Einige Formulierungen k\xF6nnen unnat\xFCrlich klingen oder Fehler enthalten.
+      Wir bitten um Verst\xE4ndnis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514945
+    m_Localized: "M\xF6chten Sie wirklich zum Titelbildschirm zur\xFCckkehren?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514946
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514947
+    m_Localized: Ja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514948
+    m_Localized: Nein
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

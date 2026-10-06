@@ -67,6 +67,9 @@ public sealed class LocalizedTMPText : MonoBehaviour
         }
 
         string value = GameLocalization.Get(key, arguments);
+        // Ending captions overlap the settings panel but have no interaction of their own.
+        if (key.StartsWith("ending.", System.StringComparison.Ordinal))
+            target.raycastTarget = false;
         string code = GameLocalization.CurrentCode;
         bool korean = code == "ko";
         bool document = key.StartsWith("manual.", System.StringComparison.Ordinal)
@@ -87,8 +90,61 @@ public sealed class LocalizedTMPText : MonoBehaviour
         target.fontSizeMax = korean ? originalMax : (originalAutoSize ? originalMax : originalSize);
         target.fontSize = originalSize;
         target.textWrappingMode = korean ? originalWrapping : TextWrappingModes.Normal;
+        bool worldDocument = originalSize < 1f && (key.StartsWith("entity.", System.StringComparison.Ordinal)
+            || key.StartsWith("manual.mimic.", System.StringComparison.Ordinal)
+            || key.StartsWith("manual.circuit.", System.StringComparison.Ordinal)
+            || key.StartsWith("manual.tentacles.", System.StringComparison.Ordinal)
+            || key.StartsWith("manual.symptoms.", System.StringComparison.Ordinal));
+        if (worldDocument)
+        {
+            target.rectTransform.sizeDelta = originalSizeDelta;
+            target.rectTransform.anchoredPosition = originalAnchoredPosition;
+            if (!korean && key.EndsWith(".title", System.StringComparison.Ordinal))
+            {
+                // Reserve the same back-arrow space as the basic rules heading.
+                target.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,
+                    target.rectTransform.rect.width - 0.13f);
+                target.rectTransform.anchoredPosition += new Vector2(0.06f, 0f);
+            }
+        }
         ApplyTranslatedLayout(korean);
         target.text = value;
+        if (!korean && worldDocument)
+            FitWorldDocument();
+    }
+
+    private void FitWorldDocument()
+    {
+        // TMP AutoSize rounds in 0.05-point steps. These world-space documents use
+        // 0.02-0.07 points, so a single step otherwise collapses them to the minimum.
+        target.enableAutoSizing = false;
+        target.fontSizeMin = Mathf.Max(target.fontSizeMin,
+            originalSize * (key.EndsWith(".description", System.StringComparison.Ordinal) ? 0.7f : 0.75f));
+        float low = target.fontSizeMin, high = target.fontSizeMax;
+        if (WorldDocumentFits(high))
+            return;
+        for (int iteration = 0; iteration < 12; iteration++)
+        {
+            float candidate = (low + high) * 0.5f;
+            if (WorldDocumentFits(candidate))
+                low = candidate;
+            else
+                high = candidate;
+        }
+        target.fontSize = low;
+    }
+
+    private bool WorldDocumentFits(float size)
+    {
+        target.fontSize = size;
+        // Check the rendered layout, including rich-text sizes and line breaking.
+        target.ForceMeshUpdate(true);
+        Rect area = target.rectTransform.rect;
+        Bounds glyphs = target.textBounds;
+        const float tolerance = 0.0001f;
+        return !target.isTextOverflowing
+            && glyphs.min.x >= area.xMin + target.margin.x - tolerance
+            && glyphs.max.x <= area.xMax - target.margin.z + tolerance;
     }
 
     private void ApplyTranslatedLayout(bool korean)

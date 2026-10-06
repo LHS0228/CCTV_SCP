@@ -12,8 +12,8 @@ public static class GameLocalization
 {
     public const string TableName = "GameText";
     public const string PreferenceKey = "CCTV_SCP.Language";
-    public static readonly string[] LanguageCodes = { "ko", "en", "ja", "zh-CN", "zh-TW" };
-    public static readonly string[] LanguageNames = { "한국어", "English", "日本語", "简体中文", "繁體中文" };
+    public static readonly string[] LanguageCodes = { "ko", "en", "ja", "zh-CN", "zh-TW", "fr", "de", "ru" };
+    public static readonly string[] LanguageNames = { "한국어", "English", "日本語", "简体中文", "繁體中文", "Français", "Deutsch", "Русский" };
     public static event Action LanguageChanged;
 
     private static readonly Dictionary<string, StringTable> tables = new Dictionary<string, StringTable>();
@@ -121,7 +121,8 @@ public static class GameLocalization
     public static TMP_FontAsset GetFont(string code)
     {
         string name = code == "ja" ? "Japanese" : code == "zh-CN" ? "Chinese"
-            : code == "zh-TW" ? "TraditionalChinese" : "English";
+            : code == "zh-TW" ? "TraditionalChinese"
+            : code == "fr" || code == "de" || code == "ru" ? "Western" : "English";
         if (!fonts.TryGetValue(name, out TMP_FontAsset font) || font == null)
         {
             font = Resources.Load<TMP_FontAsset>("Localization/Fonts/" + name);

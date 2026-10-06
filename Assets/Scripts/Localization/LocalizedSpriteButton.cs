@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>Uses native text for Japanese/Chinese labels baked into the original English button art.</summary>
+/// <summary>Uses translated text for non-English labels baked into the original button art.</summary>
 [RequireComponent(typeof(Image))]
 [DisallowMultipleComponent]
 public sealed class LocalizedSpriteButton : MonoBehaviour
@@ -24,8 +24,7 @@ public sealed class LocalizedSpriteButton : MonoBehaviour
 
     private void Refresh()
     {
-        bool translated = GameLocalization.CurrentCode == "ja" || GameLocalization.CurrentCode == "zh-CN"
-            || GameLocalization.CurrentCode == "zh-TW";
+        bool translated = GameLocalization.CurrentCode != "ko" && GameLocalization.CurrentCode != "en";
         originalImage.enabled = !translated;
         if (translatedContent != null)
             translatedContent.SetActive(translated);

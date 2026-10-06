@@ -23,10 +23,21 @@ public static class GameLocalizationSetup
     [Serializable] private sealed class Catalog { public Entry[] entries; public string[] literals; }
     [Serializable] private sealed class Entry
     {
-        public string key, ko, en, ja, zhCN, zhTW;
+        public string key, ko, en, ja, zhCN, zhTW, fr, de, ru;
         public string[] sources;
         public string Value(string code) => code == "en" ? en : code == "ja" ? ja
-            : code == "zh-CN" ? zhCN : code == "zh-TW" ? zhTW : ko;
+            : code == "zh-CN" ? zhCN : code == "zh-TW" ? zhTW
+            : code == "fr" ? fr : code == "de" ? de : code == "ru" ? ru : ko;
+    }
+
+    [MenuItem("Tools/Localization/Apply Translation Assets Only")]
+    public static void ApplyAssetsOnly()
+    {
+        Catalog catalog = ReadCatalog();
+        CreateSettingsAndTables(catalog);
+        CreateFonts(catalog);
+        AssetDatabase.SaveAssets();
+        Debug.Log($"LOCALIZATION_ASSETS_APPLIED: {catalog.entries.Length} keys, {GameLocalization.LanguageCodes.Length} languages.");
     }
 
     [MenuItem("Tools/Localization/Apply Translation Catalog")]
@@ -158,6 +169,7 @@ public static class GameLocalizationSetup
         }
         EditorUtility.SetDirty(collection.SharedData);
         EditorUtility.SetDirty(collection);
+        LocalizationEditorSettings.EditorEvents.RaiseCollectionModified(null, collection);
         AssetDatabase.SaveAssets();
     }
 
@@ -168,6 +180,7 @@ public static class GameLocalizationSetup
         CreateFont("Japanese", "Assets/Font/Localization/NotoSansCJKjp-Regular.otf", catalog, "ja");
         CreateFont("Chinese", "Assets/Font/Localization/NotoSansCJKsc-Regular.otf", catalog, "zh-CN");
         CreateFont("TraditionalChinese", "Assets/Font/Localization/NotoSansCJKtc-Regular.otf", catalog, "zh-TW");
+        CreateFont("Western", "Assets/TextMesh Pro/Fonts/LiberationSans.ttf", catalog, "fr");
     }
 
     private static void CreateFont(string name, string source, Catalog catalog, string code)
@@ -186,6 +199,9 @@ public static class GameLocalizationSetup
             + string.Concat(GameLocalization.LanguageNames) + "0123456789";
         if (code == "en")
             characters = string.Concat(catalog.entries.Select(entry => PlainText(entry.en) + PlainText(entry.ko))) + "한국어0123456789";
+        if (name == "Western")
+            characters = string.Concat(catalog.entries.Select(entry => PlainText(entry.fr) + PlainText(entry.de) + PlainText(entry.ru)))
+                + "FrançaisDeutschРусский0123456789";
         uint[] unicodes = characters.Where(c => !char.IsControl(c)).Select(c => (uint)c).Distinct().ToArray();
         generated.TryAddCharacters(unicodes, out uint[] missing);
         if (missing != null && missing.Length > 0)
@@ -623,6 +639,15 @@ public static class GameLocalizationSetup
     private static void ValidateCatalogAndScenes()
     {
         Catalog catalog = ReadCatalog();
+        ValidateAssets(catalog);
+        ValidateSceneBindings(catalog);
+    }
+
+    [MenuItem("Tools/Localization/Validate Translation Assets Only")]
+    public static void ValidateAssetsOnly() => ValidateAssets(ReadCatalog());
+
+    private static void ValidateAssets(Catalog catalog)
+    {
         foreach (string code in GameLocalization.LanguageCodes)
         {
             StringTable table = GameLocalization.LoadTable(code);
@@ -645,6 +670,14 @@ public static class GameLocalizationSetup
                 }
             }
         }
+        TMP_FontAsset menuFont = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(ResourceRoot + "/Fonts/Japanese.asset");
+        if (!menuFont.HasCharacters(string.Concat(GameLocalization.LanguageNames)))
+            throw new InvalidOperationException("The language menu is missing native-name glyphs.");
+        Debug.Log($"LOCALIZATION_ASSETS_VALIDATED: {catalog.entries.Length * GameLocalization.LanguageCodes.Length} translations, 5 fonts.");
+    }
+
+    private static void ValidateSceneBindings(Catalog catalog)
+    {
         var sources = new HashSet<string>(catalog.entries.SelectMany(entry => entry.sources));
         var literals = new HashSet<string>(catalog.literals);
         int checkedLabels = 0;
@@ -679,7 +712,7 @@ public static class GameLocalizationSetup
             if (languageButtons != menus)
                 throw new InvalidOperationException("Missing language button: " + buildScene.path);
         }
-        Debug.Log($"LOCALIZATION_VALIDATED: {catalog.entries.Length * GameLocalization.LanguageCodes.Length} translations, 4 fonts, {checkedLabels} labels, 3 scenes.");
+        Debug.Log($"LOCALIZATION_VALIDATED: {catalog.entries.Length * GameLocalization.LanguageCodes.Length} translations, 5 fonts, {checkedLabels} labels, 3 scenes.");
     }
 
     private static string PlainText(string text) => Regex.Replace(text, "<[^>]+>", "")

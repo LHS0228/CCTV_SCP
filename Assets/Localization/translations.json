@@ -9,7 +9,10 @@
       "sources": [
         "SFX Sound\n"
       ],
-      "zhTW": "音效"
+      "zhTW": "音效",
+      "fr": "Effets sonores",
+      "de": "Soundeffekte",
+      "ru": "Звуковые эффекты"
     },
     {
       "key": "options.music",
@@ -20,7 +23,10 @@
       "sources": [
         "BGM Sound\n"
       ],
-      "zhTW": "音樂"
+      "zhTW": "音樂",
+      "fr": "Musique",
+      "de": "Musik",
+      "ru": "Музыка"
     },
     {
       "key": "menu.exit",
@@ -31,7 +37,10 @@
       "sources": [
         "종료\n"
       ],
-      "zhTW": "離開"
+      "zhTW": "離開",
+      "fr": "Quitter",
+      "de": "Beenden",
+      "ru": "Выход"
     },
     {
       "key": "menu.options",
@@ -42,7 +51,10 @@
       "sources": [
         "Option"
       ],
-      "zhTW": "設定"
+      "zhTW": "設定",
+      "fr": "Paramètres",
+      "de": "Einstellungen",
+      "ru": "Настройки"
     },
     {
       "key": "menu.cancel",
@@ -53,7 +65,10 @@
       "sources": [
         "취소\n"
       ],
-      "zhTW": "取消"
+      "zhTW": "取消",
+      "fr": "Annuler",
+      "de": "Abbrechen",
+      "ru": "Отмена"
     },
     {
       "key": "options.master",
@@ -64,7 +79,10 @@
       "sources": [
         "Master Sound\n"
       ],
-      "zhTW": "總音量"
+      "zhTW": "總音量",
+      "fr": "Volume général",
+      "de": "Gesamtlautstärke",
+      "ru": "Общая громкость"
     },
     {
       "key": "options.sensitivity",
@@ -75,7 +93,10 @@
       "sources": [
         "Turn Speed\n"
       ],
-      "zhTW": "滑鼠靈敏度"
+      "zhTW": "滑鼠靈敏度",
+      "fr": "Sensibilité de la souris",
+      "de": "Mausempfindlichkeit",
+      "ru": "Чувствительность мыши"
     },
     {
       "key": "options.fullscreen",
@@ -86,7 +107,10 @@
       "sources": [
         "Use Full Screen"
       ],
-      "zhTW": "全螢幕"
+      "zhTW": "全螢幕",
+      "fr": "Plein écran",
+      "de": "Vollbild",
+      "ru": "Полный экран"
     },
     {
       "key": "menu.confirmExit",
@@ -97,7 +121,10 @@
       "sources": [
         "정말 게임을 종료하시겠습니까?"
       ],
-      "zhTW": "確定要離開遊戲嗎？"
+      "zhTW": "確定要離開遊戲嗎？",
+      "fr": "Voulez-vous vraiment quitter le jeu ?",
+      "de": "Möchten Sie das Spiel wirklich beenden?",
+      "ru": "Вы действительно хотите выйти из игры?"
     },
     {
       "key": "action.suppress",
@@ -108,7 +135,10 @@
       "sources": [
         "진압"
       ],
-      "zhTW": "鎮壓"
+      "zhTW": "鎮壓",
+      "fr": "Maîtriser",
+      "de": "Unterdrücken",
+      "ru": "Подавить"
     },
     {
       "key": "action.incinerate.12",
@@ -119,7 +149,10 @@
       "sources": [
         "소각"
       ],
-      "zhTW": "焚燒"
+      "zhTW": "焚燒",
+      "fr": "Incinérer",
+      "de": "Verbrennen",
+      "ru": "Сжечь"
     },
     {
       "key": "entity.tentacles.title",
@@ -130,7 +163,10 @@
       "sources": [
         "'촉수 군집' 개체 정보"
       ],
-      "zhTW": "“觸手群落”個體檔案"
+      "zhTW": "“觸手群落”個體檔案",
+      "fr": "Dossier : « Colonie de tentacules »",
+      "de": "Entitätsakte: „Tentakelkolonie“",
+      "ru": "Досье: «Колония щупалец»"
     },
     {
       "key": "protocol.success",
@@ -141,7 +177,10 @@
       "sources": [
         "Success\n"
       ],
-      "zhTW": "成功"
+      "zhTW": "成功",
+      "fr": "Réussi",
+      "de": "Erfolgreich",
+      "ru": "Успешно"
     },
     {
       "key": "action.systemCheck.15",
@@ -152,7 +191,10 @@
       "sources": [
         "시스템 검진"
       ],
-      "zhTW": "系統\n檢查"
+      "zhTW": "系統\n檢查",
+      "fr": "Vérifier le\nsystème",
+      "de": "System\nprüfen",
+      "ru": "Проверить\nсистему"
     },
     {
       "key": "action.systemCheck.19",
@@ -163,7 +205,10 @@
       "sources": [
         "시스템 검진\n"
       ],
-      "zhTW": "系統\n檢查"
+      "zhTW": "系統\n檢查",
+      "fr": "Vérifier le\nsystème",
+      "de": "System\nprüfen",
+      "ru": "Проверить\nсистему"
     },
     {
       "key": "manual.management",
@@ -174,7 +219,10 @@
       "sources": [
         "<b><size=0.04>2. 미상개체 관리 유의사항</size></b>\n- 미상개체는 종종 <b>이상현상</b>을 발생시켜 시설을 공격합니다.\n- <indent=3%>당신은 <b>CCTV의 관리 기능</b>과 <b>벽면의 관리 시설</b>을 사용하여\n<b>이상현상을 해결</b>할 수 있습니다. 올바른 관리 방법은 <b>미상개체 \n관리 문서</b>의 개체 <b>이상현상 연구 결과</b>를 참고하십시오</indent>.\n- 환각 등의 신체 이상은 <b>신체 이상 문서</b>를 확인하십시오.\r\n\n"
       ],
-      "zhTW": "<size=115%>2. 未知個體管理注意事項</size>\n- 未知個體有時會引發異常現象並攻擊設施。\n- 請使用CCTV管理功能和牆面管理裝置處理異常。正確的應對方法請參閱未知個體管理檔案中的個體異常現象研究結果。\n- 出現幻覺等身體異常時，請查閱身體異常應對手冊。"
+      "zhTW": "<size=115%>2. 未知個體管理注意事項</size>\n- 未知個體有時會引發異常現象並攻擊設施。\n- 請使用CCTV管理功能和牆面管理裝置處理異常。正確的應對方法請參閱未知個體管理檔案中的個體異常現象研究結果。\n- 出現幻覺等身體異常時，請查閱身體異常應對手冊。",
+      "fr": "<size=115%>2. Précautions de gestion des entités</size>\n- Les entités provoquent parfois des anomalies qui endommagent l'installation.\n- Utilisez les commandes de vidéosurveillance et les équipements muraux pour résoudre les anomalies. Consultez les résultats de recherche sur les anomalies dans les dossiers des entités pour connaître la bonne procédure.\n- En cas d'hallucinations ou d'autres symptômes, consultez le manuel des symptômes physiques.",
+      "de": "<size=115%>2. Hinweise zum Umgang mit Entitäten</size>\n- Entitäten können Anomalien auslösen, die die Anlage beschädigen.\n- Nutzen Sie die CCTV-Steuerung und die Geräte an den Wänden, um Anomalien zu beheben. Das richtige Vorgehen finden Sie in den Forschungsergebnissen zu Anomalien in den Entitätsakten.\n- Bei Halluzinationen oder anderen körperlichen Symptomen lesen Sie das Handbuch für körperliche Symptome.",
+      "ru": "<size=115%>2. Меры предосторожности при работе с сущностями</size>\n- Сущности могут вызывать аномалии, повреждающие объект.\n- Устраняйте аномалии с помощью средств управления CCTV и настенного оборудования. Правильные меры описаны в результатах исследований аномалий в досье сущностей.\n- При галлюцинациях и других симптомах обратитесь к руководству по физическим нарушениям."
     },
     {
       "key": "manual.mimic.research.23",
@@ -186,7 +234,10 @@
         "<line-height=0.1><size=0.055><b>개체 이상현상 연구 결과</size></b>\n</line-height>1. <indent=5%>개체가 <b>'속박된 회로'</b>의 모습을 취했을 때 <b>전기적 자극</b>에 취약한 모습을 확인했다.</indent><line-height=0.08>\n\r</line-height>2. <indent=5%>개체가 <b>‘촉수 군집’</b> 의 모습을 취했을 때 <b>고온의 자극</b>을 주자 원 형태로 돌아왔다.</indent><line-height=0.08>\n</line-height>3. <indent=6%>개체가 뒤집어 쓴  <b>인간형 껍질</b>은 <b>고온</b>에 취약함을 \n확인했다.</indent><line-height=0.08>\r\n</line-height>4. <indent=6%>주기적으로 <b>가면을 생성</b>하여 시설 내부에 설치하는데, \n시스템에 간섭하는 능력이 있어 신속히 <b>파괴</b> 해야한다.</indent>\n\n",
         "<line-height=0.1><size=0.055><b>개체 이상현상 연구 결과</size></b>\n</line-height>1. <indent=5%>개체가 <b>'속박된 회로'</b>의 모습을 취했을 때 <b>전기적 자극</b>에 취약한 모습을 확인했다.</indent><line-height=0.08>\n\r</line-height>2. <indent=5%>개체가 <b>‘촉수 군집’</b> 의 모습을 취했을 때 <b>고온의 자극</b>을 주자 원 형태로 돌아왔다.</indent><line-height=0.08>\n</line-height>3. <indent=6%>개체가 뒤집어 쓴  <b>인간형 껍질</b>은 <b>고온</b>에 취약함을 \n확인했다.</indent><line-height=0.08>\r\n</line-height>4. <indent=6%>주기적으로 <b>가면을 생성</b>하여 시설 내부에 설치하는데, \n시스템에 간섭하는 능력이 있어 신속히 밟아 <b>파괴</b>해야한다. 가면에서는 노이즈같은 소리가 들림을 확인했다.</indent>\n\n"
       ],
-      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體模仿“受縛電路”時，已確認其弱點是電擊。\n2. 個體模仿“觸手群落”時，施加高溫刺激可使其恢復原形。\n3. 個體披著的人形外殼也怕高溫。\n4. 個體會定期生成面具並放置在設施內。這些面具會干擾系統，必須迅速踩碎。已確認面具會發出類似雜訊的聲音。"
+      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體模仿“受縛電路”時，已確認其弱點是電擊。\n2. 個體模仿“觸手群落”時，施加高溫刺激可使其恢復原形。\n3. 個體披著的人形外殼也怕高溫。\n4. 個體會定期生成面具並放置在設施內。這些面具會干擾系統，必須迅速踩碎。已確認面具會發出類似雜訊的聲音。",
+      "fr": "<size=135%>Résultats de recherche sur les anomalies</size>\n1. Lorsqu'elle imitait le Circuit entravé, l'entité était vulnérable aux décharges électriques.\n2. Lorsqu'elle imitait la Colonie de tentacules, une forte chaleur lui faisait reprendre sa forme initiale.\n3. Son enveloppe humanoïde était également vulnérable à la chaleur.\n4. Elle crée périodiquement des masques dans l'installation. Ils perturbent les systèmes : détruisez-les rapidement en marchant dessus. Les masques émettent un bruit de parasites.",
+      "de": "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die Entität den Gefesselten Schaltkreis nachahmte, war sie anfällig für Stromschläge.\n2. Wenn sie die Tentakelkolonie nachahmte, brachte starke Hitze sie in ihre ursprüngliche Form zurück.\n3. Auch ihre humanoide Hülle war anfällig für Hitze.\n4. Sie erzeugt regelmäßig Masken in der Anlage. Diese stören die Systeme und müssen rasch durch Drauftreten zerstört werden. Die Masken geben ein Rauschen von sich.",
+      "ru": "<size=135%>Результаты исследований аномалий</size>\n1. При имитации Скованной цепи сущность была уязвима к электрическим разрядам.\n2. При имитации Колонии щупалец воздействие высокой температуры возвращало ей исходную форму.\n3. Её человекоподобная оболочка также была уязвима к высокой температуре.\n4. Сущность периодически создаёт маски на объекте. Они нарушают работу систем: немедленно уничтожайте их, наступая на них. Маски издают звук, похожий на помехи."
     },
     {
       "key": "action.shock.24",
@@ -197,7 +248,10 @@
       "sources": [
         "전기충격"
       ],
-      "zhTW": "電擊"
+      "zhTW": "電擊",
+      "fr": "Décharge\nélectrique",
+      "de": "Strom-\nschlag",
+      "ru": "Удар\nтоком"
     },
     {
       "key": "entity.mimic.title",
@@ -208,7 +262,10 @@
       "sources": [
         "'모방자' 개체 정보"
       ],
-      "zhTW": "“模仿者”個體檔案"
+      "zhTW": "“模仿者”個體檔案",
+      "fr": "Dossier : « Imitateur »",
+      "de": "Entitätsakte: „Nachahmer“",
+      "ru": "Досье: «Мимик»"
     },
     {
       "key": "manual.circuit.research.28",
@@ -219,7 +276,10 @@
       "sources": [
         "<line-height=0.1><size=0.055><b>개체 이상현상 연구 결과</size></b>\n</line-height>1. <indent=5%>개체가 전기를 방출해 <b>스파크</b>를 일으키자 주변 시설의 \n시스템에 이상이 발생하여 <b>시스템 점검</b>을 실행해야했다.</indent><line-height=0.08>\n\r</line-height>2. <indent=5%>개체가 구속 의자에서 <b>일어난</b> 경우 <b>물리적 충격</b>으로 \n진압 가능하다는 사실을 확인했다.</indent><line-height=0.08>\n</line-height>3. <indent=6%>개체가 <b>전선을 생성</b>하여 주변을 덮을 경우\u000b<b>고열로 소각</b>하면 생성이 멈추는것을 확인했다.</indent><line-height=0.08>\r\n</line-height>4. <indent=6%>종종 고압 전류를 발생시켜 <b>시설의 조명이 고장</b>났는데,\n<b>차단기</b>를 통해 전력 시스템을 재설정하여 해결했다.</indent>\n"
       ],
-      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體放電產生火花，導致附近設施的系統異常，需要執行系統檢查。\n2. 個體從束縛椅上站起時，可用物理衝擊將其鎮壓。\n3. 個體生成電線並覆蓋周圍區域時，使用高溫焚燒可阻止電線繼續生成。\n4. 高壓電流有時會造成設施照明故障。通過斷路器重置供電系統即可解決。"
+      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體放電產生火花，導致附近設施的系統異常，需要執行系統檢查。\n2. 個體從束縛椅上站起時，可用物理衝擊將其鎮壓。\n3. 個體生成電線並覆蓋周圍區域時，使用高溫焚燒可阻止電線繼續生成。\n4. 高壓電流有時會造成設施照明故障。通過斷路器重置供電系統即可解決。",
+      "fr": "<size=135%>Résultats de recherche sur les anomalies</size>\n1. Ses décharges électriques produisaient des étincelles et perturbaient les systèmes voisins. Une vérification du système était nécessaire.\n2. Quand l'entité se levait de sa chaise de contention, une force physique permettait de la maîtriser.\n3. Quand elle générait des câbles autour d'elle, l'incinération arrêtait leur croissance.\n4. Ses décharges à haute tension endommageaient parfois l'éclairage. Réinitialiser l'alimentation au disjoncteur résolvait le problème.",
+      "de": "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Elektrische Entladungen erzeugten Funken und störten nahe Systeme. Eine Systemprüfung war erforderlich.\n2. Wenn sich die Entität aus ihrem Fixierstuhl erhob, konnte sie mit körperlicher Gewalt unterdrückt werden.\n3. Wenn sie Drähte um sich herum erzeugte, stoppte Verbrennen deren Wachstum.\n4. Hochspannungsentladungen führten manchmal zu Beleuchtungsausfällen. Ein Zurücksetzen der Stromversorgung am Sicherungskasten behob das Problem.",
+      "ru": "<size=135%>Результаты исследований аномалий</size>\n1. Электрические разряды вызывали искры и сбои в соседних системах. Требовалась проверка системы.\n2. Когда сущность вставала с удерживающего кресла, её удавалось подавить физическим воздействием.\n3. Когда она создавала вокруг себя провода, сжигание останавливало их рост.\n4. Разряды высокого напряжения иногда выводили освещение из строя. Сброс электроснабжения через автоматический выключатель устранял сбой."
     },
     {
       "key": "manual.mimic.description",
@@ -230,7 +290,10 @@
       "sources": [
         "<line-height=0.06><b>개체명</b>: AC-029 '모방자'\n<b>주요 능력</b>: 외형 모방, 시스템 간섭\n</line-height><size=0.035>“체르노빌 농장에서 포획된 사물형 개체\r\n인간을 모방해 접근한 뒤\r\n가면을 씌워 동족으로 만든다.”\r\n</size>"
       ],
-      "zhTW": "個體名稱：AC-029“模仿者”\n主要能力：外形模仿、系統干擾\n<size=90%>在切爾諾貝利農場捕獲的物體型個體。它模仿人類接近目標，然後給目標戴上面具，將其變為同類。</size>"
+      "zhTW": "個體名稱：AC-029“模仿者”\n主要能力：外形模仿、系統干擾\n<size=90%>在切爾諾貝利農場捕獲的物體型個體。它模仿人類接近目標，然後給目標戴上面具，將其變為同類。</size>",
+      "fr": "Entité : AC-029 — Imitateur\nCapacités : imitation, interférence avec les systèmes\n<size=90%>Entité semblable à un objet, capturée dans une ferme de Tchernobyl. Elle imite les humains pour approcher ses victimes, puis leur pose un masque afin de les transformer en ses semblables.</size>",
+      "de": "Entität: AC-029 — Nachahmer\nFähigkeiten: Gestaltnachahmung, Systemstörungen\n<size=90%>Eine objektartige Entität, die auf einem Bauernhof in Tschernobyl gefangen wurde. Sie ahmt Menschen nach, nähert sich ihren Opfern und setzt ihnen Masken auf, um sie in ihresgleichen zu verwandeln.</size>",
+      "ru": "Сущность: AC-029 — Мимик\nСпособности: имитация облика, вмешательство в системы\n<size=90%>Предметоподобная сущность, пойманная на ферме в Чернобыле. Имитирует людей, чтобы приблизиться к жертве, затем надевает на неё маску и превращает в себе подобную.</size>"
     },
     {
       "key": "manual.circuit.description",
@@ -241,7 +304,10 @@
       "sources": [
         "<line-height=0.06><b>개체명</b>: AC-017 '속박된 회로'\n<b>주요 능력</b>: 전류 조작, 전선 생성\n</line-height><size=0.035>“구소련 벙커에서 발견된 인간형 개체.\r\n평소엔 전력을 흡수하나 불안정해지면\r\n전선을 생성해 주변을 초토화한다.”</size>\r\n"
       ],
-      "zhTW": "個體名稱：AC-017“受縛電路”\n主要能力：電流操控、電線生成\n<size=90%>在前蘇聯掩體中發現的人形個體。平時吸收電力，狀態不穩定時則生成電線，摧毀周邊區域。</size>"
+      "zhTW": "個體名稱：AC-017“受縛電路”\n主要能力：電流操控、電線生成\n<size=90%>在前蘇聯掩體中發現的人形個體。平時吸收電力，狀態不穩定時則生成電線，摧毀周邊區域。</size>",
+      "fr": "Entité : AC-017 — Circuit entravé\nCapacités : manipulation du courant, génération de câbles\n<size=90%>Entité humanoïde trouvée dans un ancien bunker soviétique. Elle absorbe normalement l'électricité, mais, lorsqu'elle devient instable, génère des câbles et dévaste les alentours.</size>",
+      "de": "Entität: AC-017 — Gefesselter Schaltkreis\nFähigkeiten: Strommanipulation, Drahterzeugung\n<size=90%>Eine humanoide Entität aus einem ehemaligen sowjetischen Bunker. Sie nimmt normalerweise Strom auf, erzeugt bei Instabilität jedoch Drähte und verwüstet ihre Umgebung.</size>",
+      "ru": "Сущность: AC-017 — Скованная цепь\nСпособности: управление током, создание проводов\n<size=90%>Человекоподобная сущность, найденная в бывшем советском бункере. Обычно поглощает электричество, но при нестабильности создаёт провода и опустошает всё вокруг.</size>"
     },
     {
       "key": "entity.circuit.title",
@@ -252,7 +318,10 @@
       "sources": [
         "'속박된 회로' 개체 정보"
       ],
-      "zhTW": "“受縛電路”個體檔案"
+      "zhTW": "“受縛電路”個體檔案",
+      "fr": "Dossier : « Circuit entravé »",
+      "de": "Entitätsakte: „Gefesselter Schaltkreis“",
+      "ru": "Досье: «Скованная цепь»"
     },
     {
       "key": "manual.symptoms.32",
@@ -263,7 +332,10 @@
       "sources": [
         "<b><size=0.05>1. 발생 가능한 신체 이상</size></b>\n시설 안의 폐쇄성으로 신체에  다음과 같은 \n경미한 이상이 나타날 수 있습니다.\n<size=0.03>- 시각을 저해하는 노이즈와 같은 환각\u000b- 자신을 제외한 다른이의 목소리와 같은 환청\u000b- 시설에 등록된 개체 및 사물 이외의 비현실적 환각</size>\n\r\n\n<b><size=0.05>2. 신체 이상 대처</size></b>\n위와 같은 이상이 생긴다면, 즉시 다음 그림처럼 생긴\n책상 위의 <b>관리자용 상비약</b>을 사용하십시오.\n"
       ],
-      "zhTW": "<size=130%>1. 可能出現的身體異常</size>\n設施的封閉環境可能導致以下輕微異常：\n- 類似雜訊的幻覺，干擾視野。\n- 聽到他人聲音的幻聽。\n- 看到登記個體和物品以外的不真實幻象。\n\n<size=130%>2. 應對方法</size>\n出現上述症狀時，請參照下圖，立即服用桌上的管理員備用藥品。"
+      "zhTW": "<size=130%>1. 可能出現的身體異常</size>\n設施的封閉環境可能導致以下輕微異常：\n- 類似雜訊的幻覺，干擾視野。\n- 聽到他人聲音的幻聽。\n- 看到登記個體和物品以外的不真實幻象。\n\n<size=130%>2. 應對方法</size>\n出現上述症狀時，請參照下圖，立即服用桌上的管理員備用藥品。",
+      "fr": "<size=130%>1. Symptômes physiques possibles</size>\nLe confinement dans l'installation peut provoquer les symptômes mineurs suivants :\n- Des parasites visuels qui gênent la vision.\n- Des voix autres que la vôtre.\n- Des apparitions irréelles, sans lien avec les entités ou objets enregistrés.\n\n<size=130%>2. Mesures à prendre</size>\nSi l'un de ces symptômes apparaît, prenez immédiatement le médicament destiné aux administrateurs sur le bureau, illustré ci-dessous.",
+      "de": "<size=130%>1. Mögliche körperliche Symptome</size>\nDie abgeschlossene Anlage kann folgende leichte Symptome verursachen:\n- Bildrauschen, das die Sicht beeinträchtigt.\n- Stimmen anderer Personen.\n- Unwirkliche Erscheinungen, die keiner registrierten Entität oder keinem Objekt entsprechen.\n\n<size=130%>2. Gegenmaßnahmen</size>\nNehmen Sie bei diesen Symptomen sofort das unten abgebildete Medikament für Administratoren auf dem Schreibtisch ein.",
+      "ru": "<size=130%>1. Возможные физические нарушения</size>\nПребывание в замкнутом пространстве объекта может вызвать следующие лёгкие симптомы:\n- Визуальные помехи, мешающие обзору.\n- Чужие голоса.\n- Нереальные видения, не связанные с зарегистрированными сущностями и предметами.\n\n<size=130%>2. Меры реагирования</size>\nПри появлении этих симптомов немедленно примите лекарство для администраторов на столе, показанное ниже."
     },
     {
       "key": "action.shock.33",
@@ -274,7 +346,10 @@
       "sources": [
         "전기충격\n"
       ],
-      "zhTW": "電擊"
+      "zhTW": "電擊",
+      "fr": "Décharge\nélectrique",
+      "de": "Strom-\nschlag",
+      "ru": "Удар\nтоком"
     },
     {
       "key": "manual.symptoms.title",
@@ -285,7 +360,10 @@
       "sources": [
         "신체 이상 대처 매뉴얼"
       ],
-      "zhTW": "身體異常應對手冊"
+      "zhTW": "身體異常應對手冊",
+      "fr": "Symptômes physiques : mesures à prendre",
+      "de": "Körperliche Symptome: Gegenmaßnahmen",
+      "ru": "Руководство по физическим нарушениям"
     },
     {
       "key": "protocol.fail",
@@ -296,7 +374,10 @@
       "sources": [
         "Fail\n"
       ],
-      "zhTW": "失敗"
+      "zhTW": "失敗",
+      "fr": "Échec",
+      "de": "Fehlgeschlagen",
+      "ru": "Неудача"
     },
     {
       "key": "game.failure",
@@ -307,7 +388,10 @@
       "sources": [
         "관리에 실패했습니다."
       ],
-      "zhTW": "管理失敗。"
+      "zhTW": "管理失敗。",
+      "fr": "Échec du confinement.",
+      "de": "Eindämmung fehlgeschlagen.",
+      "ru": "Сдерживание провалено."
     },
     {
       "key": "manual.protocolCode",
@@ -318,7 +402,10 @@
       "sources": [
         "오늘의 프로토콜 코드 - "
       ],
-      "zhTW": "今日應變代碼："
+      "zhTW": "今日應變代碼：",
+      "fr": "Code du protocole du jour : ",
+      "de": "Heutiger Protokollcode: ",
+      "ru": "Код протокола на сегодня: "
     },
     {
       "key": "manual.emergency",
@@ -329,7 +416,10 @@
       "sources": [
         "<b><size=0.04>3. 긴급 프로토콜</size></b>\n- 특정 방의 <b>안정수치가 0</b>이 되면 <b>긴급 프로토콜</b>이 활성화됩니다.\n- <indent=3%>시간 내에 <b>엘레베이터 좌측</b>의 <b>프로토콜 요청기</b>에 <b>올바른 코드</b>를 넣고 실행하십시오. 코드는 <b>본 문서 하단</b>에 <b>매일 갱신</b>됩니다.</indent>\n- <indent=3%>만일 시간 내에 프로토콜을 요청하지 못했다면, 본 시설은 \n폐쇄되며 이후 말소 절차를 밟습니다. 행운을 빕니다.</indent>\n"
       ],
-      "zhTW": "<size=115%>3. 緊急應變程序</size>\n- 任一房間的穩定值降至0時，緊急應變程序將啟動。\n- 請在時限內，向電梯左側的協議終端機輸入正確代碼並執行。代碼位於本文件底部，每天更新。\n- 若未能及時提交協議，本設施將被封鎖，隨後執行抹除程式。祝您好運。"
+      "zhTW": "<size=115%>3. 緊急應變程序</size>\n- 任一房間的穩定值降至0時，緊急應變程序將啟動。\n- 請在時限內，向電梯左側的協議終端機輸入正確代碼並執行。代碼位於本文件底部，每天更新。\n- 若未能及時提交協議，本設施將被封鎖，隨後執行抹除程式。祝您好運。",
+      "fr": "<size=115%>3. Protocole d'urgence</size>\n- Si la stabilité d'une salle atteint zéro, le protocole d'urgence s'active.\n- Avant la fin du délai, saisissez le bon code sur le terminal de protocole à gauche de l'ascenseur et validez. Le code, au bas de ce document, est renouvelé chaque jour.\n- Si le protocole n'est pas demandé à temps, l'installation sera scellée, puis les procédures d'effacement seront exécutées. Bonne chance.",
+      "de": "<size=115%>3. Notfallprotokoll</size>\n- Sinkt die Stabilität eines Raums auf null, wird das Notfallprotokoll aktiviert.\n- Geben Sie vor Ablauf der Zeit den richtigen Code am Protokollterminal links vom Aufzug ein und bestätigen Sie ihn. Der Code am Ende dieses Dokuments wird täglich erneuert.\n- Wird das Protokoll nicht rechtzeitig angefordert, wird die Anlage abgeriegelt und das Auslöschungsverfahren eingeleitet. Viel Glück.",
+      "ru": "<size=115%>3. Аварийный протокол</size>\n- Если стабильность в любой камере достигает нуля, активируется аварийный протокол.\n- До истечения времени введите правильный код в терминал протокола слева от лифта и подтвердите его. Код внизу этого документа обновляется ежедневно.\n- Если протокол не будет запрошен вовремя, объект заблокируют, после чего начнётся процедура уничтожения. Удачи."
     },
     {
       "key": "manual.tentacles.research.40",
@@ -340,7 +430,10 @@
       "sources": [
         "<line-height=0.1><size=0.055><b>개체 이상현상 연구 결과</size></b>\n\r</line-height>1. <indent=5%>군집의 공격성이 증가해  <b>주변 시설을 공격</b> 할 때 <b>고온의 자극</b>을 가하면 공격성이 사라짐을 확인했다.</indent><line-height=0.08>\n</line-height>2. <indent=6%>격리실 내부의 <b>먹이통이 비워지자 </b>급격하게 상태가 \n불안정해짐을 확인했다. \n이후 <b>배식 시설을 통해 먹이를 공급</b>하자\n상태가 안정되었다. </indent>"
       ],
-      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 群落攻擊性增強並攻擊周邊設施時，施加高溫刺激可消除其攻擊性。\n2. 隔離室內的食槽清空後，群落迅速變得不穩定。通過供食裝置投餵後，其狀態恢復穩定。"
+      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 群落攻擊性增強並攻擊周邊設施時，施加高溫刺激可消除其攻擊性。\n2. 隔離室內的食槽清空後，群落迅速變得不穩定。通過供食裝置投餵後，其狀態恢復穩定。",
+      "fr": "<size=135%>Résultats de recherche sur les anomalies</size>\n1. Quand la colonie devenait agressive et attaquait les équipements voisins, une forte chaleur mettait fin à son agressivité.\n2. La colonie devenait très instable lorsque sa mangeoire était vide. La nourrir via le dispositif d'alimentation rétablissait sa stabilité.",
+      "de": "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die Kolonie aggressiv wurde und nahe Geräte angriff, beendete starke Hitze ihre Aggression.\n2. Sobald ihr Futterbehälter leer war, wurde die Kolonie stark instabil. Futterzufuhr über die Fütterungsanlage stellte ihre Stabilität wieder her.",
+      "ru": "<size=135%>Результаты исследований аномалий</size>\n1. Когда колония становилась агрессивной и атаковала соседнее оборудование, высокая температура прекращала агрессию.\n2. При опустошении кормушки колония быстро становилась нестабильной. Подача корма через систему кормления восстанавливала её стабильность."
     },
     {
       "key": "manual.rules.title",
@@ -351,7 +444,10 @@
       "sources": [
         "<b>기본 관리 규칙</b>"
       ],
-      "zhTW": "基本管理規則"
+      "zhTW": "基本管理規則",
+      "fr": "Règles de gestion de base",
+      "de": "Grundregeln der Verwaltung",
+      "ru": "Основные правила управления"
     },
     {
       "key": "manual.objective.tablet",
@@ -362,7 +458,10 @@
       "sources": [
         "<b><size=0.04>1. 업무 목표</size></b>\n- <indent=3%>당신의 업무는 <b>00:00에서 06:00</b>까지 미상개체를 \n안정적으로 관리하는 것입니다.</indent>\n- <indent=3%>모니터를 통해 미상개체의 <b>안정수치</b>를 확인하고 \n<b>0%</b>가 되기 전에 책상의 <b>태블릿</b>을 사용해 수치를 상승시키십시오.</indent>\n"
       ],
-      "zhTW": "<size=115%>1. 工作目標</size>\n- 從00:00到06:00，維持所有未知個體的穩定狀態。\n- 通過監視器檢視個體的穩定值，在降至0%之前，使用桌上的平板電腦提升數值。"
+      "zhTW": "<size=115%>1. 工作目標</size>\n- 從00:00到06:00，維持所有未知個體的穩定狀態。\n- 通過監視器檢視個體的穩定值，在降至0%之前，使用桌上的平板電腦提升數值。",
+      "fr": "<size=115%>1. Objectif du poste</size>\n- Maintenez toutes les entités dans un état stable de 00:00 à 06:00.\n- Surveillez leur stabilité sur les moniteurs. Utilisez la tablette sur le bureau pour l'augmenter avant qu'elle n'atteigne 0 %.",
+      "de": "<size=115%>1. Dienstziel</size>\n- Halten Sie alle Entitäten von 00:00 bis 06:00 stabil unter Kontrolle.\n- Überwachen Sie ihre Stabilität auf den Monitoren. Erhöhen Sie sie mit dem Tablet auf dem Schreibtisch, bevor sie 0 % erreicht.",
+      "ru": "<size=115%>1. Цель смены</size>\n- Поддерживайте стабильное состояние всех сущностей с 00:00 до 06:00.\n- Следите за стабильностью на мониторах. Повышайте её с помощью планшета на столе, прежде чем она достигнет 0 %."
     },
     {
       "key": "action.incinerate.43",
@@ -373,7 +472,10 @@
       "sources": [
         "소각\n"
       ],
-      "zhTW": "焚燒"
+      "zhTW": "焚燒",
+      "fr": "Incinérer",
+      "de": "Verbrennen",
+      "ru": "Сжечь"
     },
     {
       "key": "manual.tentacles.description",
@@ -384,7 +486,10 @@
       "sources": [
         "<line-height=0.06><b>개체명</b>: AC-013 '촉수 군집'\n<b>주요 능력</b>: 촉수 공격, 촉수 생성\n</line-height><size=0.035>“판타나우 늪지대에서 발견된 환형동물.\r\n섭식과 번식을 끝없이 반복하며\r\n주변에 보이는 모든 것을 먹으려한다.”\r\n\r\n</size>"
       ],
-      "zhTW": "個體名稱：AC-013“觸手群落”\n主要能力：觸手攻擊、觸手生成\n<size=90%>在潘塔納爾溼地發現的環節動物。它不停進食和繁殖，試圖吞噬視野內的一切。</size>"
+      "zhTW": "個體名稱：AC-013“觸手群落”\n主要能力：觸手攻擊、觸手生成\n<size=90%>在潘塔納爾溼地發現的環節動物。它不停進食和繁殖，試圖吞噬視野內的一切。</size>",
+      "fr": "Entité : AC-013 — Colonie de tentacules\nCapacités : attaques de tentacules, génération de tentacules\n<size=90%>Annélide découvert dans les marais du Pantanal. Il se nourrit et se reproduit sans fin, tentant de dévorer tout ce qu'il voit.</size>",
+      "de": "Entität: AC-013 — Tentakelkolonie\nFähigkeiten: Tentakelangriffe, Tentakelerzeugung\n<size=90%>Ein Ringelwurm aus den Feuchtgebieten des Pantanal. Er frisst und vermehrt sich unablässig und versucht, alles in Sichtweite zu verschlingen.</size>",
+      "ru": "Сущность: AC-013 — Колония щупалец\nСпособности: атаки щупальцами, создание щупалец\n<size=90%>Кольчатый червь, найденный в болотах Пантанала. Бесконечно питается и размножается, пытаясь поглотить всё, что видит.</size>"
     },
     {
       "key": "manual.symptoms.caption",
@@ -395,7 +500,10 @@
       "sources": [
         "환각 묘사 이미지(경험자 진술 토대) - 시야를 방해하는 노이즈(좌), 비현실적 환각(우)"
       ],
-      "zhTW": "根據經歷者描述繪製的幻覺：干擾視野的雜訊（左），不真實的幻象（右）"
+      "zhTW": "根據經歷者描述繪製的幻覺：干擾視野的雜訊（左），不真實的幻象（右）",
+      "fr": "Hallucinations décrites : parasites visuels (à gauche), apparitions irréelles (à droite).",
+      "de": "Berichtete Halluzinationen: Bildrauschen (links), unwirkliche Erscheinungen (rechts).",
+      "ru": "Описания галлюцинаций: визуальные помехи (слева), нереальные видения (справа)."
     },
     {
       "key": "action.systemCheck.47",
@@ -406,7 +514,10 @@
       "sources": [
         "시스템\n검진"
       ],
-      "zhTW": "系統\n檢查"
+      "zhTW": "系統\n檢查",
+      "fr": "Vérifier le\nsystème",
+      "de": "System\nprüfen",
+      "ru": "Проверить\nсистему"
     },
     {
       "key": "action.systemCheck.48",
@@ -417,7 +528,10 @@
       "sources": [
         "시스템 \n검진\n"
       ],
-      "zhTW": "系統\n檢查"
+      "zhTW": "系統\n檢查",
+      "fr": "Vérifier le\nsystème",
+      "de": "System\nprüfen",
+      "ru": "Проверить\nсистему"
     },
     {
       "key": "day.initial.five",
@@ -428,7 +542,10 @@
       "sources": [
         "Day 5\n"
       ],
-      "zhTW": "第5天"
+      "zhTW": "第5天",
+      "fr": "Jour 5",
+      "de": "Tag 5",
+      "ru": "День 5"
     },
     {
       "key": "manual.mimic.research.50",
@@ -440,7 +557,10 @@
         "<line-height=0.08><size=0.045><b>개체 이상현상 연구 결과</size></b>\n</line-height>1. <indent=5%>개체가 <b>'속박된 회로'</b>의 모습을 취했을 때 <b>전기적 자극</b>에 취약한 모습을 확인했다.</indent><line-height=0.08>\n\r</line-height>2. <indent=5%>개체가 <b>‘촉수 군집’</b> 의 모습을 취했을 때 <b>고온의 자극</b>을 주자 원 형태로 돌아왔다.</indent><line-height=0.08>\n</line-height>3. <indent=6%>개체가 뒤집어 쓴  <b>인간형 껍질</b>은 <b>고온</b>에 취약함을 \n확인했다.</indent><line-height=0.08>\r\n</line-height>4. <indent=6%>주기적으로 <b>가면을 생성</b>하여 시설 내부에 설치하는데, \n시스템에 간섭하는 능력이 있어 신속히 <b>파괴</b> 해야한다.</indent>\n\n",
         "<line-height=0.08><size=0.045><b>개체 이상현상 연구 결과</size></b>\n</line-height>1. <indent=5%>개체가 <b>'속박된 회로'</b>의 모습을 취했을 때 <b>전기적 자극</b>에 취약한 모습을 확인했다.</indent><line-height=0.08>\n\r</line-height>2. <indent=5%>개체가 <b>‘촉수 군집’</b> 의 모습을 취했을 때 <b>고온의 자극</b>을 주자 원 형태로 돌아왔다.</indent><line-height=0.08>\n</line-height>3. <indent=6%>개체가 뒤집어 쓴  <b>인간형 껍질</b>은 <b>고온</b>에 취약함을 \n확인했다.</indent><line-height=0.08>\r\n</line-height>4. <indent=6%>주기적으로 <b>가면을 생성</b>하여 시설 내부에 설치하는데, \n시스템에 간섭하는 능력이 있어 신속히 밟아 <b>파괴</b>해야한다. 가면에서는 노이즈같은 소리가 들림을 확인했다.</indent>\n\n"
       ],
-      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體模仿“受縛電路”時，已確認其弱點是電擊。\n2. 個體模仿“觸手群落”時，施加高溫刺激可使其恢復原形。\n3. 個體披著的人形外殼也怕高溫。\n4. 個體會定期生成面具並放置在設施內。這些面具會干擾系統，必須迅速踩碎。已確認面具會發出類似雜訊的聲音。"
+      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體模仿“受縛電路”時，已確認其弱點是電擊。\n2. 個體模仿“觸手群落”時，施加高溫刺激可使其恢復原形。\n3. 個體披著的人形外殼也怕高溫。\n4. 個體會定期生成面具並放置在設施內。這些面具會干擾系統，必須迅速踩碎。已確認面具會發出類似雜訊的聲音。",
+      "fr": "<size=135%>Résultats de recherche sur les anomalies</size>\n1. Lorsqu'elle imitait le Circuit entravé, l'entité était vulnérable aux décharges électriques.\n2. Lorsqu'elle imitait la Colonie de tentacules, une forte chaleur lui faisait reprendre sa forme initiale.\n3. Son enveloppe humanoïde était également vulnérable à la chaleur.\n4. Elle crée périodiquement des masques dans l'installation. Ils perturbent les systèmes : détruisez-les rapidement en marchant dessus. Les masques émettent un bruit de parasites.",
+      "de": "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die Entität den Gefesselten Schaltkreis nachahmte, war sie anfällig für Stromschläge.\n2. Wenn sie die Tentakelkolonie nachahmte, brachte starke Hitze sie in ihre ursprüngliche Form zurück.\n3. Auch ihre humanoide Hülle war anfällig für Hitze.\n4. Sie erzeugt regelmäßig Masken in der Anlage. Diese stören die Systeme und müssen rasch durch Drauftreten zerstört werden. Die Masken geben ein Rauschen von sich.",
+      "ru": "<size=135%>Результаты исследований аномалий</size>\n1. При имитации Скованной цепи сущность была уязвима к электрическим разрядам.\n2. При имитации Колонии щупалец воздействие высокой температуры возвращало ей исходную форму.\n3. Её человекоподобная оболочка также была уязвима к высокой температуре.\n4. Сущность периодически создаёт маски на объекте. Они нарушают работу систем: немедленно уничтожайте их, наступая на них. Маски издают звук, похожий на помехи."
     },
     {
       "key": "voice.ending.congratulations",
@@ -451,7 +571,10 @@
       "sources": [
         "관리자32, 당신의 업무 기간이 종료되었습니다. 축하합니다."
       ],
-      "zhTW": "管理員32。您的任職期已結束。恭喜。"
+      "zhTW": "管理員32。您的任職期已結束。恭喜。",
+      "fr": "Administrateur 32. Votre période de service est terminée. Félicitations.",
+      "de": "Administrator 32. Ihre Dienstzeit ist beendet. Herzlichen Glückwunsch.",
+      "ru": "Администратор 32. Ваш срок службы завершён. Поздравляем."
     },
     {
       "key": "ending.title",
@@ -462,7 +585,10 @@
       "sources": [
         "End. 말소"
       ],
-      "zhTW": "終局：抹除"
+      "zhTW": "終局：抹除",
+      "fr": "Fin : Effacement",
+      "de": "Ende: Auslöschung",
+      "ru": "Конец: Уничтожение"
     },
     {
       "key": "manual.circuit.research.54",
@@ -473,7 +599,10 @@
       "sources": [
         "<line-height=0.08><size=0.045><b>개체 이상현상 연구 결과</size></b>\n</line-height>1. <indent=5%>개체가 전기를 방출해 <b>스파크</b>를 일으키자 주변 시설의 \n시스템에 이상이 발생하여 <b>시스템 점검</b>을 실행해야했다.</indent><line-height=0.08>\n\r</line-height>2. <indent=5%>개체가 구속 의자에서 <b>일어난</b> 경우 <b>물리적 충격</b>으로 \n진압 가능하다는 사실을 확인했다.</indent><line-height=0.08>\n</line-height>3. <indent=6%>개체가 <b>전선을 생성</b>하여 주변을 덮을 경우\u000b<b>고열로 소각</b>하면 생성이 멈추는것을 확인했다.</indent><line-height=0.08>\r\n</line-height>4. <indent=6%>종종 고압 전류를 발생시켜 <b>시설의 조명이 고장</b>났는데,\n<b>차단기</b>를 통해 전력 시스템을 재설정하여 해결했다.</indent>\n"
       ],
-      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體放電產生火花，導致附近設施的系統異常，需要執行系統檢查。\n2. 個體從束縛椅上站起時，可用物理衝擊將其鎮壓。\n3. 個體生成電線並覆蓋周圍區域時，使用高溫焚燒可阻止電線繼續生成。\n4. 高壓電流有時會造成設施照明故障。通過斷路器重置供電系統即可解決。"
+      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 個體放電產生火花，導致附近設施的系統異常，需要執行系統檢查。\n2. 個體從束縛椅上站起時，可用物理衝擊將其鎮壓。\n3. 個體生成電線並覆蓋周圍區域時，使用高溫焚燒可阻止電線繼續生成。\n4. 高壓電流有時會造成設施照明故障。通過斷路器重置供電系統即可解決。",
+      "fr": "<size=135%>Résultats de recherche sur les anomalies</size>\n1. Ses décharges électriques produisaient des étincelles et perturbaient les systèmes voisins. Une vérification du système était nécessaire.\n2. Quand l'entité se levait de sa chaise de contention, une force physique permettait de la maîtriser.\n3. Quand elle générait des câbles autour d'elle, l'incinération arrêtait leur croissance.\n4. Ses décharges à haute tension endommageaient parfois l'éclairage. Réinitialiser l'alimentation au disjoncteur résolvait le problème.",
+      "de": "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Elektrische Entladungen erzeugten Funken und störten nahe Systeme. Eine Systemprüfung war erforderlich.\n2. Wenn sich die Entität aus ihrem Fixierstuhl erhob, konnte sie mit körperlicher Gewalt unterdrückt werden.\n3. Wenn sie Drähte um sich herum erzeugte, stoppte Verbrennen deren Wachstum.\n4. Hochspannungsentladungen führten manchmal zu Beleuchtungsausfällen. Ein Zurücksetzen der Stromversorgung am Sicherungskasten behob das Problem.",
+      "ru": "<size=135%>Результаты исследований аномалий</size>\n1. Электрические разряды вызывали искры и сбои в соседних системах. Требовалась проверка системы.\n2. Когда сущность вставала с удерживающего кресла, её удавалось подавить физическим воздействием.\n3. Когда она создавала вокруг себя провода, сжигание останавливало их рост.\n4. Разряды высокого напряжения иногда выводили освещение из строя. Сброс электроснабжения через автоматический выключатель устранял сбой."
     },
     {
       "key": "ending.epilogue",
@@ -484,7 +613,10 @@
       "sources": [
         "하위 직원의 끝은 언제나 '말소' 입니다.\n"
       ],
-      "zhTW": "底層員工的結局，永遠是“抹除”。"
+      "zhTW": "底層員工的結局，永遠是“抹除”。",
+      "fr": "Pour les employés subalternes, tout finit toujours par un « effacement ».",
+      "de": "Für niederrangige Angestellte endet es immer mit einer „Auslöschung“.",
+      "ru": "Для рядовых сотрудников всё всегда заканчивается «уничтожением»."
     },
     {
       "key": "manual.symptoms.58",
@@ -495,7 +627,10 @@
       "sources": [
         "<b><size=0.05>1. 발생 가능한 신체 이상</size></b>\n시설 안의 폐쇄성으로 신체에  다음과 같은 \n경미한 이상이 나타날 수 있습니다.\n<size=0.03>- 시각을 저해하는 노이즈와 같은 환각\u000b- 자신을 제외한 다른이의 목소리와 같은 환청\u000b- 시설에 등록된 개체 및 사물 이외의 비현실적 환각</size>\r\n<b><size=0.05>2. 신체 이상 대처</size></b>\n위와 같은 이상이 생긴다면, 즉시 다음 그림처럼 생긴\n책상 위의 관리자용 상비약을 사용하십시오.\n"
       ],
-      "zhTW": "<size=130%>1. 可能出現的身體異常</size>\n設施的封閉環境可能導致以下輕微異常：\n- 類似雜訊的幻覺，干擾視野。\n- 聽到他人聲音的幻聽。\n- 看到登記個體和物品以外的不真實幻象。\n\n<size=130%>2. 應對方法</size>\n出現上述症狀時，請參照下圖，立即服用桌上的管理員備用藥品。"
+      "zhTW": "<size=130%>1. 可能出現的身體異常</size>\n設施的封閉環境可能導致以下輕微異常：\n- 類似雜訊的幻覺，干擾視野。\n- 聽到他人聲音的幻聽。\n- 看到登記個體和物品以外的不真實幻象。\n\n<size=130%>2. 應對方法</size>\n出現上述症狀時，請參照下圖，立即服用桌上的管理員備用藥品。",
+      "fr": "<size=130%>1. Symptômes physiques possibles</size>\nLe confinement dans l'installation peut provoquer les symptômes mineurs suivants :\n- Des parasites visuels qui gênent la vision.\n- Des voix autres que la vôtre.\n- Des apparitions irréelles, sans lien avec les entités ou objets enregistrés.\n\n<size=130%>2. Mesures à prendre</size>\nSi l'un de ces symptômes apparaît, prenez immédiatement le médicament destiné aux administrateurs sur le bureau, illustré ci-dessous.",
+      "de": "<size=130%>1. Mögliche körperliche Symptome</size>\nDie abgeschlossene Anlage kann folgende leichte Symptome verursachen:\n- Bildrauschen, das die Sicht beeinträchtigt.\n- Stimmen anderer Personen.\n- Unwirkliche Erscheinungen, die keiner registrierten Entität oder keinem Objekt entsprechen.\n\n<size=130%>2. Gegenmaßnahmen</size>\nNehmen Sie bei diesen Symptomen sofort das unten abgebildete Medikament für Administratoren auf dem Schreibtisch ein.",
+      "ru": "<size=130%>1. Возможные физические нарушения</size>\nПребывание в замкнутом пространстве объекта может вызвать следующие лёгкие симптомы:\n- Визуальные помехи, мешающие обзору.\n- Чужие голоса.\n- Нереальные видения, не связанные с зарегистрированными сущностями и предметами.\n\n<size=130%>2. Меры реагирования</size>\nПри появлении этих симптомов немедленно примите лекарство для администраторов на столе, показанное ниже."
     },
     {
       "key": "day.initial.one.59",
@@ -506,7 +641,10 @@
       "sources": [
         "Day 1\n"
       ],
-      "zhTW": "第1天"
+      "zhTW": "第1天",
+      "fr": "Jour 1",
+      "de": "Tag 1",
+      "ru": "День 1"
     },
     {
       "key": "day.initial.clear",
@@ -517,7 +655,10 @@
       "sources": [
         "Day 1 Clear"
       ],
-      "zhTW": "第1天完成"
+      "zhTW": "第1天完成",
+      "fr": "Jour 1 terminé",
+      "de": "Tag 1 abgeschlossen",
+      "ru": "День 1 завершён"
     },
     {
       "key": "game.over.short",
@@ -528,7 +669,10 @@
       "sources": [
         "GameOver"
       ],
-      "zhTW": "遊戲結束"
+      "zhTW": "遊戲結束",
+      "fr": "Partie terminée",
+      "de": "Spiel vorbei",
+      "ru": "Игра окончена"
     },
     {
       "key": "manual.tentacles.research.63",
@@ -539,7 +683,10 @@
       "sources": [
         "<line-height=0.08><size=0.045><b>개체 이상현상 연구 결과</size></b>\n\r</line-height>1. <indent=5%>군집의 공격성이 증가해  <b>주변 시설을 공격</b> 할 때 <b>고온의 자극</b>을 가하면 공격성이 사라짐을 확인했다.</indent><line-height=0.08>\n</line-height>2. <indent=6%>격리실 내부의 <b>먹이통이 비워지자 </b>급격하게 상태가 \n불안정해짐을 확인했다. \n이후 <b>배식 시설을 통해 먹이를 공급</b>하자\n상태가 안정되었다. </indent>"
       ],
-      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 群落攻擊性增強並攻擊周邊設施時，施加高溫刺激可消除其攻擊性。\n2. 隔離室內的食槽清空後，群落迅速變得不穩定。通過供食裝置投餵後，其狀態恢復穩定。"
+      "zhTW": "<size=135%>個體異常現象研究結果</size>\n1. 群落攻擊性增強並攻擊周邊設施時，施加高溫刺激可消除其攻擊性。\n2. 隔離室內的食槽清空後，群落迅速變得不穩定。通過供食裝置投餵後，其狀態恢復穩定。",
+      "fr": "<size=135%>Résultats de recherche sur les anomalies</size>\n1. Quand la colonie devenait agressive et attaquait les équipements voisins, une forte chaleur mettait fin à son agressivité.\n2. La colonie devenait très instable lorsque sa mangeoire était vide. La nourrir via le dispositif d'alimentation rétablissait sa stabilité.",
+      "de": "<size=135%>Forschungsergebnisse zu Anomalien</size>\n1. Wenn die Kolonie aggressiv wurde und nahe Geräte angriff, beendete starke Hitze ihre Aggression.\n2. Sobald ihr Futterbehälter leer war, wurde die Kolonie stark instabil. Futterzufuhr über die Fütterungsanlage stellte ihre Stabilität wieder her.",
+      "ru": "<size=135%>Результаты исследований аномалий</size>\n1. Когда колония становилась агрессивной и атаковала соседнее оборудование, высокая температура прекращала агрессию.\n2. При опустошении кормушки колония быстро становилась нестабильной. Подача корма через систему кормления восстанавливала её стабильность."
     },
     {
       "key": "manual.objective",
@@ -550,7 +697,10 @@
       "sources": [
         "<b><size=0.04>1. 업무 목표</size></b>\n- <indent=3%>당신의 업무는 <b>00:00에서 06:00</b>까지 미상개체를 \n안정적으로 관리하는 것입니다.</indent>\n- <indent=3%>모니터를 통해 미상개체의 <b>안정수치</b>를 확인하고 \n<b>0%</b>가 되지 않게 관리하십시오.</indent>\n"
       ],
-      "zhTW": "<size=115%>1. 工作目標</size>\n- 從00:00到06:00，維持所有未知個體的穩定狀態。\n- 通過監視器檢視個體的穩定值，避免降至0%。"
+      "zhTW": "<size=115%>1. 工作目標</size>\n- 從00:00到06:00，維持所有未知個體的穩定狀態。\n- 通過監視器檢視個體的穩定值，避免降至0%。",
+      "fr": "<size=115%>1. Objectif du poste</size>\n- Maintenez toutes les entités dans un état stable de 00:00 à 06:00.\n- Surveillez leur stabilité sur les moniteurs et empêchez-la d'atteindre 0 %.",
+      "de": "<size=115%>1. Dienstziel</size>\n- Halten Sie alle Entitäten von 00:00 bis 06:00 stabil unter Kontrolle.\n- Überwachen Sie ihre Stabilität auf den Monitoren und verhindern Sie, dass sie 0 % erreicht.",
+      "ru": "<size=115%>1. Цель смены</size>\n- Поддерживайте стабильное состояние всех сущностей с 00:00 до 06:00.\n- Следите за стабильностью на мониторах и не допускайте её падения до 0 %."
     },
     {
       "key": "action.systemCheck.65",
@@ -561,7 +711,10 @@
       "sources": [
         "시스템\n검진\n"
       ],
-      "zhTW": "系統\n檢查"
+      "zhTW": "系統\n檢查",
+      "fr": "Vérifier le\nsystème",
+      "de": "System\nprüfen",
+      "ru": "Проверить\nсистему"
     },
     {
       "key": "menu.yes",
@@ -572,7 +725,10 @@
       "sources": [
         "Yes\n"
       ],
-      "zhTW": "是"
+      "zhTW": "是",
+      "fr": "Oui",
+      "de": "Ja",
+      "ru": "Да"
     },
     {
       "key": "menu.no",
@@ -583,7 +739,10 @@
       "sources": [
         "No\n"
       ],
-      "zhTW": "否"
+      "zhTW": "否",
+      "fr": "Non",
+      "de": "Nein",
+      "ru": "Нет"
     },
     {
       "key": "menu.start.68",
@@ -594,7 +753,10 @@
       "sources": [
         "Start\n"
       ],
-      "zhTW": "開始"
+      "zhTW": "開始",
+      "fr": "Commencer",
+      "de": "Starten",
+      "ru": "Начать"
     },
     {
       "key": "contract.title",
@@ -605,7 +767,10 @@
       "sources": [
         "고용 계약서"
       ],
-      "zhTW": "僱傭契約"
+      "zhTW": "僱傭契約",
+      "fr": "Contrat de travail",
+      "de": "Arbeitsvertrag",
+      "ru": "Трудовой договор"
     },
     {
       "key": "division.name",
@@ -616,7 +781,10 @@
       "sources": [
         "Anomaly Control Division"
       ],
-      "zhTW": "異常個體管理部"
+      "zhTW": "異常個體管理部",
+      "fr": "Division de contrôle des anomalies",
+      "de": "Abteilung für Anomaliekontrolle",
+      "ru": "Отдел контроля аномалий"
     },
     {
       "key": "contract.acceptQuestion",
@@ -627,7 +795,10 @@
       "sources": [
         "위 조항에 동의하고, 입사하시겠습니까?"
       ],
-      "zhTW": "您是否同意上述條款併入職？"
+      "zhTW": "您是否同意上述條款併入職？",
+      "fr": "Acceptez-vous ces conditions et souhaitez-vous nous rejoindre ?",
+      "de": "Akzeptieren Sie diese Bedingungen und treten Sie dem Unternehmen bei?",
+      "ru": "Вы принимаете эти условия и согласны поступить на работу?"
     },
     {
       "key": "report.nextDay",
@@ -638,7 +809,10 @@
       "sources": [
         "다음날로"
       ],
-      "zhTW": "下一天"
+      "zhTW": "下一天",
+      "fr": "Jour suivant",
+      "de": "Nächster Tag",
+      "ru": "Следующий день"
     },
     {
       "key": "report.initial",
@@ -649,7 +823,10 @@
       "sources": [
         "<size= 100>Day n Report</size>"
       ],
-      "zhTW": "<size=115%>第n天報告</size>"
+      "zhTW": "<size=115%>第n天報告</size>",
+      "fr": "<size=115%>Rapport du jour n</size>",
+      "de": "<size=115%>Bericht für Tag n</size>",
+      "ru": "<size=115%>Отчёт за день n</size>"
     },
     {
       "key": "report.results",
@@ -660,7 +837,10 @@
       "sources": [
         "<size=50>1. 자산 피해: 없음</size>\r\n\r\r\n\r<size=50>2. 격리실 안정도: 높음</size>\r\n\r\n<size=50>3. 대응 신속성: 보통</size>\r\n\r\n\r<size=50>4. 정신 오염: 없음</size>\r\n\n<size=80>업무 적합성: A</size>\n"
       ],
-      "zhTW": "<size=80%>1. 資產損失：無\n\n2. 隔離室穩定度：高\n\n3. 反應速度：一般\n\n4. 精神汙染：無</size>\n\n<size=115%>工作適任性：A</size>"
+      "zhTW": "<size=80%>1. 資產損失：無\n\n2. 隔離室穩定度：高\n\n3. 反應速度：一般\n\n4. 精神汙染：無</size>\n\n<size=115%>工作適任性：A</size>",
+      "fr": "<size=80%>1. Dommages aux actifs : aucun\n\n2. Stabilité du confinement : élevée\n\n3. Rapidité de réaction : moyenne\n\n4. Contamination mentale : aucune</size>\n\n<size=115%>Aptitude au poste : A</size>",
+      "de": "<size=80%>1. Schäden an Vermögenswerten: keine\n\n2. Eindämmungsstabilität: hoch\n\n3. Reaktionsgeschwindigkeit: durchschnittlich\n\n4. Geistige Kontamination: keine</size>\n\n<size=115%>Diensteignung: A</size>",
+      "ru": "<size=80%>1. Ущерб активам: отсутствует\n\n2. Стабильность сдерживания: высокая\n\n3. Скорость реагирования: средняя\n\n4. Психическое заражение: отсутствует</size>\n\n<size=115%>Пригодность к работе: A</size>"
     },
     {
       "key": "report.title.78",
@@ -671,7 +851,10 @@
       "sources": [
         "Performance Evaluation Report"
       ],
-      "zhTW": "工作績效評估報告"
+      "zhTW": "工作績效評估報告",
+      "fr": "Rapport d'évaluation des performances",
+      "de": "Leistungsbeurteilung",
+      "ru": "Отчёт об оценке работы"
     },
     {
       "key": "report.title.79",
@@ -682,7 +865,10 @@
       "sources": [
         "업무성취 평가서\n"
       ],
-      "zhTW": "工作績效評估報告"
+      "zhTW": "工作績效評估報告",
+      "fr": "Rapport d'évaluation des performances",
+      "de": "Leistungsbeurteilung",
+      "ru": "Отчёт об оценке работы"
     },
     {
       "key": "report.agreement",
@@ -693,7 +879,10 @@
       "sources": [
         "월급 수령 및 근무계약 유지에 동의합니다."
       ],
-      "zhTW": "我同意領取薪資並繼續履行僱傭契約。"
+      "zhTW": "我同意領取薪資並繼續履行僱傭契約。",
+      "fr": "J'accepte le versement de mon salaire et le maintien de mon contrat de travail.",
+      "de": "Ich stimme dem Erhalt meines Gehalts und der Fortsetzung meines Arbeitsvertrags zu.",
+      "ru": "Я согласен на получение зарплаты и продление трудового договора."
     },
     {
       "key": "tablet.defense.title",
@@ -704,7 +893,10 @@
       "sources": [
         "Defend against \ninvasion"
       ],
-      "zhTW": "阻止系統\n入侵"
+      "zhTW": "阻止系統\n入侵",
+      "fr": "Empêcher l'intrusion\ndans le système",
+      "de": "Systemeinbruch\nverhindern",
+      "ru": "Защита от\nпроникновения"
     },
     {
       "key": "menu.start.82",
@@ -715,7 +907,10 @@
       "sources": [
         "Start"
       ],
-      "zhTW": "開始"
+      "zhTW": "開始",
+      "fr": "Commencer",
+      "de": "Starten",
+      "ru": "Начать"
     },
     {
       "key": "tablet.voltage.title",
@@ -726,7 +921,10 @@
       "sources": [
         "Voltage Stabilization"
       ],
-      "zhTW": "電壓穩定"
+      "zhTW": "電壓穩定",
+      "fr": "Stabilisation de la tension",
+      "de": "Spannungsstabilisierung",
+      "ru": "Стабилизация напряжения"
     },
     {
       "key": "tablet.timer",
@@ -737,7 +935,10 @@
       "sources": [
         "Timer"
       ],
-      "zhTW": "計時器"
+      "zhTW": "計時器",
+      "fr": "Temps",
+      "de": "Zeit",
+      "ru": "Время"
     },
     {
       "key": "tablet.tranquilizer.title",
@@ -748,7 +949,10 @@
       "sources": [
         "Tranquilizer Compounding"
       ],
-      "zhTW": "配製穩定劑"
+      "zhTW": "配製穩定劑",
+      "fr": "Préparation du tranquillisant",
+      "de": "Beruhigungsmittel herstellen",
+      "ru": "Приготовление успокоительного"
     },
     {
       "key": "tablet.tranquilizer.instructions",
@@ -759,7 +963,10 @@
       "sources": [
         "촉수 군체에 사용할 안정제를 제조하세요"
       ],
-      "zhTW": "請為觸手群落配製穩定劑。"
+      "zhTW": "請為觸手群落配製穩定劑。",
+      "fr": "Préparez un tranquillisant pour la Colonie de tentacules.",
+      "de": "Stellen Sie ein Beruhigungsmittel für die Tentakelkolonie her.",
+      "ru": "Приготовьте успокоительное для Колонии щупалец."
     },
     {
       "key": "tablet.defense.instructions",
@@ -770,7 +977,10 @@
       "sources": [
         "방어 코드를 지시와 동일하게 입력해주십시오"
       ],
-      "zhTW": "請按照指示準確輸入防禦代碼。"
+      "zhTW": "請按照指示準確輸入防禦代碼。",
+      "fr": "Saisissez le code de défense exactement comme indiqué.",
+      "de": "Geben Sie den Abwehrcode genau wie angezeigt ein.",
+      "ru": "Введите защитный код точно по инструкции."
     },
     {
       "key": "tablet.defense.description",
@@ -781,7 +991,10 @@
       "sources": [
         "방어 코드를 입력하여  \n시스템 침투를 저지하세요"
       ],
-      "zhTW": "輸入防禦代碼，阻止系統入侵。"
+      "zhTW": "輸入防禦代碼，阻止系統入侵。",
+      "fr": "Saisissez le code de défense pour empêcher l'intrusion dans le système.",
+      "de": "Geben Sie den Abwehrcode ein, um den Systemeinbruch zu verhindern.",
+      "ru": "Введите защитный код, чтобы предотвратить проникновение в систему."
     },
     {
       "key": "tablet.voltage.instructions",
@@ -792,7 +1005,10 @@
       "sources": [
         "불안정해진 전압을 안정화하세요"
       ],
-      "zhTW": "請穩定波動的電壓。"
+      "zhTW": "請穩定波動的電壓。",
+      "fr": "Stabilisez la tension fluctuante.",
+      "de": "Stabilisieren Sie die schwankende Spannung.",
+      "ru": "Стабилизируйте колеблющееся напряжение."
     },
     {
       "key": "tablet.voltage.progress",
@@ -803,7 +1019,10 @@
       "sources": [
         "전압 안정화 중 ..."
       ],
-      "zhTW": "正在穩定電壓……"
+      "zhTW": "正在穩定電壓……",
+      "fr": "Stabilisation de la tension...",
+      "de": "Spannung wird stabilisiert...",
+      "ru": "Стабилизация напряжения..."
     },
     {
       "key": "game.over",
@@ -814,7 +1033,10 @@
       "sources": [
         "<Color=red>Game Over<line-height=80></color>\n</line-height><size=80>관리에 실패했습니다</size>"
       ],
-      "zhTW": "<color=red>遊戲結束</color>\n<size=80%>管理失敗。</size>"
+      "zhTW": "<color=red>遊戲結束</color>\n<size=80%>管理失敗。</size>",
+      "fr": "<color=red>Partie terminée</color>\n<size=80%>Échec du confinement.</size>",
+      "de": "<color=red>Spiel vorbei</color>\n<size=80%>Eindämmung fehlgeschlagen.</size>",
+      "ru": "<color=red>Игра окончена</color>\n<size=80%>Сдерживание провалено.</size>"
     },
     {
       "key": "day.initial.one.97",
@@ -825,7 +1047,10 @@
       "sources": [
         "Day 1"
       ],
-      "zhTW": "第1天"
+      "zhTW": "第1天",
+      "fr": "Jour 1",
+      "de": "Tag 1",
+      "ru": "День 1"
     },
     {
       "key": "prototype.entity.preferences",
@@ -836,7 +1061,10 @@
       "sources": [
         "- 마카롱보다 뚱카롱 좋아함\n\n- 쟌슨빌 이상 급 소시지외에는 안먹음\n\n- 크루아상 보다 크룽지 선호\n\n- 여자 많음\n"
       ],
-      "zhTW": "- 比起普通馬卡龍，更喜歡厚馬卡龍。\n\n- 只吃強生維爾或更高品質的香腸。\n\n- 比起普通可頌，更喜歡壓扁烤脆的可頌。\n\n- 女性很多。"
+      "zhTW": "- 比起普通馬卡龍，更喜歡厚馬卡龍。\n\n- 只吃強生維爾或更高品質的香腸。\n\n- 比起普通可頌，更喜歡壓扁烤脆的可頌。\n\n- 女性很多。",
+      "fr": "- Préfère les macarons épais aux macarons classiques.\n\n- Ne mange que des saucisses de qualité Johnsonville ou supérieure.\n\n- Préfère les croissants aplatis et croustillants aux croissants classiques.\n\n- Beaucoup de femmes.",
+      "de": "- Mag dicke Macarons lieber als gewöhnliche.\n\n- Isst nur Würstchen von mindestens Johnsonville-Qualität.\n\n- Bevorzugt flach gepresste, knusprige Croissants.\n\n- Viele Frauen.",
+      "ru": "- Предпочитает толстые макароны обычным.\n\n- Ест только сосиски качества Johnsonville или выше.\n\n- Предпочитает плоские хрустящие круассаны обычным.\n\n- Много женщин."
     },
     {
       "key": "manual.title",
@@ -847,7 +1075,10 @@
       "sources": [
         "관리 매뉴얼"
       ],
-      "zhTW": "管理手冊"
+      "zhTW": "管理手冊",
+      "fr": "Manuel de gestion",
+      "de": "Verwaltungshandbuch",
+      "ru": "Руководство по управлению"
     },
     {
       "key": "prototype.entity.description",
@@ -858,7 +1089,10 @@
       "sources": [
         "개체명 : 김지원\n주요 능력 : 기획\n\n구소련 지하에서 발견됨"
       ],
-      "zhTW": "個體名稱：Kim Ji-won\n主要能力：策劃\n\n發現於前蘇聯地下。"
+      "zhTW": "個體名稱：Kim Ji-won\n主要能力：策劃\n\n發現於前蘇聯地下。",
+      "fr": "Nom de l'entité : Kim Ji-won\nCapacité principale : planification\n\nDécouverte sous terre dans l'ancienne Union soviétique.",
+      "de": "Entitätsname: Kim Ji-won\nHauptfähigkeit: Planung\n\nUnterirdisch in der ehemaligen Sowjetunion entdeckt.",
+      "ru": "Имя сущности: Ким Джи Вон\nОсновная способность: планирование\n\nОбнаружена под землёй на территории бывшего СССР."
     },
     {
       "key": "manual.division.title",
@@ -869,7 +1103,10 @@
       "sources": [
         "미상개체 관리부 업무매뉴얼"
       ],
-      "zhTW": "未知個體管理部工作手冊"
+      "zhTW": "未知個體管理部工作手冊",
+      "fr": "Division de gestion des entités inconnues : manuel opérationnel",
+      "de": "Abteilung für unbekannte Entitäten: Betriebshandbuch",
+      "ru": "Отдел управления неизвестными сущностями: руководство по работе"
     },
     {
       "key": "manual.rules.plain",
@@ -880,7 +1117,10 @@
       "sources": [
         "  기본 관리 규칙"
       ],
-      "zhTW": "基本管理規則"
+      "zhTW": "基本管理規則",
+      "fr": "Règles de gestion de base",
+      "de": "Grundregeln der Verwaltung",
+      "ru": "Основные правила управления"
     },
     {
       "key": "ui.day",
@@ -889,7 +1129,10 @@
       "ja": "{0}日目",
       "zhCN": "第{0}天",
       "sources": [],
-      "zhTW": "第{0}天"
+      "zhTW": "第{0}天",
+      "fr": "Jour {0}",
+      "de": "Tag {0}",
+      "ru": "День {0}"
     },
     {
       "key": "ui.dayClear",
@@ -898,7 +1141,10 @@
       "ja": "{0}日目 完了",
       "zhCN": "第{0}天完成",
       "sources": [],
-      "zhTW": "第{0}天完成"
+      "zhTW": "第{0}天完成",
+      "fr": "Jour {0} terminé",
+      "de": "Tag {0} abgeschlossen",
+      "ru": "День {0} завершён"
     },
     {
       "key": "ui.dayReport",
@@ -907,7 +1153,10 @@
       "ja": "{0}日目の報告書",
       "zhCN": "第{0}天报告",
       "sources": [],
-      "zhTW": "第{0}天報告"
+      "zhTW": "第{0}天報告",
+      "fr": "Rapport du jour {0}",
+      "de": "Bericht für Tag {0}",
+      "ru": "Отчёт за день {0}"
     },
     {
       "key": "options.language",
@@ -916,7 +1165,10 @@
       "ja": "言語",
       "zhCN": "语言",
       "sources": [],
-      "zhTW": "語言"
+      "zhTW": "語言",
+      "fr": "Langue",
+      "de": "Sprache",
+      "ru": "Язык"
     },
     {
       "key": "voice.manual",
@@ -925,7 +1177,10 @@
       "ja": "業務に必要な情報はマニュアルを確認してください。",
       "zhCN": "请查阅手册，了解必要的工作信息。",
       "sources": [],
-      "zhTW": "請查閱手冊，了解必要的工作資訊。"
+      "zhTW": "請查閱手冊，了解必要的工作資訊。",
+      "fr": "Consultez le manuel pour les informations essentielles à votre mission.",
+      "de": "Lesen Sie das Handbuch für wichtige Informationen zu Ihren Aufgaben.",
+      "ru": "Ознакомьтесь с руководством: в нём содержится важная информация о работе."
     },
     {
       "key": "voice.day1",
@@ -934,7 +1189,10 @@
       "ja": "以前の管理記録を抹消。新たな識別番号を付与。ようこそ、管理者32。",
       "zhCN": "以往记录已抹除。新的编号已分配。欢迎，管理员32。",
       "sources": [],
-      "zhTW": "以往紀錄已抹除。新的編號已分配。歡迎，管理員32。"
+      "zhTW": "以往紀錄已抹除。新的編號已分配。歡迎，管理員32。",
+      "fr": "Dossiers précédents effacés. Nouvelle désignation attribuée. Bienvenue, Administrateur 32.",
+      "de": "Vorherige Aufzeichnungen gelöscht. Neue Kennung zugewiesen. Willkommen, Administrator 32.",
+      "ru": "Предыдущие записи удалены. Присвоен новый номер. Добро пожаловать, Администратор 32."
     },
     {
       "key": "voice.day2",
@@ -943,7 +1201,10 @@
       "ja": "ようこそ、管理者32。再確認：会社資産の保全は、職員の安全よりも厳格に優先されます。",
       "zhCN": "欢迎，管理员32。提醒：公司资产的保全严格优先于人员安全。",
       "sources": [],
-      "zhTW": "歡迎，管理員32。提醒：公司資產的保全嚴格優先於人員安全。"
+      "zhTW": "歡迎，管理員32。提醒：公司資產的保全嚴格優先於人員安全。",
+      "fr": "Bienvenue, Administrateur 32. Rappel : la préservation des actifs de l'entreprise prime strictement sur la sécurité du personnel.",
+      "de": "Willkommen, Administrator 32. Erinnerung: Der Erhalt der Vermögenswerte hat strikten Vorrang vor der Sicherheit des Personals.",
+      "ru": "Добро пожаловать, Администратор 32. Напоминаем: сохранность активов компании имеет безусловный приоритет перед безопасностью персонала."
     },
     {
       "key": "voice.day3",
@@ -952,7 +1213,10 @@
       "ja": "ようこそ、管理者32。原因不明のため個体が現在不安定になっています。警戒を怠らないでください。",
       "zhCN": "欢迎，管理员32。个体目前因不明原因处于不稳定状态，请保持警惕。",
       "sources": [],
-      "zhTW": "歡迎，管理員32。個體目前因不明原因處於不穩定狀態，請保持警惕。"
+      "zhTW": "歡迎，管理員32。個體目前因不明原因處於不穩定狀態，請保持警惕。",
+      "fr": "Bienvenue, Administrateur 32. Restez vigilant : l'entité est actuellement instable pour des raisons inconnues.",
+      "de": "Willkommen, Administrator 32. Bleiben Sie wachsam: Die Entität ist derzeit aus unbekannten Gründen instabil.",
+      "ru": "Добро пожаловать, Администратор 32. Будьте бдительны: сущность нестабильна по неизвестным причинам."
     },
     {
       "key": "voice.day4",
@@ -961,7 +1225,10 @@
       "ja": "ようこそ、管理者32。資産の損失は即時解雇につながりますので、ご注意ください。",
       "zhCN": "欢迎，管理员32。请注意，资产损失将导致立即解雇。",
       "sources": [],
-      "zhTW": "歡迎，管理員32。請注意，資產損失將導致立即解僱。"
+      "zhTW": "歡迎，管理員32。請注意，資產損失將導致立即解僱。",
+      "fr": "Bienvenue, Administrateur 32. Toute perte d'actifs entraîne un licenciement immédiat.",
+      "de": "Willkommen, Administrator 32. Beachten Sie: Der Verlust von Vermögenswerten führt zur sofortigen Entlassung.",
+      "ru": "Добро пожаловать, Администратор 32. Учтите: потеря активов ведёт к немедленному увольнению."
     },
     {
       "key": "voice.day5",
@@ -970,7 +1237,10 @@
       "ja": "ようこそ、管理者32。最後の瞬間まで、完璧に任務を遂行してください。",
       "zhCN": "欢迎，管理员32。请完美履行职责，直到最后一刻。",
       "sources": [],
-      "zhTW": "歡迎，管理員32。請完美履行職責，直到最後一刻。"
+      "zhTW": "歡迎，管理員32。請完美履行職責，直到最後一刻。",
+      "fr": "Bienvenue, Administrateur 32. Accomplissez votre service à la perfection jusqu'au dernier instant.",
+      "de": "Willkommen, Administrator 32. Erfüllen Sie Ihren Dienst bis zum letzten Moment vollkommen fehlerfrei.",
+      "ru": "Добро пожаловать, Администратор 32. Выполняйте свои обязанности безупречно до последнего мгновения."
     },
     {
       "key": "voice.ending.erasure",
@@ -979,7 +1249,10 @@
       "ja": "機密漏洩の可能性を確認。抹消を実行します。",
       "zhCN": "已确认存在机密泄露的可能。开始执行抹除程序。",
       "sources": [],
-      "zhTW": "已確認存在機密洩露的可能。開始執行抹除程序。"
+      "zhTW": "已確認存在機密洩露的可能。開始執行抹除程序。",
+      "fr": "Risque de divulgation d'informations confidentielles confirmé. Procédure d'élimination en cours.",
+      "de": "Mögliche Weitergabe vertraulicher Informationen bestätigt. Eliminierung wird eingeleitet.",
+      "ru": "Вероятность утечки конфиденциальной информации подтверждена. Приступаем к уничтожению."
     },
     {
       "key": "game.logo",
@@ -990,7 +1263,10 @@
       "sources": [
         "Anomaly Control\nDivision\n<size=60>미상개체 관리부</size>"
       ],
-      "zhTW": "Anomaly Control\nDivision\n<size=60%>未知個體管理部</size>"
+      "zhTW": "Anomaly Control\nDivision\n<size=60%>未知個體管理部</size>",
+      "fr": "Anomaly Control\nDivision\n<size=60%>Division de contrôle des anomalies</size>",
+      "de": "Anomaly Control\nDivision\n<size=60%>Abteilung für Anomaliekontrolle</size>",
+      "ru": "Anomaly Control\nDivision\n<size=60%>Отдел контроля аномалий</size>"
     },
     {
       "key": "contract.terms",
@@ -1001,7 +1277,10 @@
       "sources": [
         "<size=42>1. 업무 범위 및 위험고지</size>\r\n귀하는 통제 불가능한 생물학적/비현실적 위험에 노출될 수 있으며, 업무 중 발생하는 \r\n사망, 신체 절단, 정신 오염에 대해 회사는 일절 책임지지 않습니다.\r\r\n\r<size=42>2. 기밀 유지</size>\r\n퇴사 후를 포함해 기밀 누설이 적발될 시, 즉각적인 법적 조치 및 ‘기억 소거 시술’이 강제 집행됩니다.\r\n이로 인해 발생하는 부작용(지능 저하 등)은 피고용인의 귀책입니다.\r\n<size=42>3. 긴급 상황</size>\r\n격리 실패(Breach) 등 비상 상황 발생 시, 직원은 본인의 안전보다 ‘자산(변칙 개체)’의 \n회수 및 보호를 최우선으로 해야 합니다.\r\n\r<size=42>4. 산업재해 및 보험</size>\r\n본 업무는 특수 고용 형태이므로 4대 보험 및 산재 처리가 불가합니다. \r\n직무 중 사망 시, 시신은 연구 목적으로 회사에 무상 기증됩니다.\n<size=42>5. 정보 검열</size>\n피고용인에게 제공되는 자료는 회사의 판단에 따라 검열될 수 있으며, \n피고용인이 저장한 정보 또한 불시적 검열이 가능합니다."
       ],
-      "zhTW": "<size=115%>1. 工作範圍與風險告知</size>\n您可能遭遇無法控制的生物或超自然危險。公司對履職期間發生的死亡、肢體切斷及精神汙染概不負責。\n\n<size=115%>2. 保密義務</size>\n包括離職後在內，一旦發現機密洩露，公司將立即採取法律措施並強制執行“記憶清除手術”。由此產生的智力下降等副作用，由受僱者自行承擔。\n\n<size=115%>3. 緊急情況</size>\n發生收容失效（Breach）等緊急情況時，員工須將回收及保護“資產（異常個體）”置於自身安全之上。\n\n<size=115%>4. 工傷與保險</size>\n本職位屬於特殊僱傭形式，不享有韓國四大社會保險及工傷保障。若員工履職期間死亡，遺體將無償提供給公司用於研究。\n\n<size=115%>5. 資訊審查</size>\n公司可自行決定審查向員工提供的資料。員工儲存的資訊也可能受到突擊審查。"
+      "zhTW": "<size=115%>1. 工作範圍與風險告知</size>\n您可能遭遇無法控制的生物或超自然危險。公司對履職期間發生的死亡、肢體切斷及精神汙染概不負責。\n\n<size=115%>2. 保密義務</size>\n包括離職後在內，一旦發現機密洩露，公司將立即採取法律措施並強制執行“記憶清除手術”。由此產生的智力下降等副作用，由受僱者自行承擔。\n\n<size=115%>3. 緊急情況</size>\n發生收容失效（Breach）等緊急情況時，員工須將回收及保護“資產（異常個體）”置於自身安全之上。\n\n<size=115%>4. 工傷與保險</size>\n本職位屬於特殊僱傭形式，不享有韓國四大社會保險及工傷保障。若員工履職期間死亡，遺體將無償提供給公司用於研究。\n\n<size=115%>5. 資訊審查</size>\n公司可自行決定審查向員工提供的資料。員工儲存的資訊也可能受到突擊審查。",
+      "fr": "<size=115%>1. Fonctions et risques</size>\nVous pouvez être exposé à des dangers biologiques ou paranormaux incontrôlables. L'entreprise décline toute responsabilité en cas de décès, de mutilation ou de contamination mentale durant votre service.\n\n<size=115%>2. Confidentialité</size>\nToute divulgation, même après votre départ, entraînera des poursuites immédiates et un effacement forcé de la mémoire. Les effets secondaires, notamment la baisse d'intelligence, relèvent de la responsabilité de l'employé.\n\n<size=115%>3. Urgences</size>\nEn cas de rupture du confinement ou autre urgence, la récupération et la protection des actifs de l'entreprise (entités anormales) priment sur votre propre sécurité.\n\n<size=115%>4. Accidents du travail et assurances</size>\nCet emploi spécial n'offre aucune couverture sociale légale ni assurance contre les accidents du travail. En cas de décès en service, votre corps sera cédé gratuitement à l'entreprise à des fins de recherche.\n\n<size=115%>5. Censure des informations</size>\nL'entreprise peut censurer les documents qui vous sont fournis à sa discrétion. Les données conservées par les employés peuvent aussi être inspectées sans préavis.",
+      "de": "<size=115%>1. Aufgaben und Risiken</size>\nSie können unkontrollierbaren biologischen oder paranormalen Gefahren ausgesetzt sein. Das Unternehmen übernimmt keine Haftung für Tod, Verstümmelung oder geistige Kontamination während Ihres Dienstes.\n\n<size=115%>2. Geheimhaltung</size>\nDie Weitergabe vertraulicher Informationen, auch nach Ihrem Ausscheiden, führt zu sofortigen rechtlichen Schritten und erzwungener Gedächtnislöschung. Nebenwirkungen wie verringerte Intelligenz liegen in der Verantwortung des Angestellten.\n\n<size=115%>3. Notfälle</size>\nBei einem Eindämmungsbruch oder anderen Notfällen haben Bergung und Schutz der Vermögenswerte (anomale Entitäten) Vorrang vor Ihrer eigenen Sicherheit.\n\n<size=115%>4. Arbeitsunfälle und Versicherung</size>\nDieses besondere Arbeitsverhältnis bietet weder gesetzliche Sozialversicherung noch Arbeitsunfallschutz. Bei Tod im Dienst wird Ihr Körper dem Unternehmen kostenlos für Forschungszwecke überlassen.\n\n<size=115%>5. Informationszensur</size>\nDas Unternehmen darf bereitgestellte Unterlagen nach eigenem Ermessen zensieren. Von Angestellten gespeicherte Informationen können unangekündigt überprüft werden.",
+      "ru": "<size=115%>1. Обязанности и риски</size>\nВы можете столкнуться с неконтролируемыми биологическими или сверхъестественными угрозами. Компания не несёт ответственности за смерть, увечья или психическое заражение во время работы.\n\n<size=115%>2. Конфиденциальность</size>\nРазглашение секретных сведений, в том числе после увольнения, повлечёт немедленные правовые меры и принудительное стирание памяти. За побочные эффекты, включая снижение интеллекта, отвечает сотрудник.\n\n<size=115%>3. Чрезвычайные ситуации</size>\nПри нарушении сдерживания или другой аварии спасение и защита активов компании (аномальных сущностей) имеют приоритет перед вашей безопасностью.\n\n<size=115%>4. Производственные травмы и страхование</size>\nОсобый характер этой работы исключает обязательное социальное страхование и страхование производственных травм. При смерти на службе тело бесплатно передаётся компании для исследований.\n\n<size=115%>5. Цензура информации</size>\nКомпания вправе по своему усмотрению цензурировать предоставленные материалы. Данные сотрудников также подлежат внезапным проверкам."
     },
     {
       "key": "options.resolution",
@@ -1010,7 +1289,10 @@
       "ja": "解像度",
       "zhCN": "分辨率",
       "sources": [],
-      "zhTW": "解析度"
+      "zhTW": "解析度",
+      "fr": "Résolution",
+      "de": "Auflösung",
+      "ru": "Разрешение"
     },
     {
       "key": "options.languageSelect",
@@ -1019,7 +1301,10 @@
       "ja": "言語を選択：{0}",
       "zhCN": "选择语言：{0}",
       "zhTW": "選擇語言：{0}",
-      "sources": []
+      "sources": [],
+      "fr": "Choisir la langue : {0}",
+      "de": "Sprache wählen: {0}",
+      "ru": "Выбрать язык: {0}"
     },
     {
       "key": "manual.circuit.menu",
@@ -1030,7 +1315,10 @@
       "en": "Bound Circuit: Management Rules",
       "ja": "「束縛された回路」管理規則",
       "zhCN": "“受缚电路”管理规则",
-      "zhTW": "“受縛電路”管理規則"
+      "zhTW": "“受縛電路”管理規則",
+      "fr": "Circuit entravé : règles de gestion",
+      "de": "Gefesselter Schaltkreis: Verwaltungsregeln",
+      "ru": "Скованная цепь: правила управления"
     },
     {
       "key": "manual.mimic.menu",
@@ -1041,7 +1329,10 @@
       "en": "Mimic: Management Rules",
       "ja": "「模倣者」管理規則",
       "zhCN": "“模仿者”管理规则",
-      "zhTW": "“模仿者”管理規則"
+      "zhTW": "“模仿者”管理規則",
+      "fr": "Imitateur : règles de gestion",
+      "de": "Nachahmer: Verwaltungsregeln",
+      "ru": "Мимик: правила управления"
     },
     {
       "key": "manual.tentacles.menu",
@@ -1052,7 +1343,10 @@
       "en": "Tentacle Colony: Management Rules",
       "ja": "「触手群体」管理規則",
       "zhCN": "“触手群落”管理规则",
-      "zhTW": "“觸手群落”管理規則"
+      "zhTW": "“觸手群落”管理規則",
+      "fr": "Colonie de tentacules : règles de gestion",
+      "de": "Tentakelkolonie: Verwaltungsregeln",
+      "ru": "Колония щупалец: правила управления"
     },
     {
       "key": "manual.symptoms.menu",
@@ -1063,7 +1357,10 @@
       "en": "Physical Symptoms: Response",
       "ja": "身体異常への対処",
       "zhCN": "身体异常应对",
-      "zhTW": "身體異常應對"
+      "zhTW": "身體異常應對",
+      "fr": "Symptômes physiques : mesures à prendre",
+      "de": "Körperliche Symptome: Gegenmaßnahmen",
+      "ru": "Физические нарушения: меры реагирования"
     },
     {
       "key": "voice.emergency",
@@ -1074,7 +1371,10 @@
       "en": "Emergency. Emergency. Execute protocol immediately......",
       "ja": "緊急事態。緊急事態。直ちにプロトコルを実行してください……",
       "zhCN": "紧急情况。紧急情况。立即执行协议……",
-      "zhTW": "緊急情況。緊急情況。立即執行協定……"
+      "zhTW": "緊急情況。緊急情況。立即執行協定……",
+      "fr": "Urgence. Urgence. Exécutez le protocole immédiatement......",
+      "de": "Notfall. Notfall. Protokoll sofort ausführen......",
+      "ru": "Тревога. Тревога. Немедленно выполните протокол......"
     },
     {
       "key": "voice.ending.last",
@@ -1085,7 +1385,10 @@
       "en": "Previous records expunged. New designation assigned. Welcome, Administrator 33.",
       "ja": "以前の管理記録を抹消。新たな識別番号を付与。ようこそ、管理者33。",
       "zhCN": "以往记录已抹除。新的编号已分配。欢迎，管理员33。",
-      "zhTW": "以往紀錄已抹除。新的編號已分配。歡迎，管理員33。"
+      "zhTW": "以往紀錄已抹除。新的編號已分配。歡迎，管理員33。",
+      "fr": "Dossiers précédents effacés. Nouvelle désignation attribuée. Bienvenue, Administrateur 33.",
+      "de": "Vorherige Aufzeichnungen gelöscht. Neue Kennung zugewiesen. Willkommen, Administrator 33.",
+      "ru": "Предыдущие записи удалены. Присвоен новый номер. Добро пожаловать, Администратор 33."
     },
     {
       "key": "dialog.translation.title",
@@ -1094,7 +1397,10 @@
       "en": "Translation Notice",
       "ja": "翻訳に関するご案内",
       "zhCN": "翻译说明",
-      "zhTW": "翻譯說明"
+      "zhTW": "翻譯說明",
+      "fr": "Avis concernant les traductions",
+      "de": "Hinweis zu den Übersetzungen",
+      "ru": "Информация о переводах"
     },
     {
       "key": "dialog.translation.body",
@@ -1103,7 +1409,10 @@
       "en": "All languages other than Korean were translated using AI. Some translations may sound unnatural or contain errors. Thank you for your understanding.",
       "ja": "韓国語以外の言語はすべてAIを使用して翻訳されています。不自然な表現や誤訳が含まれる場合がありますので、ご了承ください。",
       "zhCN": "除韩语外，所有语言均使用AI翻译。译文可能存在不自然或错误之处，敬请谅解。",
-      "zhTW": "除韓語外，所有語言皆使用AI翻譯。譯文可能有不自然或錯誤之處，敬請見諒。"
+      "zhTW": "除韓語外，所有語言皆使用AI翻譯。譯文可能有不自然或錯誤之處，敬請見諒。",
+      "fr": "Toutes les langues autres que le coréen ont été traduites à l'aide de l'IA. Certaines formulations peuvent sembler peu naturelles ou contenir des erreurs. Merci de votre compréhension.",
+      "de": "Alle Sprachen außer Koreanisch wurden mithilfe von KI übersetzt. Einige Formulierungen können unnatürlich klingen oder Fehler enthalten. Wir bitten um Verständnis.",
+      "ru": "Все языки, кроме корейского, переведены с помощью ИИ. В переводах возможны неточные формулировки и ошибки. Благодарим за понимание."
     },
     {
       "key": "dialog.returnTitle.question",
@@ -1112,7 +1421,10 @@
       "en": "Are you sure you want to leave?",
       "ja": "本当に退出しますか？",
       "zhCN": "确定要离开吗？",
-      "zhTW": "確定要離開嗎？"
+      "zhTW": "確定要離開嗎？",
+      "fr": "Voulez-vous vraiment quitter ?",
+      "de": "Möchten Sie wirklich zum Titelbildschirm zurückkehren?",
+      "ru": "Вы действительно хотите выйти?"
     },
     {
       "key": "dialog.confirm",
@@ -1121,7 +1433,10 @@
       "en": "OK",
       "ja": "確認",
       "zhCN": "确定",
-      "zhTW": "確定"
+      "zhTW": "確定",
+      "fr": "OK",
+      "de": "OK",
+      "ru": "ОК"
     },
     {
       "key": "dialog.yes",
@@ -1130,7 +1445,10 @@
       "en": "Yes",
       "ja": "はい",
       "zhCN": "是",
-      "zhTW": "是"
+      "zhTW": "是",
+      "fr": "Oui",
+      "de": "Ja",
+      "ru": "Да"
     },
     {
       "key": "dialog.no",
@@ -1139,7 +1457,10 @@
       "en": "No",
       "ja": "いいえ",
       "zhCN": "否",
-      "zhTW": "否"
+      "zhTW": "否",
+      "fr": "Non",
+      "de": "Nein",
+      "ru": "Нет"
     }
   ],
   "literals": [

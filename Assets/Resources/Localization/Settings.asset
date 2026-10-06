@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Settings
   m_EditorClassIdentifier: 
   m_StartupSelectors:
-  - rid: 4860295617790607360
+  - rid: 4860295640493588580
   m_AvailableLocales:
-    rid: 4860295617790607361
+    rid: 4860295640493588581
   m_AssetDatabase:
     rid: 4860295613370335236
   m_StringDatabase:
@@ -48,7 +48,7 @@ MonoBehaviour:
         m_DefaultTableReference:
           m_TableCollectionName: 
         m_CustomTableProvider:
-          rid: 4860295617790607362
+          rid: 4860295640493588582
         m_CustomTablePostprocessor:
           rid: -2
         m_AsynchronousBehaviour: 0
@@ -188,10 +188,10 @@ MonoBehaviour:
         - default
         - d
         - 
-    - rid: 4860295617790607360
+    - rid: 4860295640493588580
       type: {class: SavedGameLocaleSelector, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 4860295617790607361
+    - rid: 4860295640493588581
       type: {class: ResourceLocalesProvider, ns: , asm: Assembly-CSharp}
       data:
         locales:
@@ -200,6 +200,9 @@ MonoBehaviour:
         - {fileID: 11400000, guid: 39cfe949b998b7549a870f7694684677, type: 2}
         - {fileID: 11400000, guid: e19e2e37ca6b7ce47b5068445707a774, type: 2}
         - {fileID: 11400000, guid: 77daedb0dd6d6e842bc641caac7cb127, type: 2}
-    - rid: 4860295617790607362
+        - {fileID: 11400000, guid: d8b4e224e4e17454391c4685b5a4075e, type: 2}
+        - {fileID: 11400000, guid: 82bc3167366b42c4b8745acc018166e7, type: 2}
+        - {fileID: 11400000, guid: c12eee12b59764d4698dcc31b36dd2d4, type: 2}
+    - rid: 4860295640493588582
       type: {class: ResourceStringTableProvider, ns: , asm: Assembly-CSharp}
       data: 

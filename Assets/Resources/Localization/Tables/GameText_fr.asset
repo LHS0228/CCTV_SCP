@@ -1,0 +1,565 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameText_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 3837ebd90fa5c6e428d3eb0f9f0593ce, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 744108032
+    m_Localized: Effets sonores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468160
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468161
+    m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773468162
+    m_Localized: "Param\xE8tres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662464
+    m_Localized: Annuler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662465
+    m_Localized: "Volume g\xE9n\xE9ral"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662466
+    m_Localized: "Sensibilit\xE9 de la souris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662467
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662468
+    m_Localized: Voulez-vous vraiment quitter le jeu ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662469
+    m_Localized: "Ma\xEEtriser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662470
+    m_Localized: "Incin\xE9rer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662471
+    m_Localized: "Dossier : \xAB Colonie de tentacules \xBB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662472
+    m_Localized: "R\xE9ussi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662473
+    m_Localized: "V\xE9rifier le\nsyst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662474
+    m_Localized: "V\xE9rifier le\nsyst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662475
+    m_Localized: "<size=115%>2. Pr\xE9cautions de gestion des entit\xE9s</size>\n-
+      Les entit\xE9s provoquent parfois des anomalies qui endommagent l'installation.\n-
+      Utilisez les commandes de vid\xE9osurveillance et les \xE9quipements muraux
+      pour r\xE9soudre les anomalies. Consultez les r\xE9sultats de recherche sur
+      les anomalies dans les dossiers des entit\xE9s pour conna\xEEtre la bonne proc\xE9dure.\n-
+      En cas d'hallucinations ou d'autres sympt\xF4mes, consultez le manuel des sympt\xF4mes
+      physiques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662476
+    m_Localized: "<size=135%>R\xE9sultats de recherche sur les anomalies</size>\n1.
+      Lorsqu'elle imitait le Circuit entrav\xE9, l'entit\xE9 \xE9tait vuln\xE9rable
+      aux d\xE9charges \xE9lectriques.\n2. Lorsqu'elle imitait la Colonie de tentacules,
+      une forte chaleur lui faisait reprendre sa forme initiale.\n3. Son enveloppe
+      humano\xEFde \xE9tait \xE9galement vuln\xE9rable \xE0 la chaleur.\n4. Elle
+      cr\xE9e p\xE9riodiquement des masques dans l'installation. Ils perturbent les
+      syst\xE8mes : d\xE9truisez-les rapidement en marchant dessus. Les masques \xE9mettent
+      un bruit de parasites."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662477
+    m_Localized: "D\xE9charge\n\xE9lectrique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662478
+    m_Localized: "Dossier : \xAB Imitateur \xBB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662479
+    m_Localized: "<size=135%>R\xE9sultats de recherche sur les anomalies</size>\n1.
+      Ses d\xE9charges \xE9lectriques produisaient des \xE9tincelles et perturbaient
+      les syst\xE8mes voisins. Une v\xE9rification du syst\xE8me \xE9tait n\xE9cessaire.\n2.
+      Quand l'entit\xE9 se levait de sa chaise de contention, une force physique
+      permettait de la ma\xEEtriser.\n3. Quand elle g\xE9n\xE9rait des c\xE2bles
+      autour d'elle, l'incin\xE9ration arr\xEAtait leur croissance.\n4. Ses d\xE9charges
+      \xE0 haute tension endommageaient parfois l'\xE9clairage. R\xE9initialiser
+      l'alimentation au disjoncteur r\xE9solvait le probl\xE8me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662480
+    m_Localized: "Entit\xE9 : AC-029 \u2014 Imitateur\nCapacit\xE9s : imitation,
+      interf\xE9rence avec les syst\xE8mes\n<size=90%>Entit\xE9 semblable \xE0 un
+      objet, captur\xE9e dans une ferme de Tchernobyl. Elle imite les humains pour
+      approcher ses victimes, puis leur pose un masque afin de les transformer en
+      ses semblables.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662481
+    m_Localized: "Entit\xE9 : AC-017 \u2014 Circuit entrav\xE9\nCapacit\xE9s : manipulation
+      du courant, g\xE9n\xE9ration de c\xE2bles\n<size=90%>Entit\xE9 humano\xEFde
+      trouv\xE9e dans un ancien bunker sovi\xE9tique. Elle absorbe normalement l'\xE9lectricit\xE9,
+      mais, lorsqu'elle devient instable, g\xE9n\xE8re des c\xE2bles et d\xE9vaste
+      les alentours.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662482
+    m_Localized: "Dossier : \xAB Circuit entrav\xE9 \xBB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662483
+    m_Localized: "<size=130%>1. Sympt\xF4mes physiques possibles</size>\nLe confinement
+      dans l'installation peut provoquer les sympt\xF4mes mineurs suivants :\n- Des
+      parasites visuels qui g\xEAnent la vision.\n- Des voix autres que la v\xF4tre.\n-
+      Des apparitions irr\xE9elles, sans lien avec les entit\xE9s ou objets enregistr\xE9s.\n\n<size=130%>2.
+      Mesures \xE0 prendre</size>\nSi l'un de ces sympt\xF4mes appara\xEEt, prenez
+      imm\xE9diatement le m\xE9dicament destin\xE9 aux administrateurs sur le bureau,
+      illustr\xE9 ci-dessous."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662484
+    m_Localized: "D\xE9charge\n\xE9lectrique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662485
+    m_Localized: "Sympt\xF4mes physiques : mesures \xE0 prendre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662486
+    m_Localized: "\xC9chec"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662487
+    m_Localized: "\xC9chec du confinement."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662488
+    m_Localized: 'Code du protocole du jour : '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662489
+    m_Localized: "<size=115%>3. Protocole d'urgence</size>\n- Si la stabilit\xE9
+      d'une salle atteint z\xE9ro, le protocole d'urgence s'active.\n- Avant la fin
+      du d\xE9lai, saisissez le bon code sur le terminal de protocole \xE0 gauche
+      de l'ascenseur et validez. Le code, au bas de ce document, est renouvel\xE9
+      chaque jour.\n- Si le protocole n'est pas demand\xE9 \xE0 temps, l'installation
+      sera scell\xE9e, puis les proc\xE9dures d'effacement seront ex\xE9cut\xE9es.
+      Bonne chance."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662490
+    m_Localized: "<size=135%>R\xE9sultats de recherche sur les anomalies</size>\n1.
+      Quand la colonie devenait agressive et attaquait les \xE9quipements voisins,
+      une forte chaleur mettait fin \xE0 son agressivit\xE9.\n2. La colonie devenait
+      tr\xE8s instable lorsque sa mangeoire \xE9tait vide. La nourrir via le dispositif
+      d'alimentation r\xE9tablissait sa stabilit\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662491
+    m_Localized: "R\xE8gles de gestion de base"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662492
+    m_Localized: "<size=115%>1. Objectif du poste</size>\n- Maintenez toutes les
+      entit\xE9s dans un \xE9tat stable de 00:00 \xE0 06:00.\n- Surveillez leur stabilit\xE9
+      sur les moniteurs. Utilisez la tablette sur le bureau pour l'augmenter avant
+      qu'elle n'atteigne 0 %."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662493
+    m_Localized: "Incin\xE9rer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662494
+    m_Localized: "Entit\xE9 : AC-013 \u2014 Colonie de tentacules\nCapacit\xE9s :
+      attaques de tentacules, g\xE9n\xE9ration de tentacules\n<size=90%>Ann\xE9lide
+      d\xE9couvert dans les marais du Pantanal. Il se nourrit et se reproduit sans
+      fin, tentant de d\xE9vorer tout ce qu'il voit.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662495
+    m_Localized: "Hallucinations d\xE9crites : parasites visuels (\xE0 gauche), apparitions
+      irr\xE9elles (\xE0 droite)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662496
+    m_Localized: "V\xE9rifier le\nsyst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662497
+    m_Localized: "V\xE9rifier le\nsyst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662498
+    m_Localized: Jour 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662499
+    m_Localized: "<size=135%>R\xE9sultats de recherche sur les anomalies</size>\n1.
+      Lorsqu'elle imitait le Circuit entrav\xE9, l'entit\xE9 \xE9tait vuln\xE9rable
+      aux d\xE9charges \xE9lectriques.\n2. Lorsqu'elle imitait la Colonie de tentacules,
+      une forte chaleur lui faisait reprendre sa forme initiale.\n3. Son enveloppe
+      humano\xEFde \xE9tait \xE9galement vuln\xE9rable \xE0 la chaleur.\n4. Elle
+      cr\xE9e p\xE9riodiquement des masques dans l'installation. Ils perturbent les
+      syst\xE8mes : d\xE9truisez-les rapidement en marchant dessus. Les masques \xE9mettent
+      un bruit de parasites."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662500
+    m_Localized: "Administrateur 32. Votre p\xE9riode de service est termin\xE9e.
+      F\xE9licitations."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662501
+    m_Localized: 'Fin : Effacement'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662502
+    m_Localized: "<size=135%>R\xE9sultats de recherche sur les anomalies</size>\n1.
+      Ses d\xE9charges \xE9lectriques produisaient des \xE9tincelles et perturbaient
+      les syst\xE8mes voisins. Une v\xE9rification du syst\xE8me \xE9tait n\xE9cessaire.\n2.
+      Quand l'entit\xE9 se levait de sa chaise de contention, une force physique
+      permettait de la ma\xEEtriser.\n3. Quand elle g\xE9n\xE9rait des c\xE2bles
+      autour d'elle, l'incin\xE9ration arr\xEAtait leur croissance.\n4. Ses d\xE9charges
+      \xE0 haute tension endommageaient parfois l'\xE9clairage. R\xE9initialiser
+      l'alimentation au disjoncteur r\xE9solvait le probl\xE8me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662503
+    m_Localized: "Pour les employ\xE9s subalternes, tout finit toujours par un \xAB
+      effacement \xBB."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662504
+    m_Localized: "<size=130%>1. Sympt\xF4mes physiques possibles</size>\nLe confinement
+      dans l'installation peut provoquer les sympt\xF4mes mineurs suivants :\n- Des
+      parasites visuels qui g\xEAnent la vision.\n- Des voix autres que la v\xF4tre.\n-
+      Des apparitions irr\xE9elles, sans lien avec les entit\xE9s ou objets enregistr\xE9s.\n\n<size=130%>2.
+      Mesures \xE0 prendre</size>\nSi l'un de ces sympt\xF4mes appara\xEEt, prenez
+      imm\xE9diatement le m\xE9dicament destin\xE9 aux administrateurs sur le bureau,
+      illustr\xE9 ci-dessous."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662505
+    m_Localized: Jour 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662506
+    m_Localized: "Jour 1 termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662507
+    m_Localized: "Partie termin\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662508
+    m_Localized: "<size=135%>R\xE9sultats de recherche sur les anomalies</size>\n1.
+      Quand la colonie devenait agressive et attaquait les \xE9quipements voisins,
+      une forte chaleur mettait fin \xE0 son agressivit\xE9.\n2. La colonie devenait
+      tr\xE8s instable lorsque sa mangeoire \xE9tait vide. La nourrir via le dispositif
+      d'alimentation r\xE9tablissait sa stabilit\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662509
+    m_Localized: "<size=115%>1. Objectif du poste</size>\n- Maintenez toutes les
+      entit\xE9s dans un \xE9tat stable de 00:00 \xE0 06:00.\n- Surveillez leur stabilit\xE9
+      sur les moniteurs et emp\xEAchez-la d'atteindre 0 %."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662510
+    m_Localized: "V\xE9rifier le\nsyst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662511
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662512
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662513
+    m_Localized: Commencer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662514
+    m_Localized: Contrat de travail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662515
+    m_Localized: "Division de contr\xF4le des anomalies"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662516
+    m_Localized: Acceptez-vous ces conditions et souhaitez-vous nous rejoindre ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662517
+    m_Localized: Jour suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662518
+    m_Localized: <size=115%>Rapport du jour n</size>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662519
+    m_Localized: "<size=80%>1. Dommages aux actifs : aucun\n\n2. Stabilit\xE9 du
+      confinement : \xE9lev\xE9e\n\n3. Rapidit\xE9 de r\xE9action : moyenne\n\n4.
+      Contamination mentale : aucune</size>\n\n<size=115%>Aptitude au poste : A</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662520
+    m_Localized: "Rapport d'\xE9valuation des performances"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662521
+    m_Localized: "Rapport d'\xE9valuation des performances"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662522
+    m_Localized: J'accepte le versement de mon salaire et le maintien de mon contrat
+      de travail.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662523
+    m_Localized: "Emp\xEAcher l'intrusion\ndans le syst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662524
+    m_Localized: Commencer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662525
+    m_Localized: Stabilisation de la tension
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662526
+    m_Localized: Temps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662527
+    m_Localized: "Pr\xE9paration du tranquillisant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662528
+    m_Localized: "Pr\xE9parez un tranquillisant pour la Colonie de tentacules."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662529
+    m_Localized: "Saisissez le code de d\xE9fense exactement comme indiqu\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662530
+    m_Localized: "Saisissez le code de d\xE9fense pour emp\xEAcher l'intrusion dans
+      le syst\xE8me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662531
+    m_Localized: Stabilisez la tension fluctuante.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662532
+    m_Localized: Stabilisation de la tension...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662533
+    m_Localized: "<color=red>Partie termin\xE9e</color>\n<size=80%>\xC9chec du confinement.</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662534
+    m_Localized: Jour 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662535
+    m_Localized: "- Pr\xE9f\xE8re les macarons \xE9pais aux macarons classiques.\n\n-
+      Ne mange que des saucisses de qualit\xE9 Johnsonville ou sup\xE9rieure.\n\n-
+      Pr\xE9f\xE8re les croissants aplatis et croustillants aux croissants classiques.\n\n-
+      Beaucoup de femmes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662536
+    m_Localized: Manuel de gestion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662537
+    m_Localized: "Nom de l'entit\xE9 : Kim Ji-won\nCapacit\xE9 principale : planification\n\nD\xE9couverte
+      sous terre dans l'ancienne Union sovi\xE9tique."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662538
+    m_Localized: "Division de gestion des entit\xE9s inconnues : manuel op\xE9rationnel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662539
+    m_Localized: "R\xE8gles de gestion de base"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662540
+    m_Localized: Jour {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662541
+    m_Localized: "Jour {0} termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662542
+    m_Localized: Rapport du jour {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777662543
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828288
+    m_Localized: "Consultez le manuel pour les informations essentielles \xE0 votre
+      mission."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828289
+    m_Localized: "Dossiers pr\xE9c\xE9dents effac\xE9s. Nouvelle d\xE9signation attribu\xE9e.
+      Bienvenue, Administrateur 32."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828290
+    m_Localized: "Bienvenue, Administrateur 32. Rappel : la pr\xE9servation des actifs
+      de l'entreprise prime strictement sur la s\xE9curit\xE9 du personnel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828291
+    m_Localized: "Bienvenue, Administrateur 32. Restez vigilant : l'entit\xE9 est
+      actuellement instable pour des raisons inconnues."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828292
+    m_Localized: "Bienvenue, Administrateur 32. Toute perte d'actifs entra\xEEne
+      un licenciement imm\xE9diat."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828293
+    m_Localized: "Bienvenue, Administrateur 32. Accomplissez votre service \xE0 la
+      perfection jusqu'au dernier instant."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 802828294
+    m_Localized: "Risque de divulgation d'informations confidentielles confirm\xE9.
+      Proc\xE9dure d'\xE9limination en cours."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243348611072
+    m_Localized: "Anomaly Control\nDivision\n<size=60%>Division de contr\xF4le des
+      anomalies</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1243373776896
+    m_Localized: "<size=115%>1. Fonctions et risques</size>\nVous pouvez \xEAtre
+      expos\xE9 \xE0 des dangers biologiques ou paranormaux incontr\xF4lables. L'entreprise
+      d\xE9cline toute responsabilit\xE9 en cas de d\xE9c\xE8s, de mutilation ou
+      de contamination mentale durant votre service.\n\n<size=115%>2. Confidentialit\xE9</size>\nToute
+      divulgation, m\xEAme apr\xE8s votre d\xE9part, entra\xEEnera des poursuites
+      imm\xE9diates et un effacement forc\xE9 de la m\xE9moire. Les effets secondaires,
+      notamment la baisse d'intelligence, rel\xE8vent de la responsabilit\xE9 de
+      l'employ\xE9.\n\n<size=115%>3. Urgences</size>\nEn cas de rupture du confinement
+      ou autre urgence, la r\xE9cup\xE9ration et la protection des actifs de l'entreprise
+      (entit\xE9s anormales) priment sur votre propre s\xE9curit\xE9.\n\n<size=115%>4.
+      Accidents du travail et assurances</size>\nCet emploi sp\xE9cial n'offre aucune
+      couverture sociale l\xE9gale ni assurance contre les accidents du travail.
+      En cas de d\xE9c\xE8s en service, votre corps sera c\xE9d\xE9 gratuitement
+      \xE0 l'entreprise \xE0 des fins de recherche.\n\n<size=115%>5. Censure des
+      informations</size>\nL'entreprise peut censurer les documents qui vous sont
+      fournis \xE0 sa discr\xE9tion. Les donn\xE9es conserv\xE9es par les employ\xE9s
+      peuvent aussi \xEAtre inspect\xE9es sans pr\xE9avis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064357789696
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13146795945984
+    m_Localized: 'Choisir la langue : {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784318197760
+    m_Localized: "Circuit entrav\xE9 : r\xE8gles de gestion"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752192
+    m_Localized: "Imitateur : r\xE8gles de gestion"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752193
+    m_Localized: "Colonie de tentacules : r\xE8gles de gestion"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752194
+    m_Localized: "Sympt\xF4mes physiques : mesures \xE0 prendre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752195
+    m_Localized: "Urgence. Urgence. Ex\xE9cutez le protocole imm\xE9diatement......"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68784351752196
+    m_Localized: "Dossiers pr\xE9c\xE9dents effac\xE9s. Nouvelle d\xE9signation attribu\xE9e.
+      Bienvenue, Administrateur 33."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016800960512
+    m_Localized: Avis concernant les traductions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514944
+    m_Localized: "Toutes les langues autres que le cor\xE9en ont \xE9t\xE9 traduites
+      \xE0 l'aide de l'IA. Certaines formulations peuvent sembler peu naturelles
+      ou contenir des erreurs. Merci de votre compr\xE9hension."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514945
+    m_Localized: Voulez-vous vraiment quitter ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514946
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514947
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 414016834514948
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
